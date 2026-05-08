@@ -2,6 +2,10 @@
 
 > MediaWiki 驱动的《玄鉴仙族》小说百科全书
 
+## 代码仓库
+
+- **工蜂**: https://git.woa.com/leoshixie/xuanjian-wiki
+
 ## 在线访问
 
 - **Wiki 首页**: http://leoshixie.devcloud.woa.com/wiki/首页
@@ -16,6 +20,9 @@
 | Nginx 反代 + API 暴露 | ✅ 完成 | 2026-05-07 |
 | 基础模板创建（角色 Infobox） | ✅ 完成 | 2026-05-07 |
 | 354 角色/势力页面批量导入 | ✅ 完成 | 2026-05-07 |
+| 仙基道统神通页面生成 | ✅ 完成 | 2026-05-08 |
+| 神通资料库建设（OCR + 考据） | ✅ 完成 | 2026-05-08 |
+| 五德位业体系结构化 | ✅ 完成 | 2026-05-08 |
 | 首页设计 + 导航完善 | 🔲 待做 | - |
 | 分类体系优化 | 🔲 待做 | - |
 | 人物关系图可视化 | 🔲 待做 | - |
@@ -26,27 +33,35 @@
 
 ```
 wiki/
-├── README.md           # 本文件
-├── config.yaml         # 项目配置（非敏感）
-├── .env                # 敏感密码（不入版本控制）
+├── README.md               # 本文件
+├── config.yaml             # 项目配置（非敏感）
+├── .env                    # 敏感密码（不入版本控制）
 ├── .gitignore
-├── scripts/            # 脚本工具
-│   ├── generate_pages.py   # 数据源 → .wiki 文件生成器（654行）
-│   ├── upload_pages.py     # .wiki 文件 → MW API 批量上传（151行）
-│   ├── wiki_admin.py       # 管理工具（统计/查询/搜索/删除）
-│   └── ssh_wiki.sh         # SSH 快捷连接脚本
-├── pages/              # MediaWiki 源文件（按类型归档）
-│   ├── 人物与势力/       # 人物/势力等正文页面
-│   ├── 索引/             # 索引页
-│   └── 仙基道统/         # 仙基、道统、神通独立页面
+├── scripts/                # 脚本工具
+│   ├── generate_pages.py       # 数据源 → .wiki 文件生成器
+│   ├── generate_xianji_pages.py # 仙基道统神通页面生成器
+│   ├── setup_smw_properties.py  # SemanticMW 属性配置
+│   ├── upload_pages.py         # .wiki 文件 → MW API 批量上传
+│   ├── upload_images.py        # 图片批量上传
+│   ├── wiki_admin.py           # 管理工具（统计/查询/搜索/删除）
+│   └── ssh_wiki.sh             # SSH 快捷连接脚本
+├── pages/                  # MediaWiki 源文件（按类型归档）
+│   ├── 人物与势力/           # 人物/势力等正文页面
+│   ├── 索引/                 # 索引页
+│   └── 仙基道统/             # 仙基、道统、神通独立页面
 │       ├── 位业/
 │       ├── 道统/
 │       └── 神通/
-├── data/               # 结构化数据（JSON/YAML）
-├── backup/             # XML 导出备份
-│   └── xuanjian_import.xml  # 完整 XML 导出（484K）
-└── docs/               # 文档
-    └── LESSONS.md      # 踩坑记录
+├── 资料库 - 神通/           # 神通体系完整资料库
+│   ├── 01_原始素材/          # 原始图片、百科全书 HTML
+│   ├── 02_加工产出/          # OCR 转录、清洗文本
+│   ├── 03_校对与核对/        # 核对报告、校正记录
+│   └── 04_参考权威/          # 五德位业结构化 JSON/CSV/MD
+├── data/                   # 结构化数据（JSON/YAML）
+├── backup/                 # XML 导出备份
+└── docs/                   # 文档
+    ├── LESSONS.md              # 踩坑记录
+    └── wiki_competitive_analysis.md  # 竞品分析
 ```
 
 ## 技术架构
@@ -103,6 +118,9 @@ python3 scripts/wiki_admin.py categories
 # 重新生成所有页面（从数据源）
 python3 scripts/generate_pages.py
 
+# 生成仙基道统神通页面
+python3 scripts/generate_xianji_pages.py
+
 # 上传所有页面到 wiki
 python3 scripts/upload_pages.py
 
@@ -129,7 +147,20 @@ docker restart mediawiki
 nginx -t && nginx -s reload
 ```
 
-## 数据源
+## 资料库说明
+
+### 神通资料库 (`资料库 - 神通/`)
+
+完整的神通体系资料加工流水线：
+
+| 阶段 | 目录 | 内容 |
+|------|------|------|
+| 原始素材 | `01_原始素材/` | 神通图片（9张）、中文百科全书 HTML、释修体系图片 |
+| 加工产出 | `02_加工产出/` | OCR 转录文本、百科全书清洗版 |
+| 校对核对 | `03_校对与核对/` | 核对报告、本地对照、清洗总结 |
+| 参考权威 | `04_参考权威/` | 五德位业结构化 JSON（15174条考据）、仙基分类表、金位历史 |
+
+### 数据源
 
 | 源文件 | 条目数 | 内容 |
 |--------|--------|------|
