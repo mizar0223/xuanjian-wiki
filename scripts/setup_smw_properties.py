@@ -4,9 +4,12 @@
 import requests
 import time
 
-WIKI_API = "http://leoshixie.devcloud.woa.com/api.php"
-USERNAME = "WikiAdmin"
-PASSWORD = "XuanjianAdmin2026"
+from common.config import AppConfig, require_wiki_password
+
+CONFIG = AppConfig()
+WIKI_API = CONFIG.wiki_api
+USERNAME = CONFIG.wiki_user
+WIKI_URL = CONFIG.wiki_url or 'http://leoshixie.devcloud.woa.com/wiki/'
 
 # ============================================================
 # SMW Property 定义
@@ -176,6 +179,7 @@ PROPERTIES = {
 
 def get_session():
     """创建已登录的 requests session"""
+    password = require_wiki_password(CONFIG)
     s = requests.Session()
     # Step 1: 获取 login token
     r = s.get(WIKI_API, params={
@@ -187,8 +191,8 @@ def get_session():
     r = s.post(WIKI_API, data={
         "action": "clientlogin",
         "username": USERNAME,
-        "password": PASSWORD,
-        "loginreturnurl": "http://leoshixie.devcloud.woa.com",
+        "password": password,
+        "loginreturnurl": WIKI_URL.rstrip('/') + '/首页',
         "logintoken": login_token,
         "format": "json"
     })
@@ -205,7 +209,7 @@ def get_session():
         r = s.post(WIKI_API, data={
             "action": "login",
             "lgname": USERNAME,
-            "lgpassword": PASSWORD,
+            "lgpassword": password,
             "lgtoken": login_token,
             "format": "json"
         })

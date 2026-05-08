@@ -5,6 +5,7 @@ wiki:
   name: "玄鉴仙族维基"
   url: "http://leoshixie.devcloud.woa.com/wiki/"
   api: "http://leoshixie.devcloud.woa.com/api.php"
+  user: "WikiAdmin"
   engine: "MediaWiki 1.42.7"
   skin: "Vector 2022"
   language: "zh-hans"
@@ -40,6 +41,11 @@ database:
   prefix: "wiki_"
   network_ip: "172.18.0.4"
 
+paths:
+  pages_dir: "pages"
+  xianji_json: "资料库 - 神通/04_参考权威/玄鉴仙族_五德位业体系_结构化.json"
+  xianji_authority: "资料库 - 神通/04_参考权威/玄鉴仙族_神通仙基汇总.md"
+
 data_sources:
   base_dir: "/Users/leoshi/WorkBuddy/20260323190937"
   characters_json: "characters/人物年鉴进度.json"
@@ -47,3 +53,4 @@ data_sources:
   notebooklm_dir: "characters/{name}/content/{name}_NotebookLM素材.md"
   setting_chars: "玄鉴图册/角色.md"
   cast: "玄鉴图册/出场群像.md"
+  image_dir: "/Users/leoshi/AIBOOK/xuanjian/resources/reference/玄鉴图册/人设图"

@@ -10,38 +10,43 @@ from datetime import datetime
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
-DATA_DIR = '/Users/leoshi/WorkBuddy/20260323190937'
-CHAR_DIR = f'{DATA_DIR}/characters'
-REF_DIR = f'{DATA_DIR}/玄鉴图册'
-OUTPUT_DIR = '/tmp/wiki_pages'
+from common.config import AppConfig
+
+CONFIG = AppConfig()
+DATA_DIR = str(CONFIG.data_base_dir)
+CHARACTERS_JSON = CONFIG.data_source_path('characters_json')
+GENEALOGY_MD = CONFIG.data_source_path('genealogy_md')
+SETTING_CHARS_MD = CONFIG.data_source_path('setting_chars')
+CAST_MD = CONFIG.data_source_path('cast')
+OUTPUT_DIR = os.getenv('WIKI_OUTPUT_DIR', '/tmp/wiki_pages')
 
 # ============ 数据加载 ============
 
 def load_progress():
     """加载人物年鉴进度JSON"""
-    with open(f'{CHAR_DIR}/人物年鉴进度.json', 'r') as f:
+    with open(CHARACTERS_JSON, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def load_genealogy():
     """加载家谱MD"""
-    with open(f'{CHAR_DIR}/望月李氏家谱.md', 'r') as f:
+    with open(GENEALOGY_MD, 'r', encoding='utf-8') as f:
         return f.read()
 
 def load_setting_characters():
     """加载设定集角色数据"""
-    with open(f'{REF_DIR}/角色.md', 'r') as f:
+    with open(SETTING_CHARS_MD, 'r', encoding='utf-8') as f:
         return f.read()
 
 def load_cast():
     """加载出场群像"""
-    with open(f'{REF_DIR}/出场群像.md', 'r') as f:
+    with open(CAST_MD, 'r', encoding='utf-8') as f:
         return f.read()
 
 def load_notebooklm(name):
     """加载角色的NotebookLM素材"""
-    path = f'{CHAR_DIR}/{name}/content/{name}_NotebookLM素材.md'
+    path = CONFIG.data_source_path('notebooklm_dir', name=name)
     if os.path.exists(path):
-        with open(path, 'r') as f:
+        with open(path, 'r', encoding='utf-8') as f:
             return f.read()
     return ''
 

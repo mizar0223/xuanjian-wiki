@@ -1,14 +1,17 @@
-#!/usr/bin/env python3
 """
 玄鉴仙族 Wiki 管理工具
 常用操作: 登录、查询页面、删除页面、统计信息
 """
 import requests, json, sys, urllib3
+
+from common.config import AppConfig, require_wiki_password
+
 urllib3.disable_warnings()
 
-WIKI_API = "http://leoshixie.devcloud.woa.com/api.php"
-WIKI_USER = "WikiAdmin"
-WIKI_PASS = "XuanjianAdmin2026"
+CONFIG = AppConfig()
+WIKI_API = CONFIG.wiki_api
+WIKI_USER = CONFIG.wiki_user
+WIKI_URL = CONFIG.wiki_url or 'http://leoshixie.devcloud.woa.com/wiki/'
 
 class WikiAdmin:
     def __init__(self):
@@ -16,15 +19,16 @@ class WikiAdmin:
         self.csrf = None
     
     def login(self):
+        password = require_wiki_password(CONFIG)
         r1 = self.s.get(WIKI_API, params={
             "action": "query", "meta": "tokens", "type": "login", "format": "json"
         }, verify=False)
         lt = r1.json()["query"]["tokens"]["logintoken"]
         r2 = self.s.post(WIKI_API, data={
             "action": "clientlogin", "format": "json",
-            "username": WIKI_USER, "password": WIKI_PASS,
+            "username": WIKI_USER, "password": password,
             "logintoken": lt,
-            "loginreturnurl": f"http://leoshixie.devcloud.woa.com/wiki/首页"
+            "loginreturnurl": WIKI_URL.rstrip('/') + '/首页'
         }, verify=False)
         if r2.json()["clientlogin"]["status"] != "PASS":
             raise Exception(f"Login failed: {r2.json()}")
@@ -32,7 +36,7 @@ class WikiAdmin:
             "action": "query", "meta": "tokens", "format": "json"
         }, verify=False)
         self.csrf = r3.json()["query"]["tokens"]["csrftoken"]
-        print("✅ Logged in as WikiAdmin")
+        print(f"✅ Logged in as {WIKI_USER}")
     
     def stats(self):
         """打印 wiki 统计信息"""

@@ -15,14 +15,18 @@ from pathlib import Path
 import requests
 import urllib3
 
+from common.config import AppConfig, require_wiki_password
+
 urllib3.disable_warnings()
 
-ROOT = Path('/Users/leoshi/AIBOOK/xuanjian/wiki')
-DEFAULT_PAGES_DIR = ROOT / 'pages'
-WIKI_API = 'http://leoshixie.devcloud.woa.com/api.php'
-WIKI_USER = 'WikiAdmin'
-WIKI_PASS = 'XuanjianAdmin2026'
+CONFIG = AppConfig()
+ROOT = CONFIG.project_root
+DEFAULT_PAGES_DIR = CONFIG.pages_dir
+WIKI_API = CONFIG.wiki_api
+WIKI_USER = CONFIG.wiki_user
+WIKI_URL = CONFIG.wiki_url or 'http://leoshixie.devcloud.woa.com/wiki/'
 MAX_RETRIES = 3
+BOT_SUMMARY_PREFIX = '[bot]'
 
 
 class WikiSession:
@@ -31,6 +35,7 @@ class WikiSession:
         self.csrf = None
 
     def login(self):
+        password = require_wiki_password(CONFIG)
         r1 = self.s.get(WIKI_API, params={
             'action': 'query', 'meta': 'tokens', 'type': 'login', 'format': 'json'
         }, verify=False, timeout=20)
@@ -38,9 +43,9 @@ class WikiSession:
 
         r2 = self.s.post(WIKI_API, data={
             'action': 'clientlogin', 'format': 'json',
-            'username': WIKI_USER, 'password': WIKI_PASS,
+            'username': WIKI_USER, 'password': password,
             'logintoken': login_token,
-            'loginreturnurl': 'http://leoshixie.devcloud.woa.com/wiki/首页'
+            'loginreturnurl': WIKI_URL.rstrip('/') + '/首页'
         }, verify=False, timeout=20)
         result = r2.json()
         if result.get('clientlogin', {}).get('status') != 'PASS':
@@ -54,16 +59,47 @@ class WikiSession:
         }, verify=False, timeout=20)
         self.csrf = r.json()['query']['tokens']['csrftoken']
 
-    def upload_page(self, title, text, summary):
+    def _revision_content(self, revision):
+        if '*' in revision:
+            return revision['*']
+        return revision.get('slots', {}).get('main', {}).get('*', '')
+
+    def get_page_revision(self, title):
+        r = self.s.get(WIKI_API, params={
+            'action': 'query',
+            'prop': 'revisions',
+            'rvprop': 'ids|timestamp|user|comment|content',
+            'rvslots': 'main',
+            'titles': title,
+            'format': 'json',
+        }, verify=False, timeout=20)
+        pages = r.json()['query']['pages']
+        page = list(pages.values())[0]
+        if 'missing' in page:
+            return {'exists': False, 'content': None}
+        revision = page.get('revisions', [{}])[0]
+        return {
+            'exists': True,
+            'revid': revision.get('revid'),
+            'timestamp': revision.get('timestamp'),
+            'user': revision.get('user'),
+            'comment': revision.get('comment', ''),
+            'content': self._revision_content(revision),
+        }
+
+    def upload_page(self, title, text, summary, baserevid=None):
         for attempt in range(MAX_RETRIES):
             try:
-                r = self.s.post(WIKI_API, data={
+                data = {
                     'action': 'edit', 'format': 'json',
                     'title': title, 'text': text,
                     'summary': summary,
                     'token': self.csrf,
                     'bot': '1',
-                }, verify=False, timeout=60)
+                }
+                if baserevid:
+                    data['baserevid'] = str(baserevid)
+                r = self.s.post(WIKI_API, data=data, verify=False, timeout=60)
                 result = r.json()
                 if 'error' in result:
                     if result['error'].get('code') == 'badtoken':
@@ -128,6 +164,9 @@ def parse_args():
     parser.add_argument('--limit', type=int, default=0, help='最多上传 N 个页面，默认不限制')
     parser.add_argument('--skip-validate', action='store_true', help='跳过重复标题和表格闭合校验')
     parser.add_argument('--summary', default='批量上传本地 wiki 页面', help='编辑摘要')
+    parser.add_argument('--force', action='store_true', help='强制覆盖远端不同内容')
+    parser.add_argument('--bot-summary-prefix', default=BOT_SUMMARY_PREFIX, help='识别脚本编辑的摘要前缀')
+    parser.add_argument('--conflict-log', default='/tmp/wiki_upload_conflicts.json', help='冲突日志路径')
     return parser.parse_args()
 
 
@@ -168,35 +207,65 @@ def main():
     wiki.login()
 
     success = 0
+    skipped = 0
+    conflicts = []
     errors = []
     start_time = time.time()
+    summary = args.summary
+    if args.bot_summary_prefix and not summary.startswith(args.bot_summary_prefix):
+        summary = f'{args.bot_summary_prefix} {summary}'
+
     for index, path in enumerate(wiki_files, 1):
         title = path.stem
         text = path.read_text(encoding='utf-8')
-        ok, message = wiki.upload_page(title, text, summary=args.summary)
-        if ok:
-            success += 1
+        remote = wiki.get_page_revision(title)
+        if remote['exists'] and remote['content'] == text:
+            skipped += 1
+            print(f'[{index}/{len(wiki_files)}] SKIP unchanged {title}')
         else:
-            errors.append((title, message))
-            print(f'[{index}/{len(wiki_files)}] FAILED {title}: {message[:120]}')
+            is_bot_edit = (not remote['exists']) or remote.get('comment', '').startswith(args.bot_summary_prefix)
+            if remote['exists'] and not is_bot_edit and not args.force:
+                conflicts.append({
+                    'title': title,
+                    'revid': remote.get('revid'),
+                    'timestamp': remote.get('timestamp'),
+                    'user': remote.get('user'),
+                    'comment': remote.get('comment', ''),
+                    'path': str(path),
+                })
+                print(f'[{index}/{len(wiki_files)}] CONFLICT {title}: last editor={remote.get("user")} revid={remote.get("revid")}')
+            else:
+                ok, message = wiki.upload_page(title, text, summary=summary, baserevid=remote.get('revid'))
+                if ok:
+                    success += 1
+                else:
+                    errors.append((title, message))
+                    print(f'[{index}/{len(wiki_files)}] FAILED {title}: {message[:120]}')
         if index % 50 == 0 or index == len(wiki_files):
             elapsed = max(time.time() - start_time, 0.001)
-            print(f'[{index}/{len(wiki_files)}] success={success} failed={len(errors)} rate={index / elapsed:.1f}/s')
+            print(f'[{index}/{len(wiki_files)}] success={success} skipped={skipped} conflicts={len(conflicts)} failed={len(errors)} rate={index / elapsed:.1f}/s')
         time.sleep(args.delay)
 
     elapsed = time.time() - start_time
     print(json.dumps({
         'total': len(wiki_files),
         'success': success,
+        'skipped': skipped,
+        'conflicts': len(conflicts),
         'failed': len(errors),
         'elapsed_sec': round(elapsed, 1),
         'errors': errors[:20],
     }, ensure_ascii=False, indent=2))
 
+    if conflicts:
+        conflict_log = Path(args.conflict_log)
+        conflict_log.write_text(json.dumps(conflicts, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(f'Conflict log saved to {conflict_log}')
     if errors:
         error_log = Path('/tmp/wiki_import_errors.json')
         error_log.write_text(json.dumps(errors, ensure_ascii=False, indent=2), encoding='utf-8')
         print(f'Error log saved to {error_log}')
+    if errors or conflicts:
         sys.exit(1)
 
 

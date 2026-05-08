@@ -11,15 +11,19 @@ from pathlib import Path
 import requests
 import urllib3
 
+from common.config import AppConfig, require_wiki_password
+
 urllib3.disable_warnings()
 
-ROOT = Path('/Users/leoshi/AIBOOK/xuanjian/wiki')
-JSON_PATH = ROOT / '资料库 - 神通/04_参考权威/玄鉴仙族_五德位业体系_结构化.json'
-AUTHORITY_PATH = ROOT / '资料库 - 神通/04_参考权威/玄鉴仙族_神通仙基汇总.md'
-PAGES_DIR = ROOT / 'pages'
-API = 'http://leoshixie.devcloud.woa.com/api.php'
-USER = 'WikiAdmin'
-PASSWORD = 'XuanjianAdmin2026'
+CONFIG = AppConfig()
+ROOT = CONFIG.project_root
+JSON_PATH = CONFIG.xianji_json_path
+AUTHORITY_PATH = CONFIG.xianji_authority_path
+PAGES_DIR = CONFIG.pages_dir
+API = CONFIG.wiki_api
+USER = CONFIG.wiki_user
+WIKI_URL = CONFIG.wiki_url or 'http://leoshixie.devcloud.woa.com/wiki/'
+BOT_SUMMARY_PREFIX = '[bot]'
 
 TOP_SECTIONS = [
     ('一、阴阳', ['阴阳（五阳）', '五阴']),
@@ -267,7 +271,7 @@ def generate_overview(data, state):
         '{{导航栏}}', '',
         "'''仙基与道统'''收录《玄鉴仙族》中已知仙基、道统、神通、位业与金位信息。", '',
         f'本页由结构化资料生成，主数据源为{source_title}，校验源为《玄鉴仙族·神通仙基汇总》（崇宫白 B 站专栏 cv41820802，2026-05-04）。', '',
-        '说明：神通表中的“校验”表示该神通名是否能在汇总校验源中找到；“补充/待复核”表示来自主结构化数据，但未在汇总源中完全匹配。', '',
+        '说明：神通表中的"校验"表示该神通名是否能在汇总校验源中找到；"补充/待复核"表示来自主结构化数据，但未在汇总源中完全匹配。', '',
         '__TOC__', '',
     ]
     seen_titles = set()
@@ -417,9 +421,10 @@ def existing_titles():
 
 
 def upload_pages(pages):
+    password = require_wiki_password(CONFIG)
     session = requests.Session()
     login_token = session.get(API, params={'action': 'query', 'meta': 'tokens', 'type': 'login', 'format': 'json'}, verify=False, timeout=20).json()['query']['tokens']['logintoken']
-    login = session.post(API, data={'action': 'clientlogin', 'format': 'json', 'username': USER, 'password': PASSWORD, 'logintoken': login_token, 'loginreturnurl': 'http://leoshixie.devcloud.woa.com/wiki/首页'}, verify=False, timeout=20).json()
+    login = session.post(API, data={'action': 'clientlogin', 'format': 'json', 'username': USER, 'password': password, 'logintoken': login_token, 'loginreturnurl': WIKI_URL.rstrip('/') + '/首页'}, verify=False, timeout=20).json()
     if login.get('clientlogin', {}).get('status') != 'PASS':
         raise RuntimeError('login failed: ' + json.dumps(login, ensure_ascii=False))
     csrf = session.get(API, params={'action': 'query', 'meta': 'tokens', 'format': 'json'}, verify=False, timeout=20).json()['query']['tokens']['csrftoken']
@@ -428,7 +433,7 @@ def upload_pages(pages):
     for index, (title, text) in enumerate(sorted(pages.items()), 1):
         response = session.post(API, data={
             'action': 'edit', 'format': 'json', 'title': title, 'text': text,
-            'summary': '生成仙基/道统/神通独立页面', 'token': csrf, 'bot': '1',
+            'summary': f'{BOT_SUMMARY_PREFIX} 生成仙基/道统/神通独立页面', 'token': csrf, 'bot': '1',
         }, verify=False, timeout=60).json()
         if response.get('edit', {}).get('result') == 'Success':
             success += 1

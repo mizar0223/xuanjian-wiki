@@ -1,16 +1,19 @@
-#!/usr/bin/env python3
 """
 批量上传人设图到 MediaWiki
 - 来源: resources/reference/玄鉴图册/人设图/
 - 目标: Wiki File: 命名空间
 """
 import requests, json, os, sys, time, glob, urllib3
+
+from common.config import AppConfig, require_wiki_password
+
 urllib3.disable_warnings()
 
-WIKI_API = "http://leoshixie.devcloud.woa.com/api.php"
-WIKI_USER = "WikiAdmin"
-WIKI_PASS = "XuanjianAdmin2026"
-IMG_DIR = "/Users/leoshi/AIBOOK/xuanjian/resources/reference/玄鉴图册/人设图"
+CONFIG = AppConfig()
+WIKI_API = CONFIG.wiki_api
+WIKI_USER = CONFIG.wiki_user
+WIKI_URL = CONFIG.wiki_url or 'http://leoshixie.devcloud.woa.com/wiki/'
+IMG_DIR = str(CONFIG.data_source_path('image_dir'))
 DELAY = 1.0  # seconds between uploads (larger files need more)
 MAX_RETRIES = 3
 DRY_RUN = "--dry-run" in sys.argv
@@ -21,15 +24,16 @@ class WikiUploader:
         self.csrf = None
     
     def login(self):
+        password = require_wiki_password(CONFIG)
         r1 = self.s.get(WIKI_API, params={
             "action": "query", "meta": "tokens", "type": "login", "format": "json"
         }, verify=False)
         lt = r1.json()["query"]["tokens"]["logintoken"]
         r2 = self.s.post(WIKI_API, data={
             "action": "clientlogin", "format": "json",
-            "username": WIKI_USER, "password": WIKI_PASS,
+            "username": WIKI_USER, "password": password,
             "logintoken": lt,
-            "loginreturnurl": "http://leoshixie.devcloud.woa.com/wiki/"
+            "loginreturnurl": WIKI_URL.rstrip('/') + '/'
         }, verify=False)
         if r2.json()["clientlogin"]["status"] != "PASS":
             raise Exception(f"Login failed: {r2.json()}")
