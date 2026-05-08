@@ -1,0 +1,1632 @@
+{
+  "IMG_0778": {
+    "source": "IMG_0778.JPG",
+    "source_size": "3427x3272",
+    "strip_count": 17,
+    "strip_height": 250,
+    "overlap": 50,
+    "step": 200,
+    "strips": [
+      {
+        "file": "strip_000.jpg",
+        "y_start": 0,
+        "y_end": 250,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 0,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_001.jpg",
+        "y_start": 200,
+        "y_end": 450,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_002.jpg",
+        "y_start": 400,
+        "y_end": 650,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_003.jpg",
+        "y_start": 600,
+        "y_end": 850,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_004.jpg",
+        "y_start": 800,
+        "y_end": 1050,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_005.jpg",
+        "y_start": 1000,
+        "y_end": 1250,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_006.jpg",
+        "y_start": 1200,
+        "y_end": 1450,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_007.jpg",
+        "y_start": 1400,
+        "y_end": 1650,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_008.jpg",
+        "y_start": 1600,
+        "y_end": 1850,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_009.jpg",
+        "y_start": 1800,
+        "y_end": 2050,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_010.jpg",
+        "y_start": 2000,
+        "y_end": 2250,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_011.jpg",
+        "y_start": 2200,
+        "y_end": 2450,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_012.jpg",
+        "y_start": 2400,
+        "y_end": 2650,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_013.jpg",
+        "y_start": 2600,
+        "y_end": 2850,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_014.jpg",
+        "y_start": 2800,
+        "y_end": 3050,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_015.jpg",
+        "y_start": 3000,
+        "y_end": 3272,
+        "width": 3427,
+        "height": 272,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      },
+      {
+        "file": "strip_016.jpg",
+        "y_start": 3200,
+        "y_end": 3272,
+        "width": 3427,
+        "height": 72,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      }
+    ]
+  },
+  "IMG_0779": {
+    "source": "IMG_0779.JPG",
+    "source_size": "3427x2476",
+    "strip_count": 13,
+    "strip_height": 250,
+    "overlap": 50,
+    "step": 200,
+    "strips": [
+      {
+        "file": "strip_000.jpg",
+        "y_start": 0,
+        "y_end": 250,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 0,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_001.jpg",
+        "y_start": 200,
+        "y_end": 450,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_002.jpg",
+        "y_start": 400,
+        "y_end": 650,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_003.jpg",
+        "y_start": 600,
+        "y_end": 850,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_004.jpg",
+        "y_start": 800,
+        "y_end": 1050,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_005.jpg",
+        "y_start": 1000,
+        "y_end": 1250,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_006.jpg",
+        "y_start": 1200,
+        "y_end": 1450,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_007.jpg",
+        "y_start": 1400,
+        "y_end": 1650,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_008.jpg",
+        "y_start": 1600,
+        "y_end": 1850,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_009.jpg",
+        "y_start": 1800,
+        "y_end": 2050,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_010.jpg",
+        "y_start": 2000,
+        "y_end": 2250,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_011.jpg",
+        "y_start": 2200,
+        "y_end": 2476,
+        "width": 3427,
+        "height": 276,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      },
+      {
+        "file": "strip_012.jpg",
+        "y_start": 2400,
+        "y_end": 2476,
+        "width": 3427,
+        "height": 76,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      }
+    ]
+  },
+  "IMG_0780": {
+    "source": "IMG_0780.JPG",
+    "source_size": "3427x2619",
+    "strip_count": 14,
+    "strip_height": 250,
+    "overlap": 50,
+    "step": 200,
+    "strips": [
+      {
+        "file": "strip_000.jpg",
+        "y_start": 0,
+        "y_end": 250,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 0,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_001.jpg",
+        "y_start": 200,
+        "y_end": 450,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_002.jpg",
+        "y_start": 400,
+        "y_end": 650,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_003.jpg",
+        "y_start": 600,
+        "y_end": 850,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_004.jpg",
+        "y_start": 800,
+        "y_end": 1050,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_005.jpg",
+        "y_start": 1000,
+        "y_end": 1250,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_006.jpg",
+        "y_start": 1200,
+        "y_end": 1450,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_007.jpg",
+        "y_start": 1400,
+        "y_end": 1650,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_008.jpg",
+        "y_start": 1600,
+        "y_end": 1850,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_009.jpg",
+        "y_start": 1800,
+        "y_end": 2050,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_010.jpg",
+        "y_start": 2000,
+        "y_end": 2250,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_011.jpg",
+        "y_start": 2200,
+        "y_end": 2450,
+        "width": 3427,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_012.jpg",
+        "y_start": 2400,
+        "y_end": 2619,
+        "width": 3427,
+        "height": 219,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      },
+      {
+        "file": "strip_013.jpg",
+        "y_start": 2600,
+        "y_end": 2619,
+        "width": 3427,
+        "height": 19,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      }
+    ]
+  },
+  "IMG_0781": {
+    "source": "IMG_0781.JPG",
+    "source_size": "4096x3146",
+    "strip_count": 16,
+    "strip_height": 250,
+    "overlap": 50,
+    "step": 200,
+    "strips": [
+      {
+        "file": "strip_000.jpg",
+        "y_start": 0,
+        "y_end": 250,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 0,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_001.jpg",
+        "y_start": 200,
+        "y_end": 450,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_002.jpg",
+        "y_start": 400,
+        "y_end": 650,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_003.jpg",
+        "y_start": 600,
+        "y_end": 850,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_004.jpg",
+        "y_start": 800,
+        "y_end": 1050,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_005.jpg",
+        "y_start": 1000,
+        "y_end": 1250,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_006.jpg",
+        "y_start": 1200,
+        "y_end": 1450,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_007.jpg",
+        "y_start": 1400,
+        "y_end": 1650,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_008.jpg",
+        "y_start": 1600,
+        "y_end": 1850,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_009.jpg",
+        "y_start": 1800,
+        "y_end": 2050,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_010.jpg",
+        "y_start": 2000,
+        "y_end": 2250,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_011.jpg",
+        "y_start": 2200,
+        "y_end": 2450,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_012.jpg",
+        "y_start": 2400,
+        "y_end": 2650,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_013.jpg",
+        "y_start": 2600,
+        "y_end": 2850,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_014.jpg",
+        "y_start": 2800,
+        "y_end": 3050,
+        "width": 4096,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_015.jpg",
+        "y_start": 3000,
+        "y_end": 3146,
+        "width": 4096,
+        "height": 146,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      }
+    ]
+  },
+  "IMG_0782": {
+    "source": "IMG_0782.JPG",
+    "source_size": "3493x3200",
+    "strip_count": 16,
+    "strip_height": 250,
+    "overlap": 50,
+    "step": 200,
+    "strips": [
+      {
+        "file": "strip_000.jpg",
+        "y_start": 0,
+        "y_end": 250,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 0,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_001.jpg",
+        "y_start": 200,
+        "y_end": 450,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_002.jpg",
+        "y_start": 400,
+        "y_end": 650,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_003.jpg",
+        "y_start": 600,
+        "y_end": 850,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_004.jpg",
+        "y_start": 800,
+        "y_end": 1050,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_005.jpg",
+        "y_start": 1000,
+        "y_end": 1250,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_006.jpg",
+        "y_start": 1200,
+        "y_end": 1450,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_007.jpg",
+        "y_start": 1400,
+        "y_end": 1650,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_008.jpg",
+        "y_start": 1600,
+        "y_end": 1850,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_009.jpg",
+        "y_start": 1800,
+        "y_end": 2050,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_010.jpg",
+        "y_start": 2000,
+        "y_end": 2250,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_011.jpg",
+        "y_start": 2200,
+        "y_end": 2450,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_012.jpg",
+        "y_start": 2400,
+        "y_end": 2650,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_013.jpg",
+        "y_start": 2600,
+        "y_end": 2850,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_014.jpg",
+        "y_start": 2800,
+        "y_end": 3050,
+        "width": 3493,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_015.jpg",
+        "y_start": 3000,
+        "y_end": 3200,
+        "width": 3493,
+        "height": 200,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      }
+    ]
+  },
+  "IMG_0784": {
+    "source": "IMG_0784.JPG",
+    "source_size": "2225x2719",
+    "strip_count": 14,
+    "strip_height": 250,
+    "overlap": 50,
+    "step": 200,
+    "strips": [
+      {
+        "file": "strip_000.jpg",
+        "y_start": 0,
+        "y_end": 250,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 0,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_001.jpg",
+        "y_start": 200,
+        "y_end": 450,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_002.jpg",
+        "y_start": 400,
+        "y_end": 650,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_003.jpg",
+        "y_start": 600,
+        "y_end": 850,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_004.jpg",
+        "y_start": 800,
+        "y_end": 1050,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_005.jpg",
+        "y_start": 1000,
+        "y_end": 1250,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_006.jpg",
+        "y_start": 1200,
+        "y_end": 1450,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_007.jpg",
+        "y_start": 1400,
+        "y_end": 1650,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_008.jpg",
+        "y_start": 1600,
+        "y_end": 1850,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_009.jpg",
+        "y_start": 1800,
+        "y_end": 2050,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_010.jpg",
+        "y_start": 2000,
+        "y_end": 2250,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_011.jpg",
+        "y_start": 2200,
+        "y_end": 2450,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_012.jpg",
+        "y_start": 2400,
+        "y_end": 2650,
+        "width": 2225,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_013.jpg",
+        "y_start": 2600,
+        "y_end": 2719,
+        "width": 2225,
+        "height": 119,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      }
+    ]
+  },
+  "IMG_0785": {
+    "source": "IMG_0785.JPG",
+    "source_size": "2816x4121",
+    "strip_count": 21,
+    "strip_height": 250,
+    "overlap": 50,
+    "step": 200,
+    "strips": [
+      {
+        "file": "strip_000.jpg",
+        "y_start": 0,
+        "y_end": 250,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 0,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_001.jpg",
+        "y_start": 200,
+        "y_end": 450,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_002.jpg",
+        "y_start": 400,
+        "y_end": 650,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_003.jpg",
+        "y_start": 600,
+        "y_end": 850,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_004.jpg",
+        "y_start": 800,
+        "y_end": 1050,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_005.jpg",
+        "y_start": 1000,
+        "y_end": 1250,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_006.jpg",
+        "y_start": 1200,
+        "y_end": 1450,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_007.jpg",
+        "y_start": 1400,
+        "y_end": 1650,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_008.jpg",
+        "y_start": 1600,
+        "y_end": 1850,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_009.jpg",
+        "y_start": 1800,
+        "y_end": 2050,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_010.jpg",
+        "y_start": 2000,
+        "y_end": 2250,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_011.jpg",
+        "y_start": 2200,
+        "y_end": 2450,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_012.jpg",
+        "y_start": 2400,
+        "y_end": 2650,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_013.jpg",
+        "y_start": 2600,
+        "y_end": 2850,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_014.jpg",
+        "y_start": 2800,
+        "y_end": 3050,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_015.jpg",
+        "y_start": 3000,
+        "y_end": 3250,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_016.jpg",
+        "y_start": 3200,
+        "y_end": 3450,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_017.jpg",
+        "y_start": 3400,
+        "y_end": 3650,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_018.jpg",
+        "y_start": 3600,
+        "y_end": 3850,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_019.jpg",
+        "y_start": 3800,
+        "y_end": 4050,
+        "width": 2816,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_020.jpg",
+        "y_start": 4000,
+        "y_end": 4121,
+        "width": 2816,
+        "height": 121,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      }
+    ]
+  },
+  "IMG_0786": {
+    "source": "IMG_0786.JPG",
+    "source_size": "3181x4116",
+    "strip_count": 21,
+    "strip_height": 250,
+    "overlap": 50,
+    "step": 200,
+    "strips": [
+      {
+        "file": "strip_000.jpg",
+        "y_start": 0,
+        "y_end": 250,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 0,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_001.jpg",
+        "y_start": 200,
+        "y_end": 450,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_002.jpg",
+        "y_start": 400,
+        "y_end": 650,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_003.jpg",
+        "y_start": 600,
+        "y_end": 850,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_004.jpg",
+        "y_start": 800,
+        "y_end": 1050,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_005.jpg",
+        "y_start": 1000,
+        "y_end": 1250,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_006.jpg",
+        "y_start": 1200,
+        "y_end": 1450,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_007.jpg",
+        "y_start": 1400,
+        "y_end": 1650,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_008.jpg",
+        "y_start": 1600,
+        "y_end": 1850,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_009.jpg",
+        "y_start": 1800,
+        "y_end": 2050,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_010.jpg",
+        "y_start": 2000,
+        "y_end": 2250,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_011.jpg",
+        "y_start": 2200,
+        "y_end": 2450,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_012.jpg",
+        "y_start": 2400,
+        "y_end": 2650,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_013.jpg",
+        "y_start": 2600,
+        "y_end": 2850,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_014.jpg",
+        "y_start": 2800,
+        "y_end": 3050,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_015.jpg",
+        "y_start": 3000,
+        "y_end": 3250,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_016.jpg",
+        "y_start": 3200,
+        "y_end": 3450,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_017.jpg",
+        "y_start": 3400,
+        "y_end": 3650,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_018.jpg",
+        "y_start": 3600,
+        "y_end": 3850,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_019.jpg",
+        "y_start": 3800,
+        "y_end": 4050,
+        "width": 3181,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_020.jpg",
+        "y_start": 4000,
+        "y_end": 4116,
+        "width": 3181,
+        "height": 116,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      }
+    ]
+  },
+  "IMG_0787": {
+    "source": "IMG_0787.JPG",
+    "source_size": "3184x3710",
+    "strip_count": 19,
+    "strip_height": 250,
+    "overlap": 50,
+    "step": 200,
+    "strips": [
+      {
+        "file": "strip_000.jpg",
+        "y_start": 0,
+        "y_end": 250,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 0,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_001.jpg",
+        "y_start": 200,
+        "y_end": 450,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_002.jpg",
+        "y_start": 400,
+        "y_end": 650,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_003.jpg",
+        "y_start": 600,
+        "y_end": 850,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_004.jpg",
+        "y_start": 800,
+        "y_end": 1050,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_005.jpg",
+        "y_start": 1000,
+        "y_end": 1250,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_006.jpg",
+        "y_start": 1200,
+        "y_end": 1450,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_007.jpg",
+        "y_start": 1400,
+        "y_end": 1650,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_008.jpg",
+        "y_start": 1600,
+        "y_end": 1850,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_009.jpg",
+        "y_start": 1800,
+        "y_end": 2050,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_010.jpg",
+        "y_start": 2000,
+        "y_end": 2250,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_011.jpg",
+        "y_start": 2200,
+        "y_end": 2450,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_012.jpg",
+        "y_start": 2400,
+        "y_end": 2650,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_013.jpg",
+        "y_start": 2600,
+        "y_end": 2850,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_014.jpg",
+        "y_start": 2800,
+        "y_end": 3050,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_015.jpg",
+        "y_start": 3000,
+        "y_end": 3250,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_016.jpg",
+        "y_start": 3200,
+        "y_end": 3450,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_017.jpg",
+        "y_start": 3400,
+        "y_end": 3650,
+        "width": 3184,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_018.jpg",
+        "y_start": 3600,
+        "y_end": 3710,
+        "width": 3184,
+        "height": 110,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      }
+    ]
+  },
+  "IMG_0788": {
+    "source": "IMG_0788.JPG",
+    "source_size": "3387x3710",
+    "strip_count": 19,
+    "strip_height": 250,
+    "overlap": 50,
+    "step": 200,
+    "strips": [
+      {
+        "file": "strip_000.jpg",
+        "y_start": 0,
+        "y_end": 250,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 0,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_001.jpg",
+        "y_start": 200,
+        "y_end": 450,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_002.jpg",
+        "y_start": 400,
+        "y_end": 650,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_003.jpg",
+        "y_start": 600,
+        "y_end": 850,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_004.jpg",
+        "y_start": 800,
+        "y_end": 1050,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_005.jpg",
+        "y_start": 1000,
+        "y_end": 1250,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_006.jpg",
+        "y_start": 1200,
+        "y_end": 1450,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_007.jpg",
+        "y_start": 1400,
+        "y_end": 1650,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_008.jpg",
+        "y_start": 1600,
+        "y_end": 1850,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_009.jpg",
+        "y_start": 1800,
+        "y_end": 2050,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_010.jpg",
+        "y_start": 2000,
+        "y_end": 2250,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_011.jpg",
+        "y_start": 2200,
+        "y_end": 2450,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_012.jpg",
+        "y_start": 2400,
+        "y_end": 2650,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_013.jpg",
+        "y_start": 2600,
+        "y_end": 2850,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_014.jpg",
+        "y_start": 2800,
+        "y_end": 3050,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_015.jpg",
+        "y_start": 3000,
+        "y_end": 3250,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_016.jpg",
+        "y_start": 3200,
+        "y_end": 3450,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_017.jpg",
+        "y_start": 3400,
+        "y_end": 3650,
+        "width": 3387,
+        "height": 250,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 50
+      },
+      {
+        "file": "strip_018.jpg",
+        "y_start": 3600,
+        "y_end": 3710,
+        "width": 3387,
+        "height": 110,
+        "overlap_with_prev": 50,
+        "overlap_with_next": 0
+      }
+    ]
+  }
+}

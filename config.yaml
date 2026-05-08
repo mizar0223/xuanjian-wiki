@@ -1,0 +1,49 @@
+# 玄鉴仙族 Wiki 项目配置
+# 本文件不含敏感密码（密码在 .env 中）
+
+wiki:
+  name: "玄鉴仙族维基"
+  url: "http://leoshixie.devcloud.woa.com/wiki/"
+  api: "http://leoshixie.devcloud.woa.com/api.php"
+  engine: "MediaWiki 1.42.7"
+  skin: "Vector 2022"
+  language: "zh-hans"
+
+server:
+  host: "21.214.75.44"
+  ssh_port: 36000
+  anydev_env_id: "evnIns-6h90vw7jeohg"
+  domain: "leoshixie.devcloud.woa.com"
+
+docker:
+  container_name: "mediawiki"
+  port_mapping: "8081->80"
+  network: "docker_ragflow"
+  localsettings_path: "/var/www/html/LocalSettings.php"
+
+nginx:
+  config_path: "/etc/nginx/conf.d/leoshixie.conf"
+  exposed_paths:
+    - "/wiki/"
+    - "/w/"
+    - "/api.php"
+    - "/load.php"
+    - "/index.php"
+    - "/rest.php"
+    - "/images/"
+
+database:
+  type: "mysql"
+  container: "docker-mysql-1"
+  name: "wikidb"
+  user: "wikiuser"
+  prefix: "wiki_"
+  network_ip: "172.18.0.4"
+
+data_sources:
+  base_dir: "/Users/leoshi/WorkBuddy/20260323190937"
+  characters_json: "characters/人物年鉴进度.json"
+  genealogy_md: "characters/望月李氏家谱.md"
+  notebooklm_dir: "characters/{name}/content/{name}_NotebookLM素材.md"
+  setting_chars: "玄鉴图册/角色.md"
+  cast: "玄鉴图册/出场群像.md"

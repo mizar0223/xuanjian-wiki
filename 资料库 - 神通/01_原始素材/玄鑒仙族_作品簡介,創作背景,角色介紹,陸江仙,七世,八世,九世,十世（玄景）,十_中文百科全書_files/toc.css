@@ -1,0 +1,79 @@
+.tocify a, .tocify li:hover a {
+	font-family:"Microsoft JhengHei","Microsoft YaHei",Verdana,sans-serif;
+    color:#000;
+}
+.post-nav.fixed {
+    position:fixed;
+    top:0;
+    left:80%
+}
+.post-nav .nav-heading {
+    border:none;
+    padding:16px 12px 4px 15px;
+    font-size:16px;
+    font-weight:bold;
+    border-bottom: 1px solid #ddd;
+    display:block;
+}
+.tocify {
+    width:100%;
+    max-height:90%;
+    overflow:auto;
+    font-size:15px
+}
+.tocify li {
+    border-left:3px solid #f3f3f3;
+    -webkit-transition:all .2s ease;
+    transition:all .2s ease;
+}
+.tocify li:hover {
+    border-left:3px solid #000
+}
+.tocify a {
+    display:block;
+}
+.tocify .active a, .tocify a:hover {
+    color:#D52409
+}
+.tocify a:active, .tocify a:focus {
+    background-color:transparent
+}
+.tocify .active {
+    border-left:3px solid #D52409;
+    background-color:#f3f3f3
+}
+.tocify li, .tocify ul {
+    /*list-style:none;*/
+    margin:0;
+    padding:0;
+    line-height:25px;
+    
+    
+}
+.tocify ul {
+    list-style-type:disc;
+}
+.tocify-header {
+    text-indent:10px;
+    white-space:nowrap; overflow:hidden; text-overflow: ellipsis;  -o-text-overflow:ellipsis;
+}
+.tocify-subheader {
+    text-indent:26px;
+    display:none;
+    white-space:nowrap; overflow:hidden; text-overflow: ellipsis;  -o-text-overflow:ellipsis;
+}
+.tocify-subheader li {
+    font-size:13px;
+}
+.tocify-subheader .tocify-subheader {
+    text-indent:36px;
+}
+.tocify-subheader .tocify-subheader .tocify-subheader {
+    text-indent:54px
+}
+.nav-list .nav-header, .nav-list>li>a {
+    margin:0
+}
+.nav-list>li>a {
+    padding:1px 5px;
+}
