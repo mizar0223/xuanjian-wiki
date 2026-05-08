@@ -1,151 +1,204 @@
 #!/usr/bin/env python3
-"""批量上传玄鉴仙族维基页面到 MediaWiki API"""
-import requests, json, os, sys, time, urllib3, glob
+"""批量上传本地 .wiki 页面到 MediaWiki。
+
+默认递归上传 `pages/` 下所有 .wiki 文件；页面标题取文件名 stem，与本地子目录无关。
+可用 `--only` 指定一个或多个目录/文件进行局部上传。
+"""
+
+import argparse
+import json
+import sys
+import time
+from collections import Counter
+from pathlib import Path
+
+import requests
+import urllib3
+
 urllib3.disable_warnings()
 
-WIKI_API = "http://leoshixie.devcloud.woa.com/api.php"
-WIKI_USER = "WikiAdmin"
-WIKI_PASS = "XuanjianAdmin2026"
-PAGES_DIR = "/tmp/wiki_pages"
-DELAY = 0.3  # seconds between edits
+ROOT = Path('/Users/leoshi/AIBOOK/xuanjian/wiki')
+DEFAULT_PAGES_DIR = ROOT / 'pages'
+WIKI_API = 'http://leoshixie.devcloud.woa.com/api.php'
+WIKI_USER = 'WikiAdmin'
+WIKI_PASS = 'XuanjianAdmin2026'
 MAX_RETRIES = 3
-DRY_RUN = "--dry-run" in sys.argv
+
 
 class WikiSession:
     def __init__(self):
         self.s = requests.Session()
         self.csrf = None
-        
+
     def login(self):
-        # Get login token
         r1 = self.s.get(WIKI_API, params={
-            "action": "query", "meta": "tokens", "type": "login", "format": "json"
-        }, verify=False)
-        login_token = r1.json()["query"]["tokens"]["logintoken"]
-        
-        # Login
+            'action': 'query', 'meta': 'tokens', 'type': 'login', 'format': 'json'
+        }, verify=False, timeout=20)
+        login_token = r1.json()['query']['tokens']['logintoken']
+
         r2 = self.s.post(WIKI_API, data={
-            "action": "clientlogin", "format": "json",
-            "username": WIKI_USER, "password": WIKI_PASS,
-            "logintoken": login_token,
-            "loginreturnurl": "http://leoshixie.devcloud.woa.com/wiki/首页"
-        }, verify=False)
+            'action': 'clientlogin', 'format': 'json',
+            'username': WIKI_USER, 'password': WIKI_PASS,
+            'logintoken': login_token,
+            'loginreturnurl': 'http://leoshixie.devcloud.woa.com/wiki/首页'
+        }, verify=False, timeout=20)
         result = r2.json()
-        if result.get("clientlogin", {}).get("status") != "PASS":
-            raise Exception(f"Login failed: {result}")
-        print(f"✅ Logged in as {result['clientlogin']['username']}")
-        
-        # Get CSRF token
-        r3 = self.s.get(WIKI_API, params={
-            "action": "query", "meta": "tokens", "format": "json"
-        }, verify=False)
-        self.csrf = r3.json()["query"]["tokens"]["csrftoken"]
-        print(f"✅ Got CSRF token")
-        
-    def create_page(self, title, text, summary="批量导入"):
-        """Create or edit a page. Returns (success, message)."""
+        if result.get('clientlogin', {}).get('status') != 'PASS':
+            raise RuntimeError(f'Login failed: {result}')
+        print(f"Logged in as {result['clientlogin']['username']}")
+        self.refresh_csrf()
+
+    def refresh_csrf(self):
+        r = self.s.get(WIKI_API, params={
+            'action': 'query', 'meta': 'tokens', 'format': 'json'
+        }, verify=False, timeout=20)
+        self.csrf = r.json()['query']['tokens']['csrftoken']
+
+    def upload_page(self, title, text, summary):
         for attempt in range(MAX_RETRIES):
             try:
                 r = self.s.post(WIKI_API, data={
-                    "action": "edit", "format": "json",
-                    "title": title,
-                    "text": text,
-                    "summary": summary,
-                    "token": self.csrf,
-                    "bot": "1",
-                }, verify=False, timeout=30)
+                    'action': 'edit', 'format': 'json',
+                    'title': title, 'text': text,
+                    'summary': summary,
+                    'token': self.csrf,
+                    'bot': '1',
+                }, verify=False, timeout=60)
                 result = r.json()
-                if "error" in result:
-                    # Check if it's a token expiry
-                    if result["error"].get("code") == "badtoken":
-                        print("  ⚠️ Token expired, refreshing...")
-                        r3 = self.s.get(WIKI_API, params={
-                            "action": "query", "meta": "tokens", "format": "json"
-                        }, verify=False)
-                        self.csrf = r3.json()["query"]["tokens"]["csrftoken"]
+                if 'error' in result:
+                    if result['error'].get('code') == 'badtoken':
+                        self.refresh_csrf()
                         continue
-                    return False, result["error"].get("info", str(result["error"]))
-                edit = result.get("edit", {})
-                if edit.get("result") == "Success":
-                    return True, f"rev:{edit.get('newrevid','?')}"
+                    return False, result['error'].get('info', str(result['error']))
+                edit = result.get('edit', {})
+                if edit.get('result') == 'Success':
+                    return True, f"rev:{edit.get('newrevid', edit.get('oldrevid', '?'))}"
                 return False, str(edit)
-            except Exception as e:
-                if attempt < MAX_RETRIES - 1:
-                    time.sleep(2)
-                else:
-                    return False, str(e)
-        return False, "Max retries exceeded"
+            except Exception as exc:
+                if attempt >= MAX_RETRIES - 1:
+                    return False, str(exc)
+                time.sleep(2)
+        return False, 'Max retries exceeded'
+
+
+def resolve_path(value):
+    path = Path(value)
+    if not path.is_absolute():
+        path = ROOT / path
+    return path
+
+
+def collect_wiki_files(base_dir, only_paths, recursive):
+    targets = [resolve_path(p) for p in only_paths] if only_paths else [base_dir]
+    files = []
+    for target in targets:
+        if target.is_file():
+            if target.suffix == '.wiki':
+                files.append(target)
+            continue
+        if not target.exists():
+            raise FileNotFoundError(f'路径不存在: {target}')
+        pattern = '**/*.wiki' if recursive else '*.wiki'
+        files.extend(target.glob(pattern))
+    return sorted(set(files))
+
+
+def validate_files(files):
+    titles = [path.stem for path in files]
+    duplicates = sorted(title for title, count in Counter(titles).items() if count > 1)
+    if duplicates:
+        raise ValueError('发现重复页面标题: ' + ', '.join(duplicates[:50]))
+
+    bad_tables = []
+    for path in files:
+        text = path.read_text(encoding='utf-8')
+        if text.count('{|') != text.count('|}'):
+            bad_tables.append(str(path))
+    if bad_tables:
+        raise ValueError('发现表格未闭合文件: ' + ', '.join(bad_tables[:20]))
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='上传本地 .wiki 页面到 MediaWiki')
+    parser.add_argument('--dir', default=str(DEFAULT_PAGES_DIR), help='页面根目录，默认 pages/')
+    parser.add_argument('--only', action='append', default=[], help='只上传指定目录或文件；可重复传入')
+    parser.add_argument('--no-recursive', action='store_true', help='不递归扫描子目录')
+    parser.add_argument('--dry-run', action='store_true', help='只预览，不上传')
+    parser.add_argument('--delay', type=float, default=0.05, help='每次编辑间隔秒数，默认 0.05')
+    parser.add_argument('--limit', type=int, default=0, help='最多上传 N 个页面，默认不限制')
+    parser.add_argument('--skip-validate', action='store_true', help='跳过重复标题和表格闭合校验')
+    parser.add_argument('--summary', default='批量上传本地 wiki 页面', help='编辑摘要')
+    return parser.parse_args()
+
 
 def main():
-    # Collect all .wiki files
-    wiki_files = sorted(glob.glob(os.path.join(PAGES_DIR, "*.wiki")))
-    if not wiki_files:
-        print("❌ No .wiki files found in", PAGES_DIR)
+    args = parse_args()
+    base_dir = resolve_path(args.dir)
+    recursive = not args.no_recursive
+
+    try:
+        wiki_files = collect_wiki_files(base_dir, args.only, recursive)
+        if args.limit > 0:
+            wiki_files = wiki_files[:args.limit]
+        if not wiki_files:
+            print(f'No .wiki files found under {base_dir}')
+            sys.exit(1)
+        if not args.skip_validate:
+            validate_files(wiki_files)
+    except Exception as exc:
+        print(f'预检失败: {exc}', file=sys.stderr)
         sys.exit(1)
-    
-    print(f"📚 Found {len(wiki_files)} wiki pages to upload")
-    
-    if DRY_RUN:
-        print("🔍 DRY RUN - showing first 5 pages:")
-        for f in wiki_files[:5]:
-            title = os.path.splitext(os.path.basename(f))[0]
-            size = os.path.getsize(f)
-            print(f"  {title} ({size} bytes)")
-        print(f"  ... and {len(wiki_files)-5} more")
+
+    print(f'Found {len(wiki_files)} wiki pages')
+    if args.only:
+        print('Only paths:')
+        for item in args.only:
+            print(f'  - {item}')
+
+    if args.dry_run:
+        print('DRY RUN preview:')
+        for path in wiki_files[:20]:
+            rel = path.relative_to(ROOT) if path.is_relative_to(ROOT) else path
+            print(f'  {path.stem} <- {rel} ({path.stat().st_size} bytes)')
+        if len(wiki_files) > 20:
+            print(f'  ... and {len(wiki_files) - 20} more')
         return
-    
-    # Login
+
     wiki = WikiSession()
     wiki.login()
-    
-    # Stats
+
     success = 0
-    failed = 0
-    skipped = 0
     errors = []
-    
     start_time = time.time()
-    
-    for i, f in enumerate(wiki_files, 1):
-        title = os.path.splitext(os.path.basename(f))[0]
-        with open(f, "r", encoding="utf-8") as fh:
-            text = fh.read()
-        
-        ok, msg = wiki.create_page(title, text, summary=f"批量导入: {title}")
-        
+    for index, path in enumerate(wiki_files, 1):
+        title = path.stem
+        text = path.read_text(encoding='utf-8')
+        ok, message = wiki.upload_page(title, text, summary=args.summary)
         if ok:
             success += 1
-            if i % 50 == 0 or i == len(wiki_files):
-                elapsed = time.time() - start_time
-                rate = i / elapsed if elapsed > 0 else 0
-                eta = (len(wiki_files) - i) / rate if rate > 0 else 0
-                print(f"  [{i}/{len(wiki_files)}] ✅ {title} ({rate:.1f} pages/s, ETA: {eta:.0f}s)")
         else:
-            failed += 1
-            errors.append((title, msg))
-            print(f"  [{i}/{len(wiki_files)}] ❌ {title}: {msg[:100]}")
-        
-        time.sleep(DELAY)
-    
-    # Summary
-    elapsed = time.time() - start_time
-    print(f"\n{'='*60}")
-    print(f"📊 Import Summary:")
-    print(f"  ✅ Success: {success}")
-    print(f"  ❌ Failed:  {failed}")
-    print(f"  ⏱️  Time:    {elapsed:.1f}s ({success/elapsed:.1f} pages/s)")
-    
-    if errors:
-        print(f"\n❌ Failed pages ({len(errors)}):")
-        for title, msg in errors[:20]:
-            print(f"  - {title}: {msg[:80]}")
-        if len(errors) > 20:
-            print(f"  ... and {len(errors)-20} more")
-    
-    # Save error log
-    with open("/tmp/wiki_import_errors.json", "w", encoding="utf-8") as fh:
-        json.dump(errors, fh, ensure_ascii=False, indent=2)
-    print(f"\n📁 Error log saved to /tmp/wiki_import_errors.json")
+            errors.append((title, message))
+            print(f'[{index}/{len(wiki_files)}] FAILED {title}: {message[:120]}')
+        if index % 50 == 0 or index == len(wiki_files):
+            elapsed = max(time.time() - start_time, 0.001)
+            print(f'[{index}/{len(wiki_files)}] success={success} failed={len(errors)} rate={index / elapsed:.1f}/s')
+        time.sleep(args.delay)
 
-if __name__ == "__main__":
+    elapsed = time.time() - start_time
+    print(json.dumps({
+        'total': len(wiki_files),
+        'success': success,
+        'failed': len(errors),
+        'elapsed_sec': round(elapsed, 1),
+        'errors': errors[:20],
+    }, ensure_ascii=False, indent=2))
+
+    if errors:
+        error_log = Path('/tmp/wiki_import_errors.json')
+        error_log.write_text(json.dumps(errors, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(f'Error log saved to {error_log}')
+        sys.exit(1)
+
+
+if __name__ == '__main__':
     main()
