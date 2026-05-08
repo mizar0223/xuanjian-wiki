@@ -2,5 +2,4 @@
 .env
 *.pyc
 __pycache__/
-pages/
 backup/xuanjian_import.xml
