@@ -269,7 +269,7 @@ def generate_overview(data, state):
     source_title = clean(data.get('元数据', {}).get('标题', '《玄鉴仙族》五德位业体系梳理'))
     lines = [
         '{{导航栏}}', '',
-        "'''仙基与道统'''收录《玄鉴仙族》中已知仙基、道统、神通、位业与金位信息。", '',
+        "'''道统丨神通丨仙基'''收录《玄鉴仙族》中已知仙基、道统、神通、位业与金位信息。", '',
         f'本页由结构化资料生成，主数据源为{source_title}，校验源为《玄鉴仙族·神通仙基汇总》（崇宫白 B 站专栏 cv41820802，2026-05-04）。', '',
         '说明：神通表中的"校验"表示该神通名是否能在汇总校验源中找到；"补充/待复核"表示来自主结构化数据，但未在汇总源中完全匹配。', '',
         '__TOC__', '',
@@ -319,7 +319,7 @@ def generate_dao_page(title, entries, state):
         ('体系', system_name),
         ('道统', name),
         ('位置类型', wiki_link(position_title(ptype), ptype) if ptype else '—'),
-        ('总览', wiki_link('仙基与道统')),
+        ('总览', wiki_link('道统丨神通丨仙基')),
     ]
     for label, value in rows:
         lines += ['|-', f'| {label} || {cell(value)}']
@@ -328,7 +328,7 @@ def generate_dao_page(title, entries, state):
     lines.append('== 位业详情 ==')
     lines.append('')
     add_details(lines, pos, state, linked_position=True)
-    lines += ['== 相关页面 ==', '', f'* {wiki_link("仙基与道统")}', f'* {wiki_link(position_title(ptype), ptype) if ptype else "—"}', '', '[[Category:道统]]', '[[Category:修炼体系]]', f'[[Category:{system_name}]]', '']
+    lines += ['== 相关页面 ==', '', f'* {wiki_link("道统丨神通丨仙基")}', f'* {wiki_link(position_title(ptype), ptype) if ptype else "—"}', '', '[[Category:道统]]', '[[Category:修炼体系]]', f'[[Category:{system_name}]]', '']
     return '\n'.join(lines)
 
 
@@ -352,7 +352,7 @@ def generate_shentong_page(title, entries):
         if relation and relation not in EMPTY:
             lines += [f'* 道统关系：{cell(relation)}']
         lines.append('')
-    lines += ['== 相关页面 ==', '', f'* {wiki_link("仙基与道统")}']
+    lines += ['== 相关页面 ==', '', f'* {wiki_link("道统丨神通丨仙基")}']
     for _, pos, _ in entries:
         lines.append(f'* {wiki_link(dao_title(pos), dao_name(pos))}')
     lines += ['', '[[Category:神通]]', '[[Category:修炼体系]]']
@@ -368,7 +368,7 @@ def generate_position_page(title, entries):
     for system_name, pos in entries:
         st_links = '、'.join(wiki_link(shentong_title(item['神通名称']), item['神通名称']) for item in shentong_rows(pos)[:5]) or '—'
         lines += ['|-', '| ' + ' || '.join([cell(system_name), wiki_link(dao_title(pos), dao_name(pos)), st_links])]
-    lines += ['|}', '', '== 相关页面 ==', '', f'* {wiki_link("仙基与道统")}', '', '[[Category:位业]]', '[[Category:修炼体系]]', '']
+    lines += ['|}', '', '== 相关页面 ==', '', f'* {wiki_link("道统丨神通丨仙基")}', '', '[[Category:位业]]', '[[Category:修炼体系]]', '']
     return '\n'.join(lines)
 
 
@@ -384,7 +384,7 @@ def validate_page(title, text):
 
 def build_pages(data, state):
     dao_entries, shentong_entries, position_entries = build_indexes(data)
-    pages = {'仙基与道统': generate_overview(data, state)}
+    pages = {'道统丨神通丨仙基': generate_overview(data, state)}
     for title, entries in sorted(position_entries.items()):
         pages[title] = generate_position_page(title, entries)
     for title, entries in sorted(dao_entries.items()):
@@ -398,7 +398,7 @@ def build_pages(data, state):
 
 def page_path(title):
     safe_title = title_safe(title)
-    if title == '仙基与道统':
+    if title == '道统丨神通丨仙基':
         return PAGES_DIR / '仙基道统' / f'{safe_title}.wiki'
     if title.startswith('位业-'):
         return PAGES_DIR / '仙基道统' / '位业' / f'{safe_title}.wiki'

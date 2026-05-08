@@ -1,0 +1,20 @@
+<includeonly><div class="xj-nav" style="margin:0 0 16px 0; padding:10px 14px; border:1px solid #d8c7a5; border-radius:8px; background:#fffaf0; line-height:1.8; font-size:14px;">
+<div style="font-weight:bold; color:#5a3b18; margin-bottom:2px;">玄鉴仙族 Wiki 导航</div>
+<div>
+[[首页|首页]] · [[角色索引|角色索引]] · [[道统丨神通丨仙基|道统丨神通丨仙基]] · [[:Category:修炼体系|修炼体系]] · [[:Category:角色|角色]]
+</div>
+{{#if:{{{本页|
+}}}|
+<div style="margin-top:6px; padding-top:6px; border-top:1px solid #e2d5b8;">
+<span style="font-weight:bold; color:#5a3b18;">本页导航：</span>{{{本页}}}
+</div>
+}}
+</div></includeonly><noinclude>
+本模板用于页面顶部公共导航。
+
+== 用法 ==
+<pre>{{导航栏}}</pre>
+<pre>{{导航栏|本页=[[#一、阴阳|阴阳]] · [[#二、五德|五德]]}}</pre>
+
+[[Category:模板]]
+</noinclude>
