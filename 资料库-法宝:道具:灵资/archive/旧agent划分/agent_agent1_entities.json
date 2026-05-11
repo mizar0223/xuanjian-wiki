@@ -1,0 +1,451 @@
+{
+  "deep": [
+    {
+      "name": "万煞贯金刀",
+      "bid": "B08",
+      "cat": "筑基法器",
+      "ctx_size": 12913,
+      "occurrences": 8,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-万煞贯金刀.wiki"
+    },
+    {
+      "name": "不伤石",
+      "bid": "B08",
+      "cat": "灵物",
+      "ctx_size": 27883,
+      "occurrences": 9,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-不伤石.wiki"
+    },
+    {
+      "name": "东命瓶",
+      "bid": "B08",
+      "cat": "灵器",
+      "ctx_size": 22489,
+      "occurrences": 8,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-东命瓶.wiki"
+    },
+    {
+      "name": "命阳白玉剑",
+      "bid": "B08",
+      "cat": "剑道",
+      "ctx_size": 22414,
+      "occurrences": 8,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-命阳白玉剑.wiki"
+    },
+    {
+      "name": "坎金围连环",
+      "bid": "B08",
+      "cat": "灵器",
+      "ctx_size": 15823,
+      "occurrences": 7,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-坎金围连环.wiki"
+    },
+    {
+      "name": "天星赤金",
+      "bid": "B08",
+      "cat": "灵资",
+      "ctx_size": 15986,
+      "occurrences": 9,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-天星赤金.wiki"
+    },
+    {
+      "name": "天灯",
+      "bid": "B08",
+      "cat": "待分类",
+      "ctx_size": 13005,
+      "occurrences": 9,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-天灯.wiki"
+    },
+    {
+      "name": "太阳衍光宝袋",
+      "bid": "B08",
+      "cat": "材料",
+      "ctx_size": 25578,
+      "occurrences": 9,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-太阳衍光宝袋.wiki"
+    },
+    {
+      "name": "峤平离火",
+      "bid": "B08",
+      "cat": "材料",
+      "ctx_size": 12911,
+      "occurrences": 7,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-峤平离火.wiki"
+    },
+    {
+      "name": "无明水火",
+      "bid": "B08",
+      "cat": "材料",
+      "ctx_size": 22810,
+      "occurrences": 9,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-无明水火.wiki"
+    },
+    {
+      "name": "材参木",
+      "bid": "B08",
+      "cat": "灵物",
+      "ctx_size": 13245,
+      "occurrences": 7,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-材参木.wiki"
+    },
+    {
+      "name": "江中炉",
+      "bid": "B08",
+      "cat": "灵器",
+      "ctx_size": 19084,
+      "occurrences": 8,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-江中炉.wiki"
+    },
+    {
+      "name": "渡迁令",
+      "bid": "B08",
+      "cat": "灵器",
+      "ctx_size": 16163,
+      "occurrences": 7,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-渡迁令.wiki"
+    },
+    {
+      "name": "漠玄天铁",
+      "bid": "B08",
+      "cat": "灵物",
+      "ctx_size": 13121,
+      "occurrences": 7,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-漠玄天铁.wiki"
+    },
+    {
+      "name": "祢水寒铁",
+      "bid": "B08",
+      "cat": "灵物",
+      "ctx_size": 12674,
+      "occurrences": 9,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-祢水寒铁.wiki"
+    },
+    {
+      "name": "纯羽离火",
+      "bid": "B08",
+      "cat": "材料",
+      "ctx_size": 22724,
+      "occurrences": 7,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-纯羽离火.wiki"
+    },
+    {
+      "name": "虺元灵水",
+      "bid": "B08",
+      "cat": "灵资",
+      "ctx_size": 22806,
+      "occurrences": 9,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-虺元灵水.wiki"
+    },
+    {
+      "name": "袤土宝心玉",
+      "bid": "B08",
+      "cat": "灵物",
+      "ctx_size": 19382,
+      "occurrences": 7,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-袤土宝心玉.wiki"
+    },
+    {
+      "name": "裨庭青芫宝鼎",
+      "bid": "B08",
+      "cat": "灵器",
+      "ctx_size": 19192,
+      "occurrences": 7,
+      "page_path": "pages/B08-L4-中低频 9-7次/造物-裨庭青芫宝鼎.wiki"
+    },
+    {
+      "name": "从欲并火",
+      "bid": "B09",
+      "cat": "材料",
+      "ctx_size": 16364,
+      "occurrences": 6,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-从欲并火.wiki"
+    },
+    {
+      "name": "党木牡火",
+      "bid": "B09",
+      "cat": "灵物",
+      "ctx_size": 15702,
+      "occurrences": 7,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-党木牡火.wiki"
+    },
+    {
+      "name": "凫晞束麟索",
+      "bid": "B09",
+      "cat": "灵器",
+      "ctx_size": 9878,
+      "occurrences": 5,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-凫晞束麟索.wiki"
+    },
+    {
+      "name": "升燠石",
+      "bid": "B09",
+      "cat": "灵物",
+      "ctx_size": 13145,
+      "occurrences": 6,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-升燠石.wiki"
+    },
+    {
+      "name": "小天离金",
+      "bid": "B09",
+      "cat": "灵物",
+      "ctx_size": 9951,
+      "occurrences": 7,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-小天离金.wiki"
+    },
+    {
+      "name": "尚飨银",
+      "bid": "B09",
+      "cat": "灵资",
+      "ctx_size": 15933,
+      "occurrences": 6,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-尚飨银.wiki"
+    },
+    {
+      "name": "岭穷玄水石",
+      "bid": "B09",
+      "cat": "灵物",
+      "ctx_size": 13039,
+      "occurrences": 6,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-岭穷玄水石.wiki"
+    },
+    {
+      "name": "月阙剑",
+      "bid": "B09",
+      "cat": "筑基法器",
+      "ctx_size": 22587,
+      "occurrences": 7,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-月阙剑.wiki"
+    },
+    {
+      "name": "权业武印",
+      "bid": "B09",
+      "cat": "灵器",
+      "ctx_size": 9735,
+      "occurrences": 5,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-权业武印.wiki"
+    },
+    {
+      "name": "沉犷岁金",
+      "bid": "B09",
+      "cat": "灵物",
+      "ctx_size": 13516,
+      "occurrences": 6,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-沉犷岁金.wiki"
+    },
+    {
+      "name": "洞鹭元水",
+      "bid": "B09",
+      "cat": "灵资",
+      "ctx_size": 13303,
+      "occurrences": 7,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-洞鹭元水.wiki"
+    },
+    {
+      "name": "清元灵水",
+      "bid": "B09",
+      "cat": "灵资",
+      "ctx_size": 16278,
+      "occurrences": 7,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-清元灵水.wiki"
+    },
+    {
+      "name": "玄妙大藏往生泉水",
+      "bid": "B09",
+      "cat": "材料",
+      "ctx_size": 12576,
+      "occurrences": 6,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-玄妙大藏往生泉水.wiki"
+    },
+    {
+      "name": "白殷扇",
+      "bid": "B09",
+      "cat": "筑基法器",
+      "ctx_size": 16048,
+      "occurrences": 6,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-白殷扇.wiki"
+    },
+    {
+      "name": "聚辛珠",
+      "bid": "B09",
+      "cat": "灵宝",
+      "ctx_size": 12877,
+      "occurrences": 7,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-聚辛珠.wiki"
+    },
+    {
+      "name": "赤金百转枪",
+      "bid": "B09",
+      "cat": "筑基法器",
+      "ctx_size": 13131,
+      "occurrences": 7,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-赤金百转枪.wiki"
+    },
+    {
+      "name": "长光掩星旗",
+      "bid": "B09",
+      "cat": "灵器",
+      "ctx_size": 9918,
+      "occurrences": 6,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-长光掩星旗.wiki"
+    },
+    {
+      "name": "长行雉火",
+      "bid": "B09",
+      "cat": "材料",
+      "ctx_size": 16290,
+      "occurrences": 6,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-长行雉火.wiki"
+    },
+    {
+      "name": "鹤抱石",
+      "bid": "B09",
+      "cat": "灵物",
+      "ctx_size": 10034,
+      "occurrences": 6,
+      "page_path": "pages/B09-L4-中低频 7-5次/造物-鹤抱石.wiki"
+    },
+    {
+      "name": "一气白寰石",
+      "bid": "B10",
+      "cat": "灵物",
+      "ctx_size": 9954,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-一气白寰石.wiki"
+    },
+    {
+      "name": "上善明玄玉",
+      "bid": "B10",
+      "cat": "灵物",
+      "ctx_size": 10100,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-上善明玄玉.wiki"
+    },
+    {
+      "name": "东命流水",
+      "bid": "B10",
+      "cat": "灵资",
+      "ctx_size": 9921,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-东命流水.wiki"
+    },
+    {
+      "name": "地望血石",
+      "bid": "B10",
+      "cat": "灵物",
+      "ctx_size": 12995,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-地望血石.wiki"
+    },
+    {
+      "name": "太焃火",
+      "bid": "B10",
+      "cat": "材料",
+      "ctx_size": 13183,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-太焃火.wiki"
+    },
+    {
+      "name": "宝降水",
+      "bid": "B10",
+      "cat": "灵资",
+      "ctx_size": 13104,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-宝降水.wiki"
+    },
+    {
+      "name": "寒云心铁",
+      "bid": "B10",
+      "cat": "灵物",
+      "ctx_size": 13170,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-寒云心铁.wiki"
+    },
+    {
+      "name": "归谿牝水",
+      "bid": "B10",
+      "cat": "灵资",
+      "ctx_size": 13255,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-归谿牝水.wiki"
+    },
+    {
+      "name": "白羽紫梓旗",
+      "bid": "B10",
+      "cat": "灵器",
+      "ctx_size": 9919,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-白羽紫梓旗.wiki"
+    },
+    {
+      "name": "稚元真水",
+      "bid": "B10",
+      "cat": "灵资",
+      "ctx_size": 12983,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-稚元真水.wiki"
+    },
+    {
+      "name": "立阳御辛一气纯阳剑",
+      "bid": "B10",
+      "cat": "筑基法器",
+      "ctx_size": 15939,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-立阳御辛一气纯阳剑.wiki"
+    },
+    {
+      "name": "血摩法书",
+      "bid": "B10",
+      "cat": "灵宝",
+      "ctx_size": 12819,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-血摩法书.wiki"
+    },
+    {
+      "name": "道勖阴魄玄刃",
+      "bid": "B10",
+      "cat": "筑基法器",
+      "ctx_size": 8578,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-道勖阴魄玄刃.wiki"
+    },
+    {
+      "name": "道煞玄名剑",
+      "bid": "B10",
+      "cat": "筑基法器",
+      "ctx_size": 9449,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-道煞玄名剑.wiki"
+    },
+    {
+      "name": "镂金石",
+      "bid": "B10",
+      "cat": "灵物",
+      "ctx_size": 15865,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-镂金石.wiki"
+    },
+    {
+      "name": "长隆珠",
+      "bid": "B10",
+      "cat": "灵宝",
+      "ctx_size": 6743,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-长隆珠.wiki"
+    },
+    {
+      "name": "问日现阳书",
+      "bid": "B10",
+      "cat": "灵宝",
+      "ctx_size": 6750,
+      "occurrences": 5,
+      "page_path": "pages/B10-L4-中低频 5-5次/造物-问日现阳书.wiki"
+    }
+  ],
+  "mid": [],
+  "light": [],
+  "batch_ids": [
+    "B08",
+    "B09",
+    "B10"
+  ]
+}

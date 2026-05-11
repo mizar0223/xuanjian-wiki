@@ -2,1141 +2,505 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>玄鉴仙族 · 道统神通仙基总览</title>
+<title>玄鉴仙族 · 神通仙基总览</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&family=ZCOOL+XiaoWei&display=swap');
-
-:root {
-  --bg-deep: #0a0a0f;
-  --bg-card: #111118;
-  --bg-card-hover: #18182a;
-  --border-subtle: rgba(180, 160, 120, 0.12);
-  --border-accent: rgba(212, 175, 55, 0.3);
-  --text-primary: #e8e0d0;
-  --text-secondary: #a09880;
-  --text-muted: #6a6255;
-  --gold: #d4af37;
-  --gold-dim: rgba(212, 175, 55, 0.15);
-  --gold-glow: rgba(212, 175, 55, 0.4);
-  --yinyang: #c9a96e;
-  --metal: #b8c4d0;
-  --wood: #6aab73;
-  --water: #5b9bd5;
-  --fire: #d45b5b;
-  --earth: #c4a55a;
-  --qi: #9b7ec8;
-  --thunder: #7bb8e0;
-  --bingu: #c97e8a;
-  --tag-bg: rgba(212, 175, 55, 0.08);
-  --tag-border: rgba(212, 175, 55, 0.2);
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: var(--gold-dim) transparent;
-}
-
-body {
-  font-family: 'Noto Serif SC', serif;
-  background: var(--bg-deep);
-  color: var(--text-primary);
-  line-height: 1.7;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* ===== 背景纹理 ===== */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(212,175,55,0.03) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 80% 90%, rgba(155,126,200,0.03) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(91,155,213,0.02) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* ===== 导航栏 ===== */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-subtle);
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-nav::-webkit-scrollbar { display: none; }
-
-.nav-brand {
-  font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 1.1rem;
-  color: var(--gold);
-  white-space: nowrap;
-  padding: 0.75rem 1rem 0.75rem 0;
-  border-right: 1px solid var(--border-subtle);
-  margin-right: 0.5rem;
-  flex-shrink: 0;
-}
-
-nav a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 0.82rem;
-  padding: 0.75rem 0.8rem;
-  white-space: nowrap;
-  transition: color 0.3s, background 0.3s;
-  border-radius: 0 0 6px 6px;
-  flex-shrink: 0;
-}
-
-nav a:hover, nav a.active {
-  color: var(--gold);
-  background: var(--gold-dim);
-}
-
-nav a .count {
-  font-size: 0.7rem;
-  opacity: 0.5;
-  margin-left: 3px;
-}
-
-/* ===== 主容器 ===== */
-.container {
-  position: relative;
-  z-index: 1;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem 4rem;
-}
-
-/* ===== 头部 ===== */
-.hero {
-  padding: 6rem 0 3rem;
-  text-align: center;
-  position: relative;
-}
-
-.hero-title {
-  font-family: 'ZCOOL XiaoWei', serif;
-  font-size: clamp(2.4rem, 6vw, 4.2rem);
-  color: var(--text-primary);
-  letter-spacing: 0.15em;
-  margin-bottom: 0.3rem;
-  position: relative;
-  display: inline-block;
-}
-
-.hero-title::before,
-.hero-title::after {
-  content: '◆';
-  font-size: 0.4em;
-  color: var(--gold);
-  position: relative;
-  top: -0.3em;
-  margin: 0 1rem;
-  opacity: 0.6;
-}
-
-.hero-sub {
-  font-size: 1rem;
-  color: var(--text-muted);
-  letter-spacing: 0.3em;
-  font-weight: 300;
-}
-
-.hero-meta {
-  margin-top: 1.2rem;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.hero-meta span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.hero-meta .dot {
-  width: 4px; height: 4px;
-  background: var(--gold);
-  border-radius: 50%;
-  opacity: 0.5;
-}
-
-/* ===== 统计横幅 ===== */
-.stats-bar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1px;
-  background: var(--border-subtle);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 3rem;
-}
-
-.stat-item {
-  background: var(--bg-card);
-  padding: 1.2rem 1rem;
-  text-align: center;
-  transition: background 0.3s;
-}
-
-.stat-item:hover {
-  background: var(--bg-card-hover);
-}
-
-.stat-num {
-  font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 2rem;
-  color: var(--gold);
-  line-height: 1.2;
-}
-
-.stat-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  letter-spacing: 0.1em;
-  margin-top: 0.2rem;
-}
-
-/* ===== 体系区块 ===== */
-.system-section {
-  margin-bottom: 3.5rem;
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.section-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  flex-shrink: 0;
-  border: 1px solid;
-}
-
-.section-title {
-  font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 1.6rem;
-  letter-spacing: 0.08em;
-}
-
-.section-desc {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-left: auto;
-  flex-shrink: 0;
-}
-
-/* ===== 仙基卡片网格 ===== */
-.xianji-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.xianji-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 10px;
-  padding: 1.2rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.xianji-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.xianji-card:hover {
-  border-color: var(--border-accent);
-  background: var(--bg-card-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-}
-
-.xianji-card:hover::before {
-  opacity: 1;
-}
-
-.card-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.8rem;
-}
-
-.card-name {
-  font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 1.15rem;
-  letter-spacing: 0.05em;
-}
-
-.card-badge {
-  font-size: 0.65rem;
-  padding: 2px 8px;
-  border-radius: 20px;
-  border: 1px solid;
-  letter-spacing: 0.05em;
-}
-
-.shentong-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.shentong-tag {
-  font-size: 0.78rem;
-  padding: 3px 10px;
-  border-radius: 4px;
-  background: var(--tag-bg);
-  border: 1px solid var(--tag-border);
-  color: var(--text-primary);
-  transition: all 0.2s;
-  cursor: default;
-  position: relative;
-}
-
-.shentong-tag:hover {
-  background: rgba(212, 175, 55, 0.15);
-  border-color: var(--gold);
-  color: var(--gold);
-}
-
-.shentong-tag.tican::after {
-  content: '替';
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  font-size: 0.55rem;
-  width: 14px;
-  height: 14px;
-  line-height: 14px;
-  text-align: center;
-  background: var(--gold);
-  color: var(--bg-deep);
-  border-radius: 50%;
-  font-weight: 700;
-}
-
-.jinxing-line {
-  margin-top: 0.8rem;
-  padding-top: 0.6rem;
-  border-top: 1px dashed var(--border-subtle);
-  font-size: 0.72rem;
-  color: var(--gold);
-  opacity: 0.7;
-  letter-spacing: 0.03em;
-}
-
-.tican-info {
-  margin-top: 0.5rem;
-  font-size: 0.72rem;
-  color: var(--text-muted);
-}
-
-.tican-info .arrow {
-  color: var(--gold);
-  opacity: 0.5;
-}
-
-.empty-state {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  font-style: italic;
-  opacity: 0.5;
-  padding: 0.5rem 0;
-}
-
-/* ===== 颜色主题 ===== */
-.yinyang .section-icon { background: rgba(201,169,110,0.1); color: var(--yinyang); border-color: rgba(201,169,110,0.2); }
-.yinyang .card-name { color: var(--yinyang); }
-.yinyang .card-badge { color: var(--yinyang); border-color: rgba(201,169,110,0.3); }
-.yinyang .xianji-card::before { background: linear-gradient(90deg, transparent, var(--yinyang), transparent); }
-
-.metal .section-icon { background: rgba(184,196,208,0.1); color: var(--metal); border-color: rgba(184,196,208,0.2); }
-.metal .card-name { color: var(--metal); }
-.metal .card-badge { color: var(--metal); border-color: rgba(184,196,208,0.3); }
-.metal .xianji-card::before { background: linear-gradient(90deg, transparent, var(--metal), transparent); }
-
-.wood .section-icon { background: rgba(106,171,115,0.1); color: var(--wood); border-color: rgba(106,171,115,0.2); }
-.wood .card-name { color: var(--wood); }
-.wood .card-badge { color: var(--wood); border-color: rgba(106,171,115,0.3); }
-.wood .xianji-card::before { background: linear-gradient(90deg, transparent, var(--wood), transparent); }
-
-.water .section-icon { background: rgba(91,155,213,0.1); color: var(--water); border-color: rgba(91,155,213,0.2); }
-.water .card-name { color: var(--water); }
-.water .card-badge { color: var(--water); border-color: rgba(91,155,213,0.3); }
-.water .xianji-card::before { background: linear-gradient(90deg, transparent, var(--water), transparent); }
-
-.fire .section-icon { background: rgba(212,91,91,0.1); color: var(--fire); border-color: rgba(212,91,91,0.2); }
-.fire .card-name { color: var(--fire); }
-.fire .card-badge { color: var(--fire); border-color: rgba(212,91,91,0.3); }
-.fire .xianji-card::before { background: linear-gradient(90deg, transparent, var(--fire), transparent); }
-
-.earth .section-icon { background: rgba(196,165,90,0.1); color: var(--earth); border-color: rgba(196,165,90,0.2); }
-.earth .card-name { color: var(--earth); }
-.earth .card-badge { color: var(--earth); border-color: rgba(196,165,90,0.3); }
-.earth .xianji-card::before { background: linear-gradient(90deg, transparent, var(--earth), transparent); }
-
-.qi .section-icon { background: rgba(155,126,200,0.1); color: var(--qi); border-color: rgba(155,126,200,0.2); }
-.qi .card-name { color: var(--qi); }
-.qi .card-badge { color: var(--qi); border-color: rgba(155,126,200,0.3); }
-.qi .xianji-card::before { background: linear-gradient(90deg, transparent, var(--qi), transparent); }
-
-.thunder .section-icon { background: rgba(123,184,224,0.1); color: var(--thunder); border-color: rgba(123,184,224,0.2); }
-.thunder .card-name { color: var(--thunder); }
-.thunder .card-badge { color: var(--thunder); border-color: rgba(123,184,224,0.3); }
-.thunder .xianji-card::before { background: linear-gradient(90deg, transparent, var(--thunder), transparent); }
-
-.bingu .section-icon { background: rgba(201,126,138,0.1); color: var(--bingu); border-color: rgba(201,126,138,0.2); }
-.bingu .card-name { color: var(--bingu); }
-.bingu .card-badge { color: var(--bingu); border-color: rgba(201,126,138,0.3); }
-.bingu .xianji-card::before { background: linear-gradient(90deg, transparent, var(--bingu), transparent); }
-
-.other .section-icon { background: rgba(160,152,128,0.1); color: var(--text-secondary); border-color: rgba(160,152,128,0.2); }
-.other .card-name { color: var(--text-secondary); }
-.other .card-badge { color: var(--text-secondary); border-color: rgba(160,152,128,0.3); }
-.other .xianji-card::before { background: linear-gradient(90deg, transparent, var(--text-secondary), transparent); }
-
-/* ===== 子分类标签 ===== */
-.sub-category {
-  margin: 1.5rem 0 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.sub-label {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  letter-spacing: 0.1em;
-  padding: 4px 12px;
-  background: rgba(255,255,255,0.03);
-  border-radius: 4px;
-  border-left: 2px solid;
-}
-
-/* ===== 五行合并区块 ===== */
-.wuxing-sections {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-/* ===== 页脚 ===== */
-footer {
-  text-align: center;
-  padding: 3rem 0 2rem;
-  border-top: 1px solid var(--border-subtle);
-  margin-top: 2rem;
-}
-
-footer p {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  line-height: 1.8;
-}
-
-footer a {
-  color: var(--gold);
-  text-decoration: none;
-  opacity: 0.7;
-}
-
-footer a:hover { opacity: 1; }
-
-/* ===== 搜索框 ===== */
-.search-wrap {
-  max-width: 400px;
-  margin: 0 auto 2rem;
-  position: relative;
-}
-
-.search-wrap input {
-  width: 100%;
-  padding: 0.7rem 1rem 0.7rem 2.5rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  color: var(--text-primary);
-  font-family: 'Noto Serif SC', serif;
-  font-size: 0.85rem;
-  outline: none;
-  transition: border-color 0.3s;
-}
-
-.search-wrap input::placeholder {
-  color: var(--text-muted);
-}
-
-.search-wrap input:focus {
-  border-color: var(--gold);
-}
-
-.search-wrap .search-icon {
-  position: absolute;
-  left: 0.9rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
-
-/* ===== 响应式 ===== */
-@media (max-width: 768px) {
-  .container { padding: 0 1rem 3rem; }
-  .hero { padding: 5rem 0 2rem; }
-  .xianji-grid { grid-template-columns: 1fr; }
-  .stats-bar { grid-template-columns: repeat(3, 1fr); }
-  .section-desc { display: none; }
-  nav { padding: 0 1rem; }
-}
-
-@media (max-width: 480px) {
-  .stats-bar { grid-template-columns: repeat(2, 1fr); }
-  .hero-title { font-size: 1.8rem; }
-}
-
-/* ===== 淡入动画 ===== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.6s ease forwards;
-}
-
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.xianji-card:nth-child(1) { animation-delay: 0.0s; }
-.xianji-card:nth-child(2) { animation-delay: 0.05s; }
-.xianji-card:nth-child(3) { animation-delay: 0.1s; }
-.xianji-card:nth-child(4) { animation-delay: 0.15s; }
-.xianji-card:nth-child(5) { animation-delay: 0.2s; }
-.xianji-card:nth-child(6) { animation-delay: 0.25s; }
+body{font-family:"Noto Serif SC","Songti SC",serif;max-width:1400px;margin:0 auto;padding:20px;background:#1a1a2e;color:#e0e0e0}
+h1{text-align:center;color:#d4af37;font-size:1.8em}
+.section{margin:30px 0}
+.section h2{color:#7eb8da;border-bottom:2px solid #2a2a4a;padding-bottom:8px}
+.dt-block{background:#16213e;border-radius:8px;padding:16px;margin:12px 0}
+.dt-block h3{color:#d4af37;margin:0 0 8px 0;font-size:1.1em}
+.dt-block .detail{color:#aaa;font-size:0.85em;line-height:1.6}
+.dt-block .detail b{color:#c9a959}
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th{background:#0f3460;color:#d4af37;padding:6px;text-align:left;font-size:0.85em}
+td{padding:5px 8px;border-bottom:1px solid #2a2a4a;font-size:0.82em}
+.tc{color:#8fbc8f}
+.jx{color:#c9a959}
 </style>
 </head>
 <body>
-
-<!-- 导航 -->
-<nav id="topNav">
-  <div class="nav-brand">玄鉴</div>
-  <a href="#yinyang">阴阳<span class="count">6</span></a>
-  <a href="#metal">金德<span class="count">5</span></a>
-  <a href="#wood">木德<span class="count">5</span></a>
-  <a href="#water">水德<span class="count">5</span></a>
-  <a href="#fire">火德<span class="count">5</span></a>
-  <a href="#earth">土德<span class="count">6</span></a>
-  <a href="#qi">十二炁<span class="count">12</span></a>
-  <a href="#thunder">三雷<span class="count">3</span></a>
-  <a href="#bingu">并古<span class="count">11+</span></a>
-  <a href="#other">其他<span class="count">4</span></a>
-</nav>
-
-<div class="container">
-
-  <!-- 头部 -->
-  <header class="hero fade-in">
-    <h1 class="hero-title">道统神通仙基总览</h1>
-    <p class="hero-sub">玄 鉴 仙 族</p>
-    <div class="hero-meta">
-      <span><span class="dot"></span>数据来源：崇宫白 · B站专栏</span>
-      <span><span class="dot"></span>最后更新：2026-05-04</span>
-      <span><span class="dot"></span>小说资料分享 无宗教传播</span>
-    </div>
-  </header>
-
-  <!-- 搜索 -->
-  <div class="search-wrap fade-in">
-    <span class="search-icon">⌕</span>
-    <input type="text" id="searchInput" placeholder="搜索仙基、神通、金性…" />
-  </div>
-
-  <!-- 统计横幅 -->
-  <div class="stats-bar fade-in">
-    <div class="stat-item"><div class="stat-num">58</div><div class="stat-label">道统总计</div></div>
-    <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">阴阳</div></div>
-    <div class="stat-item"><div class="stat-num">25</div><div class="stat-label">五德</div></div>
-    <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">十二炁</div></div>
-    <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">三雷</div></div>
-    <div class="stat-item"><div class="stat-num">10</div><div class="stat-label">并古</div></div>
-    <div class="stat-item"><div class="stat-num">192+</div><div class="stat-label">已知神通</div></div>
-    <div class="stat-item"><div class="stat-num">15</div><div class="stat-label">金性已录</div></div>
-  </div>
-
-  <!-- ==================== 阴阳 ==================== -->
-  <section id="yinyang" class="system-section yinyang fade-in">
-    <div class="section-header">
-      <div class="section-icon">☯</div>
-      <h2 class="section-title">阴阳</h2>
-      <span class="section-desc">太阳 · 明阳 · 少阳 · 太阴 · 少阴 · 阙阴</span>
-    </div>
-    <div class="xianji-grid">
-
-      <div class="xianji-card" data-keywords="太阳 视天统 分阳钗">
-        <div class="card-head"><span class="card-name">太阳</span><span class="card-badge">阳</span></div>
-        <div class="shentong-list"><span class="shentong-tag">视天统</span><span class="shentong-tag">分阳钗</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="少阳 邪绝求 奉东君 目骋怀 相诀观">
-        <div class="card-head"><span class="card-name">少阳</span><span class="card-badge">阳</span></div>
-        <div class="shentong-list"><span class="shentong-tag">邪绝求</span><span class="shentong-tag">奉东君</span><span class="shentong-tag">目骋怀</span><span class="shentong-tag">相诀观</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="明阳 谒天门 煌元关 赤断簇 顾署舆 君蹈危 帝观元 长明阶 天下明 昭澈心 明华煌阳御交性">
-        <div class="card-head"><span class="card-name">明阳</span><span class="card-badge">阳</span></div>
-        <div class="shentong-list">
-          <span class="shentong-tag tican">谒天门</span><span class="shentong-tag">赤断簇</span><span class="shentong-tag">君蹈危</span><span class="shentong-tag tican">帝观元</span><span class="shentong-tag">天下明 / 昭澈心</span>
-        </div>
-        <div class="jinxing-line">金性：明华煌阳御交性</div>
-        <div class="tican-info">谒天门 <span class="arrow">→</span> 煌元关 &nbsp;|&nbsp; 帝观元 <span class="arrow">→</span> 长明阶 &nbsp;|&nbsp; 赤断簇 <span class="arrow">→</span> 顾署舆</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="太阴 湖月秋 仪对影 结璘章 夜光府 诣太素 再圆阙 惊鹊乡 授玄珠 不胜寒">
-        <div class="card-head"><span class="card-name">太阴</span><span class="card-badge">阴</span></div>
-        <div class="shentong-list">
-          <span class="shentong-tag">湖月秋</span><span class="shentong-tag">仪对影</span><span class="shentong-tag">结璘章</span><span class="shentong-tag">夜光府</span><span class="shentong-tag">诣太素</span>
-          <span class="shentong-tag tican">再圆阙</span><span class="shentong-tag tican">惊鹊乡</span><span class="shentong-tag tican">授玄珠</span><span class="shentong-tag tican">不胜寒</span>
-        </div>
-        <div class="tican-info">再圆阙 · 惊鹊乡 · 授玄珠 · 不胜寒 为替参神通</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="少阴 香俱沉 太冲观 调杼柚">
-        <div class="card-head"><span class="card-name">少阴</span><span class="card-badge">阴</span></div>
-        <div class="shentong-list"><span class="shentong-tag">香俱沉</span><span class="shentong-tag">太冲观</span><span class="shentong-tag">调杼柚</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="阙阴 参疑室 不紫衣 掩蔽服 不二與 利异臣">
-        <div class="card-head"><span class="card-name">阙阴</span><span class="card-badge">阴</span></div>
-        <div class="shentong-list"><span class="shentong-tag">参疑室</span><span class="shentong-tag">不紫衣 / 掩蔽服</span><span class="shentong-tag">不二與</span><span class="shentong-tag tican">利异臣</span></div>
-        <div class="tican-info">利异臣为替参神通</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== 金德 ==================== -->
-  <section id="metal" class="system-section metal fade-in">
-    <div class="section-header">
-      <div class="section-icon">金</div>
-      <h2 class="section-title">金德</h2>
-      <span class="section-desc">兑金 · 庚金 · 齐金 · 逍金 · 库金</span>
-    </div>
-    <div class="xianji-grid">
-
-      <div class="xianji-card" data-keywords="兑金 金窍心 位从孚 请两忘 君兑隅 不穷锋 杀收宫 墓门棘 金一太元上青性 申白兑金上酉性">
-        <div class="card-head"><span class="card-name">兑金</span><span class="card-badge">金</span></div>
-        <div class="shentong-list">
-          <span class="shentong-tag">金窍心</span><span class="shentong-tag">位从孚 / 请两忘</span><span class="shentong-tag">君兑隅</span><span class="shentong-tag">不穷锋</span><span class="shentong-tag">杀收宫</span><span class="shentong-tag tican">墓门棘</span>
-        </div>
-        <div class="jinxing-line">金性：金一太元上青性 / 申白兑金上酉性</div>
-        <div class="tican-info">墓门棘替参待确认</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="庚金 镂金石 金兽羽 天金胄 再折毁 今去故">
-        <div class="card-head"><span class="card-name">庚金</span><span class="card-badge">金</span></div>
-        <div class="shentong-list"><span class="shentong-tag">镂金石 / 金兽羽</span><span class="shentong-tag">天金胄</span><span class="shentong-tag">再折毁</span><span class="shentong-tag">今去故</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="齐金 天齐满 望秋容齐从匮性">
-        <div class="card-head"><span class="card-name">齐金</span><span class="card-badge">金</span></div>
-        <div class="shentong-list"><span class="shentong-tag">天齐满</span></div>
-        <div class="jinxing-line">金性：望秋容齐从匮性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="逍金 望商锋 逍遥游">
-        <div class="card-head"><span class="card-name">逍金</span><span class="card-badge">金</span></div>
-        <div class="shentong-list"><span class="shentong-tag">望商锋</span><span class="shentong-tag">逍遥游</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="库金 㡔梁银 金销洞 悬藏不器道库性">
-        <div class="card-head"><span class="card-name">库金</span><span class="card-badge">金</span></div>
-        <div class="shentong-list"><span class="shentong-tag">㡔梁银</span><span class="shentong-tag">金销洞</span></div>
-        <div class="jinxing-line">金性：悬藏不器道库性</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== 木德 ==================== -->
-  <section id="wood" class="system-section wood fade-in">
-    <div class="section-header">
-      <div class="section-icon">木</div>
-      <h2 class="section-title">木德</h2>
-      <span class="section-desc">正木 · 集木 · 角木 · 更木 · 保木</span>
-    </div>
-    <div class="xianji-grid">
-
-      <div class="xianji-card" data-keywords="正木 背南行 位从专 见查语 木成方 正卯巽木专位性">
-        <div class="card-head"><span class="card-name">正木</span><span class="card-badge">木</span></div>
-        <div class="shentong-list"><span class="shentong-tag">背南行</span><span class="shentong-tag">位从专</span><span class="shentong-tag">见查语</span><span class="shentong-tag">木成方</span></div>
-        <div class="jinxing-line">金性：正卯巽木专位性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="集木 隼就栖 凌云木 定元春 祸延生 诸蓼会 妄诞林">
-        <div class="card-head"><span class="card-name">集木</span><span class="card-badge">木</span></div>
-        <div class="shentong-list"><span class="shentong-tag">隼就栖</span><span class="shentong-tag">凌云木</span><span class="shentong-tag">定元春</span><span class="shentong-tag">祸延生</span><span class="shentong-tag">诸蓼会</span><span class="shentong-tag">妄诞林</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="角木 潇重林 余养性 乙木全 朱丹参 木凭春 黎运春">
-        <div class="card-head"><span class="card-name">角木</span><span class="card-badge">木</span></div>
-        <div class="shentong-list"><span class="shentong-tag">潇重林</span><span class="shentong-tag">余养性</span><span class="shentong-tag">乙木全</span><span class="shentong-tag">朱丹参</span><span class="shentong-tag">木凭春</span><span class="shentong-tag">黎运春</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="更木 病前春">
-        <div class="card-head"><span class="card-name">更木</span><span class="card-badge">木</span></div>
-        <div class="shentong-list"><span class="shentong-tag">病前春</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="保木 神在隰">
-        <div class="card-head"><span class="card-name">保木</span><span class="card-badge">木</span></div>
-        <div class="shentong-list"><span class="shentong-tag">神在隰</span></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== 水德 ==================== -->
-  <section id="water" class="system-section water fade-in">
-    <div class="section-header">
-      <div class="section-icon">水</div>
-      <h2 class="section-title">水德</h2>
-      <span class="section-desc">渌水 · 府水 · 坎水 · 牝水 · 合水</span>
-    </div>
-    <div class="xianji-grid">
-
-      <div class="xianji-card" data-keywords="渌水 洞泉声 如重浊 丑葵藏 清夕雨 洗劫露 渌水午元符语性">
-        <div class="card-head"><span class="card-name">渌水</span><span class="card-badge">水</span></div>
-        <div class="shentong-list"><span class="shentong-tag">洞泉声</span><span class="shentong-tag">如重浊</span><span class="shentong-tag">丑葵藏</span><span class="shentong-tag">清夕雨</span><span class="shentong-tag">洗劫露</span></div>
-        <div class="jinxing-line">金性：渌水午元符语性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="府水 朝寒雨 雾回阴 合黎渊 宿穷冬 广浚湖 养命蛟 浩瀚海">
-        <div class="card-head"><span class="card-name">府水</span><span class="card-badge">水</span></div>
-        <div class="shentong-list"><span class="shentong-tag">朝寒雨</span><span class="shentong-tag">雾回阴</span><span class="shentong-tag">合黎渊</span><span class="shentong-tag">宿穷冬</span><span class="shentong-tag">广浚湖 / 养命蛟</span></div>
-        <div class="tican-info">坎水夺去的【浩瀚海】</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="坎水 浩瀚海 泾龙王 溪上翁 长云暗 据岭中 入坎窞 恨江去 位从险 甲子坎水千讷性 习险坎水行窞性">
-        <div class="card-head"><span class="card-name">坎水</span><span class="card-badge">水</span></div>
-        <div class="shentong-list"><span class="shentong-tag">浩瀚海 / 泾龙王</span><span class="shentong-tag">溪上翁</span><span class="shentong-tag">长云暗</span><span class="shentong-tag">据岭中 / 入坎窞</span><span class="shentong-tag">恨江去</span><span class="shentong-tag">位从险</span></div>
-        <div class="jinxing-line">金性：甲子坎水千讷性 / 习险坎水行窞性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="牝水 佞无晨 往生泉 谿谷会 参玄臟 胎息大臟玄牝性">
-        <div class="card-head"><span class="card-name">牝水</span><span class="card-badge">水</span></div>
-        <div class="shentong-list"><span class="shentong-tag">佞无晨</span><span class="shentong-tag">往生泉</span><span class="shentong-tag">谿谷会</span><span class="shentong-tag">参玄臟</span></div>
-        <div class="jinxing-line">金性：胎息大臟玄牝性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="合水 归流处 谶在兹 诸合还 广准圣 妖渎河">
-        <div class="card-head"><span class="card-name">合水</span><span class="card-badge">水</span></div>
-        <div class="shentong-list"><span class="shentong-tag">归流处</span><span class="shentong-tag">谶在兹</span><span class="shentong-tag">诸合还</span><span class="shentong-tag">广准圣</span><span class="shentong-tag">妖渎河</span></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== 火德 ==================== -->
-  <section id="fire" class="system-section fire fade-in">
-    <div class="section-header">
-      <div class="section-icon">火</div>
-      <h2 class="section-title">火德</h2>
-      <span class="section-desc">离火 · 真火 · 并火 · 灴火 · 牡火</span>
-    </div>
-    <div class="xianji-grid">
-
-      <div class="xianji-card" data-keywords="离火 大离书 望日述 九重欆 位从罗 折焚尽 顺平征 冲离午元火阳性">
-        <div class="card-head"><span class="card-name">离火</span><span class="card-badge">火</span></div>
-        <div class="shentong-list"><span class="shentong-tag">大离书 / 望日述</span><span class="shentong-tag">九重欆</span><span class="shentong-tag">位从罗</span><span class="shentong-tag">折焚尽</span><span class="shentong-tag">顺平征</span></div>
-        <div class="jinxing-line">金性：冲离午元火阳性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="真火 雉离行 天兜火 治命神 先天中养真火性">
-        <div class="card-head"><span class="card-name">真火</span><span class="card-badge">火</span></div>
-        <div class="shentong-list"><span class="shentong-tag">雉离行</span><span class="shentong-tag">天兜火</span><span class="shentong-tag">治命神</span></div>
-        <div class="jinxing-line">金性：先天中养真火性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="并火 焰中乌 乌从欲 心期焚 兼险夺 至命除">
-        <div class="card-head"><span class="card-name">并火</span><span class="card-badge">火</span></div>
-        <div class="shentong-list"><span class="shentong-tag">焰中乌</span><span class="shentong-tag">乌从欲</span><span class="shentong-tag">心期焚</span><span class="shentong-tag">兼险夺</span><span class="shentong-tag">至命除</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="灴火 白樆心 燔旧室 天下熯 布燥使 秉灴夏">
-        <div class="card-head"><span class="card-name">灴火</span><span class="card-badge">火</span></div>
-        <div class="shentong-list"><span class="shentong-tag">白樆心</span><span class="shentong-tag">燔旧室 / 天下熯</span><span class="shentong-tag">布燥使</span><span class="shentong-tag">秉灴夏</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="牡火 牡煞火 韬无灾 高陵父 受灴龠">
-        <div class="card-head"><span class="card-name">牡火</span><span class="card-badge">火</span></div>
-        <div class="shentong-list"><span class="shentong-tag">牡煞火</span><span class="shentong-tag">韬无灾</span><span class="shentong-tag">高陵父</span><span class="shentong-tag">受灴龠</span></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== 土德 ==================== -->
-  <section id="earth" class="system-section earth fade-in">
-    <div class="section-header">
-      <div class="section-icon">土</div>
-      <h2 class="section-title">土德</h2>
-      <span class="section-desc">戊土 · 艮土 · 宝土 · 宣土 · 归土 · 青宣</span>
-    </div>
-    <div class="xianji-grid">
-
-      <div class="xianji-card" data-keywords="戊土 受抚顶 戊心岩 仙无漏">
-        <div class="card-head"><span class="card-name">戊土</span><span class="card-badge">土</span></div>
-        <div class="shentong-list"><span class="shentong-tag">受抚顶</span><span class="shentong-tag">戊心岩</span><span class="shentong-tag">仙无漏</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="艮土 愚赶山 正源谷">
-        <div class="card-head"><span class="card-name">艮土</span><span class="card-badge">土</span></div>
-        <div class="shentong-list"><span class="shentong-tag">愚赶山</span><span class="shentong-tag">正源谷</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="宝土 藏纳宫 高垒燕 膏泽治">
-        <div class="card-head"><span class="card-name">宝土</span><span class="card-badge">土</span></div>
-        <div class="shentong-list"><span class="shentong-tag">藏纳宫</span><span class="shentong-tag">高垒燕</span><span class="shentong-tag">膏泽治</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="宣土 社土 朝社参 天下心 训浚明 神用命 帝宣中土用业性">
-        <div class="card-head"><span class="card-name">宣土 / 社土</span><span class="card-badge">土</span></div>
-        <div class="shentong-list"><span class="shentong-tag">朝社参 / 天下心</span><span class="shentong-tag">训浚明</span><span class="shentong-tag">神用命</span></div>
-        <div class="jinxing-line">金性：帝宣中土用业性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="归土 稷土 狡落原 庥命簋 有常主 养役母">
-        <div class="card-head"><span class="card-name">归土 / 稷土</span><span class="card-badge">土</span></div>
-        <div class="shentong-list"><span class="shentong-tag">狡落原</span><span class="shentong-tag">庥命簋</span><span class="shentong-tag">有常主</span><span class="shentong-tag">养役母</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="青宣 玄羊子 伏青山 青宣岳 上岩神 观地冥 下阳元 青宣神岳伏元性">
-        <div class="card-head"><span class="card-name">青宣</span><span class="card-badge">土 · 第六土</span></div>
-        <div class="shentong-list">
-          <span class="shentong-tag">玄羊子</span><span class="shentong-tag">伏青山</span><span class="shentong-tag">青宣岳</span><span class="shentong-tag">上岩神</span><span class="shentong-tag tican">观地冥</span>
-        </div>
-        <div class="jinxing-line">金性：青宣神岳伏元性</div>
-        <div class="tican-info">初伏仙君空证 · 观地冥 <span class="arrow">→</span> 下阳元</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== 十二炁 ==================== -->
-  <section id="qi" class="system-section qi fade-in">
-    <div class="section-header">
-      <div class="section-icon">炁</div>
-      <h2 class="section-title">十二炁</h2>
-      <span class="section-desc">清 · 邃 · 真 · 紫 · 瑞 · 煞 · 华 · 谪 · 晞 · 寒 · 上仪 · 下仪</span>
-    </div>
-    <div class="xianji-grid">
-
-      <div class="xianji-card" data-keywords="清炁 清元风 浮云身 空应散 炁临宇">
-        <div class="card-head"><span class="card-name">清炁</span><span class="card-badge">炁</span></div>
-        <div class="shentong-list"><span class="shentong-tag">清元风</span><span class="shentong-tag">浮云身</span><span class="shentong-tag">空应散</span><span class="shentong-tag">炁临宇</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="邃炁 代行妨 闇天殃 天成邃炁窣玄性">
-        <div class="card-head"><span class="card-name">邃炁</span><span class="card-badge">炁</span></div>
-        <div class="shentong-list"><span class="shentong-tag">代行妨</span><span class="shentong-tag">闇天殃</span></div>
-        <div class="jinxing-line">金性：天成邃炁窣玄性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="真炁 抱石眠 霞羽客 鹤挂衣 授长生 天武真炁神煞性">
-        <div class="card-head"><span class="card-name">真炁</span><span class="card-badge">炁</span></div>
-        <div class="shentong-list"><span class="shentong-tag">抱石眠</span><span class="shentong-tag">霞羽客</span><span class="shentong-tag">鹤挂衣</span><span class="shentong-tag">授长生</span></div>
-        <div class="jinxing-line">金性：天武真炁神煞性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="紫炁 绕东山 列紫篇 道始兆 坤辰修 养生主 蕴宝瓶 天修紫炁仙元性">
-        <div class="card-head"><span class="card-name">紫炁</span><span class="card-badge">炁</span></div>
-        <div class="shentong-list"><span class="shentong-tag">绕东山</span><span class="shentong-tag">列紫篇</span><span class="shentong-tag">道始兆</span><span class="shentong-tag">坤辰修</span><span class="shentong-tag">养生主</span><span class="shentong-tag">蕴宝瓶</span></div>
-        <div class="jinxing-line">金性：天修紫炁仙元性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="瑞炁 瑞气云 好功箓">
-        <div class="card-head"><span class="card-name">瑞炁</span><span class="card-badge">炁</span></div>
-        <div class="shentong-list"><span class="shentong-tag">瑞气云</span><span class="shentong-tag">好功箓</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="煞炁 不空劫 罗刹海 箝恨口 千百身">
-        <div class="card-head"><span class="card-name">煞炁</span><span class="card-badge">炁</span></div>
-        <div class="shentong-list"><span class="shentong-tag">不空劫</span><span class="shentong-tag">罗刹海</span><span class="shentong-tag tican">箝恨口</span></div>
-        <div class="tican-info">箝恨口 <span class="arrow">→</span> 千百身</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="华炁 冠灵旒">
-        <div class="card-head"><span class="card-name">华炁</span><span class="card-badge">炁</span></div>
-        <div class="shentong-list"><span class="shentong-tag">冠灵旒</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="谪炁">
-        <div class="card-head"><span class="card-name">谪炁</span><span class="card-badge">炁</span></div>
-        <p class="empty-state">暂无已知名目</p>
-      </div>
-
-      <div class="xianji-card" data-keywords="晞炁 未阕华 焜煌复 乞代夜 郁燠苦 庆垂轩 议八辟">
-        <div class="card-head"><span class="card-name">晞炁</span><span class="card-badge">炁</span></div>
-        <div class="shentong-list"><span class="shentong-tag">未阕华 / 焜煌复</span><span class="shentong-tag">乞代夜</span><span class="shentong-tag">郁燠苦</span><span class="shentong-tag">庆垂轩</span><span class="shentong-tag">议八辟</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="寒炁 松上雪 入清听 沆砀满 祢水寒">
-        <div class="card-head"><span class="card-name">寒炁</span><span class="card-badge">炁</span></div>
-        <div class="shentong-list"><span class="shentong-tag">松上雪</span><span class="shentong-tag">入清听</span><span class="shentong-tag">沆砀满</span><span class="shentong-tag">祢水寒</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="上仪 明心筵 致缉熙 射狩王">
-        <div class="card-head"><span class="card-name">上仪</span><span class="card-badge">炁</span></div>
-        <div class="shentong-list"><span class="shentong-tag">明心筵</span><span class="shentong-tag">致缉熙</span><span class="shentong-tag">射狩王</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="下仪">
-        <div class="card-head"><span class="card-name">下仪</span><span class="card-badge">炁</span></div>
-        <p class="empty-state">暂无已知名目</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== 三雷 ==================== -->
-  <section id="thunder" class="system-section thunder fade-in">
-    <div class="section-header">
-      <div class="section-icon">雷</div>
-      <h2 class="section-title">三雷</h2>
-      <span class="section-desc">玄雷 · 霄雷 · 元雷</span>
-    </div>
-    <div class="xianji-grid">
-
-      <div class="xianji-card" data-keywords="玄雷 天鸣策 至阳嘘 靖平敕 律演危 伐封坛 神宫誓">
-        <div class="card-head"><span class="card-name">玄雷</span><span class="card-badge">雷</span></div>
-        <div class="shentong-list"><span class="shentong-tag">天鸣策</span><span class="shentong-tag">至阳嘘</span><span class="shentong-tag">靖平敕</span><span class="shentong-tag">律演危</span><span class="shentong-tag">伐封坛</span><span class="shentong-tag">神宫誓</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="霄雷 冬雷声 春惊蛰 轻雷落 斡动紫 玄雷泊">
-        <div class="card-head"><span class="card-name">霄雷</span><span class="card-badge">雷</span></div>
-        <div class="shentong-list"><span class="shentong-tag">冬雷声</span><span class="shentong-tag">春惊蛰</span><span class="shentong-tag">轻雷落</span><span class="shentong-tag tican">斡动紫</span></div>
-        <div class="tican-info">斡动紫 <span class="arrow">→</span> 玄雷泊</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="元雷 脱煞胎 主煞仪">
-        <div class="card-head"><span class="card-name">元雷</span><span class="card-badge">雷</span></div>
-        <div class="shentong-list"><span class="shentong-tag">脱煞胎 / 主煞仪</span></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== 并古一系 ==================== -->
-  <section id="bingu" class="system-section bingu fade-in">
-    <div class="section-header">
-      <div class="section-icon">巫</div>
-      <h2 class="section-title">并古一系</h2>
-      <span class="section-desc">三巫 · 二祝 · 素德其余</span>
-    </div>
-
-    <div class="sub-category"><span class="sub-label" style="border-color: var(--bingu)">三巫</span></div>
-    <div class="xianji-grid" style="margin-bottom:1.5rem">
-
-      <div class="xianji-card" data-keywords="上巫 勿查我 槐荫鬼 糜妨世 应帝王 饮民血 地巫祝 薄虞渊 藏壑舟 上巫荷血三九性">
-        <div class="card-head"><span class="card-name">上巫</span><span class="card-badge">巫</span></div>
-        <div class="shentong-list"><span class="shentong-tag">勿查我</span><span class="shentong-tag">槐荫鬼 / 糜妨世</span><span class="shentong-tag">应帝王</span><span class="shentong-tag">饮民血</span><span class="shentong-tag">地巫祝</span><span class="shentong-tag">薄虞渊</span><span class="shentong-tag">藏壑舟</span></div>
-        <div class="jinxing-line">金性：上巫荷血三九性</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="玉真 玉中人 玉庭将 白玉盘 青玉崖 间道锦 道合真 庭中卫 玉真六九合虚性">
-        <div class="card-head"><span class="card-name">玉真</span><span class="card-badge">巫</span></div>
-        <div class="shentong-list"><span class="shentong-tag">玉中人 / 玉庭将</span><span class="shentong-tag">白玉盘</span><span class="shentong-tag">青玉崖</span><span class="shentong-tag">间道锦</span><span class="shentong-tag tican">道合真</span></div>
-        <div class="jinxing-line">金性：玉真六九合虚性</div>
-        <div class="tican-info">道合真 <span class="arrow">→</span> 庭中卫</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="并鸺 飓鬼阴 枭逐狸">
-        <div class="card-head"><span class="card-name">并鸺</span><span class="card-badge">巫</span></div>
-        <div class="shentong-list"><span class="shentong-tag">飓鬼阴</span><span class="shentong-tag">枭逐狸</span></div>
-      </div>
-
-    </div>
-
-    <div class="sub-category"><span class="sub-label" style="border-color: var(--bingu)">二祝</span></div>
-    <div class="xianji-grid" style="margin-bottom:1.5rem">
-
-      <div class="xianji-card" data-keywords="衡祝 殿阳虎 斛量灾 满垠㷐">
-        <div class="card-head"><span class="card-name">衡祝</span><span class="card-badge">祝</span></div>
-        <div class="shentong-list"><span class="shentong-tag">殿阳虎</span><span class="shentong-tag">斛量灾</span><span class="shentong-tag">满垠㷐</span></div>
-      </div>
-
-    </div>
-
-    <div class="sub-category"><span class="sub-label" style="border-color: var(--bingu)">素德其余</span></div>
-    <div class="xianji-grid">
-
-      <div class="xianji-card" data-keywords="全丹 元胎 侯神殊 浥铅华 金书序 制養宜 秘白汞">
-        <div class="card-head"><span class="card-name">全丹（元胎）</span><span class="card-badge">素</span></div>
-        <div class="shentong-list"><span class="shentong-tag">侯神殊</span><span class="shentong-tag">浥铅华</span><span class="shentong-tag">金书序</span><span class="shentong-tag tican">制養宜</span></div>
-        <div class="tican-info">制養宜 <span class="arrow">→</span> 秘白汞</div>
-      </div>
-
-      <div class="xianji-card" data-keywords="司天 神布序 斗衡玄 居南衡 听醒辰 推曼衍 监神律">
-        <div class="card-head"><span class="card-name">司天</span><span class="card-badge">素</span></div>
-        <div class="shentong-list"><span class="shentong-tag">神布序</span><span class="shentong-tag">斗衡玄 / 居南衡</span><span class="shentong-tag">听醒辰</span><span class="shentong-tag">推曼衍</span><span class="shentong-tag">监神律</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="修越 形度阡 相离绝 僭劻勷">
-        <div class="card-head"><span class="card-name">修越</span><span class="card-badge">素</span></div>
-        <div class="shentong-list"><span class="shentong-tag">形度阡</span><span class="shentong-tag">相离绝</span><span class="shentong-tag">僭劻勷</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="都卫 东羽山 南惆水 西天塬 北漠庭 降魂闻">
-        <div class="card-head"><span class="card-name">都卫</span><span class="card-badge">素</span></div>
-        <div class="shentong-list"><span class="shentong-tag">东羽山</span><span class="shentong-tag">南惆水</span><span class="shentong-tag">西天塬</span><span class="shentong-tag">北漠庭</span><span class="shentong-tag">降魂闻</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="身夔">
-        <div class="card-head"><span class="card-name">身夔</span><span class="card-badge">素</span></div>
-        <p class="empty-state">暂无已知名目</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== 其他 ==================== -->
-  <section id="other" class="system-section other fade-in">
-    <div class="section-header">
-      <div class="section-icon">✦</div>
-      <h2 class="section-title">其他</h2>
-      <span class="section-desc">虹霞 · 剑道 · 血摩法书 · 小室山</span>
-    </div>
-    <div class="xianji-grid">
-
-      <div class="xianji-card" data-keywords="虹霞 长霞雾">
-        <div class="card-head"><span class="card-name">虹霞</span><span class="card-badge">杂</span></div>
-        <div class="shentong-list"><span class="shentong-tag">长霞雾</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="剑道 长庚 养青冥 意堪身">
-        <div class="card-head"><span class="card-name">剑道 / 长庚</span><span class="card-badge">杂</span></div>
-        <div class="shentong-list"><span class="shentong-tag">养青冥</span><span class="shentong-tag">意堪身</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="血摩法书 梭摩岭">
-        <div class="card-head"><span class="card-name">血摩法书</span><span class="card-badge">杂</span></div>
-        <div class="shentong-list"><span class="shentong-tag">梭摩岭</span></div>
-      </div>
-
-      <div class="xianji-card" data-keywords="小室山 掩尘雾">
-        <div class="card-head"><span class="card-name">小室山</span><span class="card-badge">杂</span></div>
-        <div class="shentong-list"><span class="shentong-tag">掩尘雾</span></div>
-      </div>
-
-    </div>
-  </section>
-
+<h1>玄鉴仙族 · 神通仙基总览</h1>
+<p style="text-align:center;color:#888">校对基准: 力量体系xlsx（截止1456章） | 校对时间: 2026-05-10</p>
+<div class="section"><h2>阴阳</h2>
+<div class="dt-block"><h3>太阴</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>结璘章</td><td>—</td><td>命</td></tr>
+<tr><td>仪对影</td><td><span class="tc">授玄珠</span></td><td>身</td></tr>
+<tr><td>湖月秋</td><td><span class="tc">不胜寒</span></td><td>—</td></tr>
+<tr><td>诣太素</td><td><span class="tc">再圆阙</span></td><td>—</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：太阴星  <b>意象</b>：月  <b>外在表现</b>：银白色，白色；月光；蟾蜍，玉兔，鹊；桂花；琉璃；玄雪，细雪；宫阙... </div>
 </div>
-
-<!-- 页脚 -->
-<footer>
-  <p>数据来源：<a href="https://www.bilibili.com/read/cv41820802/">《玄鉴仙族》神通仙基汇总</a> · 作者：崇宫白 · B站专栏 cv41820802</p>
-  <p style="margin-top:0.3rem">《玄鉴仙族》作者：季越人 · 起点中文网 · 道统总计58条</p>
-</footer>
-
-<script>
-// 搜索功能
-const searchInput = document.getElementById('searchInput');
-const cards = document.querySelectorAll('.xianji-card');
-
-searchInput.addEventListener('input', function() {
-  const query = this.value.trim().toLowerCase();
-  if (!query) {
-    cards.forEach(c => c.style.display = '');
-    return;
-  }
-  cards.forEach(c => {
-    const kw = (c.getAttribute('data-keywords') || '').toLowerCase();
-    c.style.display = kw.includes(query) ? '' : 'none';
-  });
-});
-
-// 导航高亮
-const navLinks = document.querySelectorAll('nav a[href^="#"]');
-const sections = document.querySelectorAll('.system-section[id]');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(l => l.classList.remove('active'));
-      const link = document.querySelector(`nav a[href="#${entry.target.id}"]`);
-      if (link) link.classList.add('active');
-    }
-  });
-}, { threshold: 0.2, rootMargin: '-60px 0px -50% 0px' });
-
-sections.forEach(s => observer.observe(s));
-
-// 淡入动画
-const fadeEls = document.querySelectorAll('.fade-in');
-const fadeObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.animationPlayState = 'running';
-      fadeObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-fadeEls.forEach(el => {
-  el.style.animationPlayState = 'paused';
-  fadeObserver.observe(el);
-});
-</script>
-
-</body>
-</html>
+<div class="dt-block"><h3>少阴</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>太冲观</td><td>—</td><td>—</td></tr>
+<tr><td>香俱沉</td><td>—</td><td>术</td></tr>
+<tr><td>调杼柚</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：蓝白羽雀  <b>外在表现</b>：寒煞；浮冰；香灰；泥塑；华池见冰；大暄；阴沉气流；化羽... </div>
+</div>
+<div class="dt-block"><h3>厥阴</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>不紫衣</td><td><span class="tc">掩弊服</span></td><td>命</td></tr>
+<tr><td>不二舆</td><td><span class="tc">参疑室</span></td><td>术</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：百邪(古)，白玉鼩鼱(仙)，蜂蚁(魔)  <b>外在表现</b>：暗白色，苍白色；白光，阴气幽囚；狂风怒云相随，色白且暗，暗处有青气出，变化层叠云朵；白雾(仙)... </div>
+</div>
+<div class="dt-block"><h3>太阳</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>分阳钗</td><td><span class="tc">视天统</span></td><td>—</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：太阳星  <b>意象</b>：日  <b>外在表现</b>：骅掠玄花；阳符... </div>
+</div>
+<div class="dt-block"><h3>少阳</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>奉东君</td><td>—</td><td>命</td></tr>
+<tr><td>目骋怀</td><td>—</td><td>目</td></tr>
+<tr><td>邪绝求</td><td>—</td><td>命</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：右东极星(西)  <b>外在表现</b>：青金色，昏黄色，青色；青金之光；青芽；黄阶(古)
+炽白色；各色小虫；邪气，恶气(现)... </div>
+</div>
+<div class="dt-block"><h3>明阳</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>昭澈心</td><td><span class="tc">天下明</span></td><td>命</td></tr>
+<tr><td>谒天门</td><td><span class="tc">煌元关</span></td><td>术</td></tr>
+<tr><td>帝观元</td><td><span class="tc">长明阶</span></td><td>术</td></tr>
+<tr><td>君蹈危</td><td><span class="tc">誓崤身</span></td><td>身</td></tr>
+<tr><td>赤断镞</td><td><span class="tc">顾署舆</span></td><td>术</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：冲阳辖星  <b>意象</b>：枢阳，白麟，白蝉  <b>外在表现</b>：金色，血红色；天光，金光；明火，紫焰；残阳；阴所；异香，栀子花，芍花；化介...  <span class="jx">金性：明华煌阳御交性</span></div>
+</div>
+</div>
+<div class="section"><h2>金德</h2>
+<div class="dt-block"><h3>兑金</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>金窍心</td><td>—</td><td>命</td></tr>
+<tr><td>位从孚</td><td><span class="tc">请两忘</span></td><td>命</td></tr>
+<tr><td>君兑隅</td><td>—</td><td>术</td></tr>
+<tr><td>杀收宫</td><td>—</td><td>术</td></tr>
+<tr><td>不穷锋(任意替)</td><td>—</td><td>术</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：太白星  <b>外在表现</b>：白色兑相；银白，森白色；森冷；金铁；秋露，化煞化矿；兑在缺，在折毁、在器为锋，在民两忘、在地不从地，在秋不得秋、在物有驰变之志，在身有杀害之心...  <span class="jx">金性：申白兑金上酉性(旧) 金一太元上青性(新)</span></div>
+</div>
+<div class="dt-block"><h3>庚金</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>今去故</td><td><span class="tc">天下革</span></td><td>命</td></tr>
+<tr><td>再折毁</td><td>—</td><td>术</td></tr>
+<tr><td>镂金石</td><td><span class="tc">金兽羽</span></td><td>身</td></tr>
+<tr><td>天金冑</td><td>—</td><td>身</td></tr>
+<tr><td>墓门棘</td><td>—</td><td>术</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：芒金羽兽  <b>外在表现</b>：金色庚相；秋黄色；金石锐气；锐光，金光；金煞；秋露... </div>
+</div>
+<div class="dt-block"><h3>齐金</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>天齐满</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：四时之秋...  <span class="jx">金性：望秋容齐从匮性</span></div>
+</div>
+<div class="dt-block"><h3>逍金</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>望商锋</td><td>—</td><td>—</td></tr>
+<tr><td>逍遥游</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：暗金色；金匮，矿壤... </div>
+</div>
+<div class="dt-block"><h3>库金</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>帑梁银</td><td>—</td><td>—</td></tr>
+<tr><td>金销洞</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：淡银色；矿脉；藏金；凭证，誓言...  <span class="jx">金性：悬藏不器道库性</span></div>
+</div>
+</div>
+<div class="section"><h2>木德</h2>
+<div class="dt-block"><h3>正木</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>木成方</td><td>—</td><td>命</td></tr>
+<tr><td>位从专</td><td>—</td><td>命</td></tr>
+<tr><td>见查语</td><td>—</td><td>术</td></tr>
+<tr><td>背南行</td><td>—</td><td>身</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：岁星  <b>意象</b>：促织  <b>外在表现</b>：狂风，巽风；雷霆；锋利之气...  <span class="jx">金性：正卯巽木专位性</span></div>
+</div>
+<div class="dt-block"><h3>集木</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>妄诞林</td><td>—</td><td>命</td></tr>
+<tr><td>祸延生</td><td>—</td><td>命</td></tr>
+<tr><td>隼就栖</td><td>—</td><td>术</td></tr>
+<tr><td>诸蓼会</td><td><span class="tc">朱丹参</span></td><td>术</td></tr>
+<tr><td>凌云木</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：隼，蝗  <b>外在表现</b>：金绿色；丛林；芫，菁... </div>
+</div>
+<div class="dt-block"><h3>角木</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>余养性</td><td>—</td><td>—</td></tr>
+<tr><td>潇重林</td><td>—</td><td>—</td></tr>
+<tr><td>黎运春</td><td><span class="tc">木凭春</span></td><td>—</td></tr>
+<tr><td>乙木全</td><td><span class="tc">定元春</span></td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：玄鸟，凫雁，鸟雀  <b>外在表现</b>：墨绿色；松，桑梓，桑榆；春风，巽风；青光，清光；枝芽；四时之春... </div>
+</div>
+<div class="dt-block"><h3>更木</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>病前春</td><td><span class="tc">天下易</span></td><td>命</td></tr>
+</table>
+<div class="detail"></div>
+</div>
+<div class="dt-block"><h3>保木</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>神在隰</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：青色；隰；藏纳，滋养，丰收象征；墨色青光，青光；春泽... </div>
+</div>
+</div>
+<div class="section"><h2>水德</h2>
+<div class="dt-block"><h3>渌水</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>如重浊</td><td><span class="tc">天下覆</span></td><td>命</td></tr>
+<tr><td>洞泉声</td><td>—</td><td>命身</td></tr>
+<tr><td>清夕雨</td><td>—</td><td>术</td></tr>
+<tr><td>丑癸藏</td><td>—</td><td>术</td></tr>
+<tr><td>洗劫露</td><td>—</td><td>命身</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：羽蛇(被藏起)  <b>外在表现</b>：青色渌相；灰蒙，浅碧色；池，塘，青潭，洞泉，劫露，夕雨，符箓咒语；洞泉浊在水中，不凝不绝，不燥不止；羽兽...  <span class="jx">金性：渌水午元符语性 (新)</span></div>
+</div>
+<div class="dt-block"><h3>府水</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>朝寒雨</td><td>—</td><td>术</td></tr>
+<tr><td>合黎渊</td><td>—</td><td>—</td></tr>
+<tr><td>宿穷冬</td><td>—</td><td>—</td></tr>
+<tr><td>广浚湖</td><td><span class="tc">养命蛟</span></td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：白鹭，凤麟，玄鼋  <b>外在表现</b>：黑白色，灰白色；湖泽，咸水通海；水渊；白雨；四时之冬... </div>
+</div>
+<div class="dt-block"><h3>坎水</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>溪上翁</td><td>—</td><td>命</td></tr>
+<tr><td>入坎窞</td><td><span class="tc">据岭中</span></td><td>命</td></tr>
+<tr><td>浩瀚海</td><td><span class="tc">泾龙王</span></td><td>术</td></tr>
+<tr><td>长云暗</td><td>—</td><td>术</td></tr>
+<tr><td>恨江去</td><td>—</td><td>术</td></tr>
+<tr><td>位从险</td><td>—</td><td>命身</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：辰星  <b>意象</b>：蛟，蛟龙，蜮  <b>外在表现</b>：浅青色，浅黑色；溪流，川流，瀑布，江河；山峡，阴云...  <span class="jx">金性：习险坎水行窞性(正常) 甲子坎水千讷性(浩瀚)</span></div>
+</div>
+<div class="dt-block"><h3>牝水</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>佞无晨</td><td>—</td><td>术</td></tr>
+<tr><td>往生泉</td><td>—</td><td>—</td></tr>
+<tr><td>谿谷会</td><td>—</td><td>—</td></tr>
+<tr><td>参玄臟</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：灰蒙，暗沉，黑色；谿谷污下为牝，牝水即为谷水，在于蕴藏而未发，在天则雨云为谷，为云水，在人则肚藏如谷，为羊水；地水...  <span class="jx">金性：胎息大臟玄牝性</span></div>
+</div>
+<div class="dt-block"><h3>合水</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>归流处</td><td>—</td><td>术</td></tr>
+<tr><td>谶在兹</td><td>—</td><td>身</td></tr>
+<tr><td>广准圣</td><td>—</td><td>—</td></tr>
+<tr><td>诸合还</td><td><span class="tc">雾回阴</span></td><td>—</td></tr>
+<tr><td>妖渎河</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：螭，虺蛟  <b>外在表现</b>：湛蓝合相；深蓝色，暗蓝色，藏蓝色；海，波涛；鳞兽... </div>
+</div>
+</div>
+<div class="section"><h2>火德</h2>
+<div class="dt-block"><h3>离火</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>顺平征</td><td>—</td><td>命术</td></tr>
+<tr><td>位从罗</td><td>—</td><td>命</td></tr>
+<tr><td>大离书</td><td><span class="tc">望日述</span></td><td>术</td></tr>
+<tr><td>九重擭</td><td>—</td><td>术</td></tr>
+<tr><td>折焚尽</td><td>—</td><td>身</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：荧惑，冲星  <b>外在表现</b>：赤红，明红，杏红，杏黄色火焰...  <span class="jx">金性：冲离午元火阳性</span></div>
+</div>
+<div class="dt-block"><h3>真火</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>雉离行</td><td>—</td><td>术</td></tr>
+<tr><td>天兜火</td><td>—</td><td>身</td></tr>
+<tr><td>治命神</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：鸟雀  <b>外在表现</b>：金纤，深红，亮红色火焰...  <span class="jx">金性：先天中养真火性</span></div>
+</div>
+<div class="dt-block"><h3>并火</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>乌从欲</td><td>—</td><td>命</td></tr>
+<tr><td>心期焚</td><td>—</td><td>—</td></tr>
+<tr><td>兼险夺</td><td>—</td><td>—</td></tr>
+<tr><td>至命除</td><td>—</td><td>—</td></tr>
+<tr><td>焰中乌</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：孔雀  <b>外在表现</b>：灰红，黑色火焰；与三阳呼应，显示鵧三相：啼鸣为太阳，向天呼日，火中带光明，交合为明阳，相抱相交，繁衍生息，息眠为少阳，如日暮黄昏，有烛熄火微，休寝之意；鳞兽... </div>
+</div>
+<div class="dt-block"><h3>灴火</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>燔旧室</td><td><span class="tc">天下熯</span></td><td>命</td></tr>
+<tr><td>白樆心</td><td>—</td><td>命</td></tr>
+<tr><td>布燥使</td><td>—</td><td>身</td></tr>
+<tr><td>秉灴夏</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：鸾鸟  <b>外在表现</b>：白中泛红，淡红色火焰；大灾；四时之夏；羽兽... </div>
+</div>
+<div class="dt-block"><h3>牡火</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>牡煞火</td><td>—</td><td>—</td></tr>
+<tr><td>韬无灾</td><td>—</td><td>—</td></tr>
+<tr><td>高陵父</td><td>—</td><td>身</td></tr>
+<tr><td>受灴龠</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：灰色火焰；外朦胧内明亮火焰；青金色异色火焰... </div>
+</div>
+</div>
+<div class="section"><h2>土德</h2>
+<div class="dt-block"><h3>戊土</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>受抚顶</td><td>—</td><td>术</td></tr>
+<tr><td>仙无漏</td><td>—</td><td>术</td></tr>
+<tr><td>戊心岩</td><td>—</td><td>命</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：土黄色，棕黄色；戊光，云雾；戊土之灾，灾劫；在地为山，在天为霞
+鬼神（古戊土）... </div>
+</div>
+<div class="dt-block"><h3>艮土</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>愚赶山</td><td>—</td><td>术</td></tr>
+<tr><td>正源谷</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：镇星  <b>外在表现</b>：棕色；山脉；土石；大地颤动；大雾... </div>
+</div>
+<div class="dt-block"><h3>宝土</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>高垒燕</td><td>—</td><td>命</td></tr>
+<tr><td>藏纳宫</td><td>—</td><td>身</td></tr>
+<tr><td>膏泽治</td><td>—</td><td>—</td></tr>
+<tr><td>梭摩岭</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：戚象  <b>外在表现</b>：藏纳，滋养象征；铁石开花；玄壤生息；沃土；潜于地脉...  <span class="jx">金性：长养饮妙繁宝性</span></div>
+</div>
+<div class="dt-block"><h3>宣土</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>朝社参</td><td><span class="tc">天下心</span></td><td>命</td></tr>
+<tr><td>神用命</td><td>—</td><td>命</td></tr>
+<tr><td>训浚明</td><td>—</td><td>术</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：牛  <b>外在表现</b>：棕红色，棕黄色；浊泥；朽壤；土石形变，煞磁分离；神衹，五色叠加，合而为神；鬼神，持刀握戟，无限凶相；祭拜...  <span class="jx">金性：帝宣中土用业性</span></div>
+</div>
+<div class="dt-block"><h3>归土</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>狡落原</td><td>—</td><td>—</td></tr>
+<tr><td>庥命簋</td><td>—</td><td>—</td></tr>
+<tr><td>有常主</td><td>—</td><td>—</td></tr>
+<tr><td>养役母</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：灰黄色；原野... </div>
+</div>
+<div class="dt-block"><h3>青宣</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>伏青山</td><td><span class="tc">下阳元</span></td><td>身</td></tr>
+<tr><td>青宣岳</td><td>—</td><td>—</td></tr>
+<tr><td>玄羊子</td><td>—</td><td>—</td></tr>
+<tr><td>上岩神</td><td>—</td><td>—</td></tr>
+<tr><td>观地冥</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：山羊，青纹麂鹿  <b>外在表现</b>：青夷羝相；青金色...  <span class="jx">金性：青堰神岳伏元性</span></div>
+</div>
+</div>
+<div class="section"><h2>十二炁</h2>
+<div class="dt-block"><h3>清炁</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>清元风</td><td>—</td><td>—</td></tr>
+<tr><td>益清气</td><td>—</td><td>—</td></tr>
+<tr><td>浮云身</td><td>—</td><td>身</td></tr>
+<tr><td>炁临宇</td><td><span class="tc">炁引池</span></td><td>—</td></tr>
+<tr><td>空应散</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：清气；灵窍；云雾，云彩... </div>
+</div>
+<div class="dt-block"><h3>邃炁</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>代行妨</td><td>—</td><td>术</td></tr>
+<tr><td>闇天殃</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：玄黄色，白黄色；乌焰(紫金)
+灾劫恶业之光芒；灾劫，灾业，恶业，灾恶(服气)...  <span class="jx">金性：天成邃炁窣玄性</span></div>
+</div>
+<div class="dt-block"><h3>真炁</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>抱石眠</td><td>—</td><td>—</td></tr>
+<tr><td>霞羽客</td><td>—</td><td>—</td></tr>
+<tr><td>鹤挂衣</td><td>—</td><td>—</td></tr>
+<tr><td>授长生</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：修武星  <b>意象</b>：白羽仙鹤，水火长蛇，猿猴  <b>外在表现</b>：晶莹色，亮白色，红黑色，紫金色；蓝幽青靛的水火，黑赤黄苍的色彩
+白焰；华盖；紫气伴白；以羽饰为贵，羽氅最上(帝)
+道士炼丹，吞服飞升；白鹤衔果，猿猴扣门；晶石盐...  <span class="jx">金性：天武真炁神煞性</span></div>
+</div>
+<div class="dt-block"><h3>紫炁</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>绕东山</td><td>—</td><td>—</td></tr>
+<tr><td>列紫篇</td><td>—</td><td>—</td></tr>
+<tr><td>道始兆</td><td><span class="tc">蕴宝瓶</span></td><td>—</td></tr>
+<tr><td>坤辰修</td><td>—</td><td>—</td></tr>
+<tr><td>养生主</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：紫微星  <b>意象</b>：鹿类  <b>外在表现</b>：紫金色；紫气，紫烟，紫霞；经文，颂经之声...  <span class="jx">金性：天修紫炁仙元性</span></div>
+</div>
+<div class="dt-block"><h3>瑞炁</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>好功箓</td><td>—</td><td>命</td></tr>
+<tr><td>瑞气云</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：蝙蝠  <b>外在表现</b>：金色，金白色；瑞光，瑞气；金云，祥云... </div>
+</div>
+<div class="dt-block"><h3>煞炁</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>不空劫</td><td>—</td><td>命</td></tr>
+<tr><td>罗剎海</td><td>—</td><td>术</td></tr>
+<tr><td>箝恨口</td><td><span class="tc">千百身</span></td><td>身</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：黑色；魔气，魔光，魔煞；煞气，黑气，烟焰；煞雨；冰冷，大雪纷飞... </div>
+</div>
+<div class="dt-block"><h3>华炁</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>冠灵旒</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：孔雀  <b>外在表现</b>：彩色；华光，五彩宝光，香火，众生之念，宝器... </div>
+</div>
+<div class="dt-block"><h3>谪炁</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>藏壑舟</td><td>—</td><td>—</td></tr>
+<tr><td>薄虞渊</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：黑色，灰白色；骸骨幽鬼... </div>
+</div>
+<div class="dt-block"><h3>晞炁</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>未阕华</td><td><span class="tc">焜煌复</span></td><td>术</td></tr>
+<tr><td>乞代夜</td><td><span class="tc">掩尘雾</span></td><td>—</td></tr>
+<tr><td>郁燠苦</td><td>—</td><td>—</td></tr>
+<tr><td>庆垂轩</td><td>—</td><td>—</td></tr>
+<tr><td>议八辟</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：赤色，青白色(古)；青色，青黄色(现)；沙，土石，烟尘；沙烟，云烟；热露；寒夜... </div>
+</div>
+<div class="dt-block"><h3>寒炁</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>入清听</td><td>—</td><td>命</td></tr>
+<tr><td>松上雪</td><td>—</td><td>—</td></tr>
+<tr><td>祢水寒</td><td>—</td><td>—</td></tr>
+<tr><td>沆砀满</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：白蓝两色；松香；大雪，冰晶，寒霜... </div>
+</div>
+</div>
+<div class="section"><h2>三雷</h2>
+<div class="dt-block"><h3>玄雷</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>靖平敕</td><td>—</td><td>命</td></tr>
+<tr><td>至阳嘘</td><td>—</td><td>身</td></tr>
+<tr><td>神宫誓</td><td><span class="tc">天鸣策</span></td><td>—</td></tr>
+<tr><td>律演威</td><td>—</td><td>—</td></tr>
+<tr><td>伐封坛</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：银白色，紫金色，紫白色(正常)；紫黑之光(邪雷)... </div>
+</div>
+<div class="dt-block"><h3>霄雷</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>冬雷声</td><td><span class="tc">玄雷泊</span></td><td>—</td></tr>
+<tr><td>春惊蛰</td><td>—</td><td>—</td></tr>
+<tr><td>轻雷落</td><td>—</td><td>—</td></tr>
+<tr><td>斡动紫</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：紫色；乌黑透亮... </div>
+</div>
+<div class="dt-block"><h3>元雷</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>主煞仪</td><td><span class="tc">脱煞胎</span></td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：磁光... </div>
+</div>
+</div>
+<div class="section"><h2>并古一系</h2>
+<div class="dt-block"><h3>上巫</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>槐荫鬼</td><td><span class="tc">糜妨世</span></td><td>命</td></tr>
+<tr><td>应帝王</td><td>—</td><td>命</td></tr>
+<tr><td>饮民血</td><td>—</td><td>术</td></tr>
+<tr><td>勿查我</td><td>—</td><td>术</td></tr>
+<tr><td>地巫祝</td><td>—</td><td>身</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：咒术；巫箓；血祭；鬼神...  <span class="jx">金性：上巫荷血三九性</span></div>
+</div>
+<div class="dt-block"><h3>玉真</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>玉中人</td><td><span class="tc">玉庭将</span></td><td>身命</td></tr>
+<tr><td>青玉崖</td><td>—</td><td>术</td></tr>
+<tr><td>道合真</td><td>—</td><td>术</td></tr>
+<tr><td>间道锦</td><td>—</td><td>身</td></tr>
+<tr><td>白玉盘</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：玉石  <b>外在表现</b>：白色，青白色，茶白色，浅彩色；白光，白气，白玉，白珠，白锦，玉盘，玉崖，绸缎；符箓...  <span class="jx">金性：玉真六九合虚性</span></div>
+</div>
+<div class="dt-block"><h3>衡祝</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>殿阳虎</td><td>—</td><td>身</td></tr>
+<tr><td>斛量灾</td><td>—</td><td>—</td></tr>
+<tr><td>满垠㷐</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：祝术，火术... </div>
+</div>
+<div class="dt-block"><h3>全丹</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>浥铅华</td><td>—</td><td>命</td></tr>
+<tr><td>制飬宜</td><td><span class="tc">秘白汞</span></td><td>术</td></tr>
+<tr><td>候神殊</td><td>—</td><td>—</td></tr>
+<tr><td>金书序</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：铅，汞，金，银，朱砂... </div>
+</div>
+<div class="dt-block"><h3>执孛（修越）</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>形渡阡</td><td>—</td><td>身</td></tr>
+<tr><td>相离绝</td><td>—</td><td>—</td></tr>
+<tr><td>僭劻勷</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>司辰</b>：孛星  <b>外在表现</b>：淡白色；战争；兵戈；兵马相杀；改朝，民变，杀将；国争、刀兵、大疫、臣亡；兴，则人心险恶、刑滥罪泛、有将当诛、贵人下狱、宗族暴忧；行悖，悖逆；教唆；阵法阵盘；冰雹...  <span class="jx">金性：通明行衍修越性(修越)</span></div>
+</div>
+<div class="dt-block"><h3>司天</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>听醒辰</td><td>—</td><td>命</td></tr>
+<tr><td>神布序</td><td>—</td><td>命</td></tr>
+<tr><td>斗衡玄</td><td><span class="tc">居南衡</span></td><td>—</td></tr>
+</table>
+<div class="detail"> <b>外在表现</b>：银色；银光，星光... </div>
+</div>
+<div class="dt-block"><h3>都卫</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>降魂闻</td><td>—</td><td>命</td></tr>
+<tr><td>东羽山</td><td>—</td><td>术</td></tr>
+<tr><td>西天塬</td><td>—</td><td>术</td></tr>
+<tr><td>南惆水</td><td>—</td><td>术身</td></tr>
+<tr><td>北漠庭</td><td>—</td><td>术</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：山精鬼神  <b>外在表现</b>：东为飞天之山，西为绝地之塬，南为通冥之水；戍玄神鬼；紫水... </div>
+</div>
+<div class="dt-block"><h3>虹霞</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>长霞雾</td><td>—</td><td>—</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：霞鳐，蛊雕  <b>外在表现</b>：彩色，绯色；霞光，天下共七十二道；霞雾；云霞，朝霞，晚霞；半鳞半羽，水散光聚，相济相符；在地为山，在天为霞... </div>
+</div>
+<div class="dt-block"><h3>长庚（剑道）</h3>
+<table><tr><th>神通</th><th>下位/替参</th><th>类别</th></tr>
+<tr><td>养青冥</td><td><span class="tc">服气神妙</span></td><td>—</td></tr>
+<tr><td>意堪身</td><td>—</td><td>剑</td></tr>
+</table>
+<div class="detail"> <b>意象</b>：剑  <b>外在表现</b>：剑芒，剑气，剑元，剑意... </div>
+</div>
+</div>
+</body></html>

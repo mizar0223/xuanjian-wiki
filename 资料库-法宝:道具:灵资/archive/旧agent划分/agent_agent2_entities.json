@@ -1,0 +1,973 @@
+{
+  "deep": [
+    {
+      "name": "万昱剑书",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 12574,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-万昱剑书.wiki"
+    },
+    {
+      "name": "上明玄玉",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 10014,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-上明玄玉.wiki"
+    },
+    {
+      "name": "上羽夜衣",
+      "bid": "B11",
+      "cat": "灵器",
+      "ctx_size": 12612,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-上羽夜衣.wiki"
+    },
+    {
+      "name": "乌玄金",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 12767,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-乌玄金.wiki"
+    },
+    {
+      "name": "八索",
+      "bid": "B11",
+      "cat": "灵器",
+      "ctx_size": 9965,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-八索.wiki"
+    },
+    {
+      "name": "六辛齐金",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 13094,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-六辛齐金.wiki"
+    },
+    {
+      "name": "净隅功德瓶",
+      "bid": "B11",
+      "cat": "灵器",
+      "ctx_size": 13008,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-净隅功德瓶.wiki"
+    },
+    {
+      "name": "天逍垣石",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 9844,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-天逍垣石.wiki"
+    },
+    {
+      "name": "天阳彩铜",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 10008,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-天阳彩铜.wiki"
+    },
+    {
+      "name": "天阳玄火衣",
+      "bid": "B11",
+      "cat": "材料",
+      "ctx_size": 12994,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-天阳玄火衣.wiki"
+    },
+    {
+      "name": "守琉牡火",
+      "bid": "B11",
+      "cat": "材料",
+      "ctx_size": 9242,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-守琉牡火.wiki"
+    },
+    {
+      "name": "无咎灵木",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 9937,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-无咎灵木.wiki"
+    },
+    {
+      "name": "泰羽剑",
+      "bid": "B11",
+      "cat": "筑基法器",
+      "ctx_size": 9389,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-泰羽剑.wiki"
+    },
+    {
+      "name": "渌台醒心剑",
+      "bid": "B11",
+      "cat": "位别",
+      "ctx_size": 6741,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-渌台醒心剑.wiki"
+    },
+    {
+      "name": "湛蓝刃",
+      "bid": "B11",
+      "cat": "筑基法器",
+      "ctx_size": 9617,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-湛蓝刃.wiki"
+    },
+    {
+      "name": "漠玄甲",
+      "bid": "B11",
+      "cat": "灵器",
+      "ctx_size": 9342,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-漠玄甲.wiki"
+    },
+    {
+      "name": "白隼金",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 9871,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-白隼金.wiki"
+    },
+    {
+      "name": "相火",
+      "bid": "B11",
+      "cat": "材料",
+      "ctx_size": 6775,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-相火.wiki"
+    },
+    {
+      "name": "秋亡水",
+      "bid": "B11",
+      "cat": "灵资",
+      "ctx_size": 13068,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-秋亡水.wiki"
+    },
+    {
+      "name": "缡刃",
+      "bid": "B11",
+      "cat": "筑基法器",
+      "ctx_size": 6785,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-缡刃.wiki"
+    },
+    {
+      "name": "胜名宝牙石",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 6778,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-胜名宝牙石.wiki"
+    },
+    {
+      "name": "褚春悬木",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 13216,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-褚春悬木.wiki"
+    },
+    {
+      "name": "飞玄乱石",
+      "bid": "B11",
+      "cat": "灵物",
+      "ctx_size": 9925,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-飞玄乱石.wiki"
+    },
+    {
+      "name": "魏景王剑",
+      "bid": "B11",
+      "cat": "筑基法器",
+      "ctx_size": 12986,
+      "occurrences": 4,
+      "page_path": "pages/B11-L5-低频 4-4次/造物-魏景王剑.wiki"
+    },
+    {
+      "name": "三十二代夜玄铜宝灯",
+      "bid": "B12",
+      "cat": "灵物",
+      "ctx_size": 6490,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-三十二代夜玄铜宝灯.wiki"
+    },
+    {
+      "name": "代夜瓶",
+      "bid": "B12",
+      "cat": "灵器",
+      "ctx_size": 9831,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-代夜瓶.wiki"
+    },
+    {
+      "name": "六丁并火",
+      "bid": "B12",
+      "cat": "材料",
+      "ctx_size": 9850,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-六丁并火.wiki"
+    },
+    {
+      "name": "六相灵石",
+      "bid": "B12",
+      "cat": "灵物",
+      "ctx_size": 9892,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-六相灵石.wiki"
+    },
+    {
+      "name": "六震玄雷令",
+      "bid": "B12",
+      "cat": "灵宝",
+      "ctx_size": 9374,
+      "occurrences": 4,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-六震玄雷令.wiki"
+    },
+    {
+      "name": "动心金",
+      "bid": "B12",
+      "cat": "灵物",
+      "ctx_size": 9612,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-动心金.wiki"
+    },
+    {
+      "name": "北帝魏书",
+      "bid": "B12",
+      "cat": "灵宝",
+      "ctx_size": 9858,
+      "occurrences": 4,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-北帝魏书.wiki"
+    },
+    {
+      "name": "嗪地靴",
+      "bid": "B12",
+      "cat": "待分类",
+      "ctx_size": 3705,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-嗪地靴.wiki"
+    },
+    {
+      "name": "大空求道盘",
+      "bid": "B12",
+      "cat": "灵宝",
+      "ctx_size": 12928,
+      "occurrences": 4,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-大空求道盘.wiki"
+    },
+    {
+      "name": "子穆玄金",
+      "bid": "B12",
+      "cat": "灵物",
+      "ctx_size": 9639,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-子穆玄金.wiki"
+    },
+    {
+      "name": "孔雀送子盘",
+      "bid": "B12",
+      "cat": "灵宝",
+      "ctx_size": 10197,
+      "occurrences": 4,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-孔雀送子盘.wiki"
+    },
+    {
+      "name": "将胜石",
+      "bid": "B12",
+      "cat": "灵物",
+      "ctx_size": 9879,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-将胜石.wiki"
+    },
+    {
+      "name": "少商相火",
+      "bid": "B12",
+      "cat": "材料",
+      "ctx_size": 9734,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-少商相火.wiki"
+    },
+    {
+      "name": "折焚离火",
+      "bid": "B12",
+      "cat": "材料",
+      "ctx_size": 6598,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-折焚离火.wiki"
+    },
+    {
+      "name": "招瑶四时鼎",
+      "bid": "B12",
+      "cat": "灵器",
+      "ctx_size": 6050,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-招瑶四时鼎.wiki"
+    },
+    {
+      "name": "无擘水火",
+      "bid": "B12",
+      "cat": "材料",
+      "ctx_size": 6798,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-无擘水火.wiki"
+    },
+    {
+      "name": "枢宫太阳火",
+      "bid": "B12",
+      "cat": "材料",
+      "ctx_size": 6442,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-枢宫太阳火.wiki"
+    },
+    {
+      "name": "泷玄白玉",
+      "bid": "B12",
+      "cat": "灵物",
+      "ctx_size": 6840,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-泷玄白玉.wiki"
+    },
+    {
+      "name": "玄矝紫火",
+      "bid": "B12",
+      "cat": "材料",
+      "ctx_size": 3547,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-玄矝紫火.wiki"
+    },
+    {
+      "name": "白飬金书",
+      "bid": "B12",
+      "cat": "灵宝",
+      "ctx_size": 6828,
+      "occurrences": 4,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-白飬金书.wiki"
+    },
+    {
+      "name": "观雨宝鼎",
+      "bid": "B12",
+      "cat": "待分类",
+      "ctx_size": 9987,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-观雨宝鼎.wiki"
+    },
+    {
+      "name": "镇邪石",
+      "bid": "B12",
+      "cat": "灵物",
+      "ctx_size": 9751,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-镇邪石.wiki"
+    },
+    {
+      "name": "降服溟山术书",
+      "bid": "B12",
+      "cat": "灵宝",
+      "ctx_size": 10115,
+      "occurrences": 4,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-降服溟山术书.wiki"
+    },
+    {
+      "name": "霂林寒水",
+      "bid": "B12",
+      "cat": "材料",
+      "ctx_size": 9870,
+      "occurrences": 3,
+      "page_path": "pages/B12-L5-低频 4-3次/造物-霂林寒水.wiki"
+    },
+    {
+      "name": "三相心壶",
+      "bid": "B13",
+      "cat": "待分类",
+      "ctx_size": 3260,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-三相心壶.wiki"
+    },
+    {
+      "name": "修武庭州魏王旗",
+      "bid": "B13",
+      "cat": "灵器",
+      "ctx_size": 6688,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-修武庭州魏王旗.wiki"
+    },
+    {
+      "name": "六合宝瓶",
+      "bid": "B13",
+      "cat": "灵器",
+      "ctx_size": 6800,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-六合宝瓶.wiki"
+    },
+    {
+      "name": "千眼培光衣",
+      "bid": "B13",
+      "cat": "灵器",
+      "ctx_size": 6420,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-千眼培光衣.wiki"
+    },
+    {
+      "name": "塘沂渌水",
+      "bid": "B13",
+      "cat": "材料",
+      "ctx_size": 6850,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-塘沂渌水.wiki"
+    },
+    {
+      "name": "天殷元珠",
+      "bid": "B13",
+      "cat": "灵宝",
+      "ctx_size": 9798,
+      "occurrences": 3,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-天殷元珠.wiki"
+    },
+    {
+      "name": "座堪解阵刃",
+      "bid": "B13",
+      "cat": "筑基法器",
+      "ctx_size": 9549,
+      "occurrences": 3,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-座堪解阵刃.wiki"
+    },
+    {
+      "name": "恨逝水",
+      "bid": "B13",
+      "cat": "材料",
+      "ctx_size": 6618,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-恨逝水.wiki"
+    },
+    {
+      "name": "戊咲珠",
+      "bid": "B13",
+      "cat": "灵宝",
+      "ctx_size": 9797,
+      "occurrences": 3,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-戊咲珠.wiki"
+    },
+    {
+      "name": "戮尽玄乌宝图",
+      "bid": "B13",
+      "cat": "灵宝",
+      "ctx_size": 9538,
+      "occurrences": 3,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-戮尽玄乌宝图.wiki"
+    },
+    {
+      "name": "拟专汞水",
+      "bid": "B13",
+      "cat": "材料",
+      "ctx_size": 3422,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-拟专汞水.wiki"
+    },
+    {
+      "name": "渡阡令",
+      "bid": "B13",
+      "cat": "灵宝",
+      "ctx_size": 6390,
+      "occurrences": 3,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-渡阡令.wiki"
+    },
+    {
+      "name": "牝水",
+      "bid": "B13",
+      "cat": "材料",
+      "ctx_size": 6628,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-牝水.wiki"
+    },
+    {
+      "name": "玄塘池水",
+      "bid": "B13",
+      "cat": "材料",
+      "ctx_size": 6644,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-玄塘池水.wiki"
+    },
+    {
+      "name": "璃宝瓶",
+      "bid": "B13",
+      "cat": "灵器",
+      "ctx_size": 6572,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-璃宝瓶.wiki"
+    },
+    {
+      "name": "確焰丹书",
+      "bid": "B13",
+      "cat": "丹药",
+      "ctx_size": 6468,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-確焰丹书.wiki"
+    },
+    {
+      "name": "离火",
+      "bid": "B13",
+      "cat": "材料",
+      "ctx_size": 6602,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-离火.wiki"
+    },
+    {
+      "name": "紏玉",
+      "bid": "B13",
+      "cat": "灵物",
+      "ctx_size": 6266,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-紏玉.wiki"
+    },
+    {
+      "name": "蜮心甲",
+      "bid": "B13",
+      "cat": "灵器",
+      "ctx_size": 6728,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-蜮心甲.wiki"
+    },
+    {
+      "name": "趋炎并火",
+      "bid": "B13",
+      "cat": "材料",
+      "ctx_size": 3667,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-趋炎并火.wiki"
+    },
+    {
+      "name": "道金",
+      "bid": "B13",
+      "cat": "灵物",
+      "ctx_size": 9938,
+      "occurrences": 3,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-道金.wiki"
+    },
+    {
+      "name": "采行弱水",
+      "bid": "B13",
+      "cat": "材料",
+      "ctx_size": 6648,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-采行弱水.wiki"
+    },
+    {
+      "name": "重火",
+      "bid": "B13",
+      "cat": "材料",
+      "ctx_size": 6678,
+      "occurrences": 2,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-重火.wiki"
+    },
+    {
+      "name": "金鸢紫金钵",
+      "bid": "B13",
+      "cat": "灵物",
+      "ctx_size": 6536,
+      "occurrences": 3,
+      "page_path": "pages/B13-L5-低频 3-2次/造物-金鸢紫金钵.wiki"
+    },
+    {
+      "name": "不壅石",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 3247,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-不壅石.wiki"
+    },
+    {
+      "name": "凤尾石",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6396,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-凤尾石.wiki"
+    },
+    {
+      "name": "北玉",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6382,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-北玉.wiki"
+    },
+    {
+      "name": "坛金石",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6620,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-坛金石.wiki"
+    },
+    {
+      "name": "塘部辛金",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 3531,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-塘部辛金.wiki"
+    },
+    {
+      "name": "大夏郢铜甲",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6678,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-大夏郢铜甲.wiki"
+    },
+    {
+      "name": "天离赤金",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6700,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-天离赤金.wiki"
+    },
+    {
+      "name": "天阇石",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6450,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-天阇石.wiki"
+    },
+    {
+      "name": "寒湫金",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 3509,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-寒湫金.wiki"
+    },
+    {
+      "name": "左午石",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6266,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-左午石.wiki"
+    },
+    {
+      "name": "延光赐恩铜",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6476,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-延光赐恩铜.wiki"
+    },
+    {
+      "name": "次显白金",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 3639,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-次显白金.wiki"
+    },
+    {
+      "name": "汶水窞邺石",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 3523,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-汶水窞邺石.wiki"
+    },
+    {
+      "name": "渡夜悬石",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6626,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-渡夜悬石.wiki"
+    },
+    {
+      "name": "煌元石",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6626,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-煌元石.wiki"
+    },
+    {
+      "name": "牡金白火",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 3509,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-牡金白火.wiki"
+    },
+    {
+      "name": "玄道库金",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6840,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-玄道库金.wiki"
+    },
+    {
+      "name": "画水葵石",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6614,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-画水葵石.wiki"
+    },
+    {
+      "name": "白日清枢金",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 3677,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-白日清枢金.wiki"
+    },
+    {
+      "name": "白英迢金",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6650,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-白英迢金.wiki"
+    },
+    {
+      "name": "石中水",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6702,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-石中水.wiki"
+    },
+    {
+      "name": "纳心收煞金",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6636,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-纳心收煞金.wiki"
+    },
+    {
+      "name": "观解逍金",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 3298,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-观解逍金.wiki"
+    },
+    {
+      "name": "鹳川青玉",
+      "bid": "B14",
+      "cat": "灵物",
+      "ctx_size": 6602,
+      "occurrences": 2,
+      "page_path": "pages/B14-L5-低频 2-2次/造物-鹳川青玉.wiki"
+    },
+    {
+      "name": "万昱剑",
+      "bid": "B15",
+      "cat": "筑基法器",
+      "ctx_size": 6632,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-万昱剑.wiki"
+    },
+    {
+      "name": "伐真金印",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 3522,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-伐真金印.wiki"
+    },
+    {
+      "name": "六金灵盘",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6688,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-六金灵盘.wiki"
+    },
+    {
+      "name": "冲阳辖星图",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6372,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-冲阳辖星图.wiki"
+    },
+    {
+      "name": "十二玄令",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 3521,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-十二玄令.wiki"
+    },
+    {
+      "name": "宝珠木",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 3509,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-宝珠木.wiki"
+    },
+    {
+      "name": "心韵宝珠",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6778,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-心韵宝珠.wiki"
+    },
+    {
+      "name": "敕令",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 3442,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-敕令.wiki"
+    },
+    {
+      "name": "春阳灵火",
+      "bid": "B15",
+      "cat": "灵资",
+      "ctx_size": 3546,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-春阳灵火.wiki"
+    },
+    {
+      "name": "正雷堪变图",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6642,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-正雷堪变图.wiki"
+    },
+    {
+      "name": "沉云宝珠",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6152,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-沉云宝珠.wiki"
+    },
+    {
+      "name": "玄焜三十六书",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 3536,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-玄焜三十六书.wiki"
+    },
+    {
+      "name": "玄赥大尊书",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6668,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-玄赥大尊书.wiki"
+    },
+    {
+      "name": "琉璃心术书",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6672,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-琉璃心术书.wiki"
+    },
+    {
+      "name": "礼珠金",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6660,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-礼珠金.wiki"
+    },
+    {
+      "name": "移刃石",
+      "bid": "B15",
+      "cat": "筑基法器",
+      "ctx_size": 6776,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-移刃石.wiki"
+    },
+    {
+      "name": "紫湛白澧珠",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 3548,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-紫湛白澧珠.wiki"
+    },
+    {
+      "name": "至妙青花法印",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6542,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-至妙青花法印.wiki"
+    },
+    {
+      "name": "节钺",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6634,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-节钺.wiki"
+    },
+    {
+      "name": "负剑",
+      "bid": "B15",
+      "cat": "筑基法器",
+      "ctx_size": 3468,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-负剑.wiki"
+    },
+    {
+      "name": "避灾去祸剑",
+      "bid": "B15",
+      "cat": "筑基法器",
+      "ctx_size": 6572,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-避灾去祸剑.wiki"
+    },
+    {
+      "name": "金炤刀",
+      "bid": "B15",
+      "cat": "筑基法器",
+      "ctx_size": 6654,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-金炤刀.wiki"
+    },
+    {
+      "name": "长祠玄机图",
+      "bid": "B15",
+      "cat": "灵宝",
+      "ctx_size": 6800,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-长祠玄机图.wiki"
+    },
+    {
+      "name": "青月见合万璘归乡剑",
+      "bid": "B15",
+      "cat": "筑基法器",
+      "ctx_size": 6652,
+      "occurrences": 2,
+      "page_path": "pages/B15-L5-低频 2-2次/造物-青月见合万璘归乡剑.wiki"
+    }
+  ],
+  "mid": [],
+  "light": [],
+  "batch_ids": [
+    "B11",
+    "B12",
+    "B13",
+    "B14",
+    "B15"
+  ]
+}

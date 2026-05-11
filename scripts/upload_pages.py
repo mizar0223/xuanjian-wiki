@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 """批量上传本地 .wiki 页面到 MediaWiki。
 
-默认递归上传 `pages/` 下所有 .wiki 文件；页面标题取文件名 stem，与本地子目录无关。
+默认递归上传 `pages/` 下所有 .wiki 文件。
+页面标题 = 前缀 + 文件名 stem（如 "造物-少商相火"）。
+
+前缀规则：
+  --prefix 指定默认前缀（如 "造物-"）
+  --prefix-map 指定目录→前缀映射（JSON格式），优先于 --prefix
+  例：--prefix-map '{"20-人物": "人物-"}'
+  未匹配的目录使用 --prefix 或空前缀。
+
 可用 `--only` 指定一个或多个目录/文件进行局部上传。
 """
 
@@ -124,6 +132,56 @@ def resolve_path(value):
     return path
 
 
+# ========== 前缀映射默认值 ==========
+# 将本地子目录名映射到 wiki 页面标题前缀
+DEFAULT_PREFIX_MAP = {
+    '20-人物': '人物-',
+    # 其余所有目录默认使用 --prefix（"造物-"）
+}
+
+
+def build_prefix_map(args):
+    """根据命令行参数构建 (目录名→前缀) 字典和默认前缀。"""
+    if args.no_prefix:
+        return {}, ''
+    prefix_map = dict(DEFAULT_PREFIX_MAP)
+    if args.prefix_map:
+        user_map = json.loads(args.prefix_map)
+        prefix_map.update(user_map)
+    default_prefix = args.prefix
+    return prefix_map, default_prefix
+
+
+def get_page_title(path, pages_root, prefix_map, default_prefix):
+    """根据文件路径和前缀映射，生成 wiki 页面标题。
+
+    规则：
+      1. 在文件路径的所有层级中查找 prefix_map 的键
+      2. 命中则用对应前缀 + stem
+      3. 未命中则尝试 relative_to pages_root，取第一级子目录查 prefix_map
+      4. 最终 fallback 用 default_prefix + stem
+    """
+    stem = path.stem
+
+    # 方法1: 在路径组件中直接查找已知的目录名
+    for part in path.parts:
+        if part in prefix_map:
+            return prefix_map[part] + stem
+
+    # 方法2: 通过 relative_to 获取子目录
+    try:
+        rel = path.relative_to(pages_root)
+        parts = rel.parts
+        if len(parts) > 1:
+            subdir = parts[0]
+            if subdir in prefix_map:
+                return prefix_map[subdir] + stem
+    except ValueError:
+        pass
+
+    return default_prefix + stem
+
+
 def collect_wiki_files(base_dir, only_paths, recursive):
     targets = [resolve_path(p) for p in only_paths] if only_paths else [base_dir]
     files = []
@@ -139,8 +197,12 @@ def collect_wiki_files(base_dir, only_paths, recursive):
     return sorted(set(files))
 
 
-def validate_files(files):
-    titles = [path.stem for path in files]
+def validate_files(files, pages_root=None, prefix_map=None, default_prefix=''):
+    """校验页面：标题去重 + 表格闭合检查。"""
+    if pages_root and prefix_map is not None:
+        titles = [get_page_title(p, pages_root, prefix_map, default_prefix) for p in files]
+    else:
+        titles = [path.stem for path in files]
     duplicates = sorted(title for title, count in Counter(titles).items() if count > 1)
     if duplicates:
         raise ValueError('发现重复页面标题: ' + ', '.join(duplicates[:50]))
@@ -167,6 +229,9 @@ def parse_args():
     parser.add_argument('--force', action='store_true', help='强制覆盖远端不同内容')
     parser.add_argument('--bot-summary-prefix', default=BOT_SUMMARY_PREFIX, help='识别脚本编辑的摘要前缀')
     parser.add_argument('--conflict-log', default='/tmp/wiki_upload_conflicts.json', help='冲突日志路径')
+    parser.add_argument('--prefix', default='造物-', help='默认页面标题前缀，如"造物-"（默认）')
+    parser.add_argument('--prefix-map', default=None, help='目录→前缀映射JSON，如 \'{"20-人物":"人物-"}\'')
+    parser.add_argument('--no-prefix', action='store_true', help='禁用前缀，直接用 stem 作标题（兼容旧行为）')
     return parser.parse_args()
 
 
@@ -174,6 +239,9 @@ def main():
     args = parse_args()
     base_dir = resolve_path(args.dir)
     recursive = not args.no_recursive
+
+    # 构建前缀映射
+    prefix_map, default_prefix = build_prefix_map(args)
 
     try:
         wiki_files = collect_wiki_files(base_dir, args.only, recursive)
@@ -183,7 +251,7 @@ def main():
             print(f'No .wiki files found under {base_dir}')
             sys.exit(1)
         if not args.skip_validate:
-            validate_files(wiki_files)
+            validate_files(wiki_files, base_dir, prefix_map, default_prefix)
     except Exception as exc:
         print(f'预检失败: {exc}', file=sys.stderr)
         sys.exit(1)
@@ -193,12 +261,15 @@ def main():
         print('Only paths:')
         for item in args.only:
             print(f'  - {item}')
+    if not args.no_prefix:
+        print(f'Prefix: default="{default_prefix}", map={json.dumps(prefix_map, ensure_ascii=False)}')
 
     if args.dry_run:
         print('DRY RUN preview:')
         for path in wiki_files[:20]:
+            title = get_page_title(path, base_dir, prefix_map, default_prefix)
             rel = path.relative_to(ROOT) if path.is_relative_to(ROOT) else path
-            print(f'  {path.stem} <- {rel} ({path.stat().st_size} bytes)')
+            print(f'  {title} <- {rel} ({path.stat().st_size} bytes)')
         if len(wiki_files) > 20:
             print(f'  ... and {len(wiki_files) - 20} more')
         return
@@ -216,7 +287,7 @@ def main():
         summary = f'{args.bot_summary_prefix} {summary}'
 
     for index, path in enumerate(wiki_files, 1):
-        title = path.stem
+        title = get_page_title(path, base_dir, prefix_map, default_prefix)
         text = path.read_text(encoding='utf-8')
         remote = wiki.get_page_revision(title)
         if remote['exists'] and remote['content'] == text:
