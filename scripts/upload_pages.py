@@ -2,13 +2,18 @@
 """批量上传本地 .wiki 页面到 MediaWiki。
 
 默认递归上传 `pages/` 下所有 .wiki 文件。
-页面标题 = 前缀 + 文件名 stem（如 "造物-少商相火"）。
+页面标题 = 前缀 + 文件名 stem。
 
-前缀规则：
-  --prefix 指定默认前缀（如 "造物-"）
-  --prefix-map 指定目录→前缀映射（JSON格式），优先于 --prefix
-  例：--prefix-map '{"20-人物": "人物-"}'
-  未匹配的目录使用 --prefix 或空前缀。
+前缀规则（重要）：
+  - 通过 --prefix-map（或内置 DEFAULT_PREFIX_MAP）按"目录名→前缀"精确白名单匹配。
+  - 命中目录名的文件使用对应前缀；未命中的使用 --prefix（默认空字符串，即不加前缀）。
+  - 仙基道统/索引/人物与势力 维度：文件 stem 已自带 "道统-"/"神通-"/"位业-"/"人物-" 类语义前缀，
+    因此对应目录前缀均为 ""，避免出现 "造物-道统-XXX" 这种双前缀错误。
+  - 造物维度（资料库-法宝:道具:灵资）：上传时显式 --prefix='造物-' 或在 --prefix-map 中映射对应目录。
+
+例：
+  python3 upload_pages.py --only pages/仙基道统           # 自动空前缀
+  python3 upload_pages.py --only "资料库-法宝:道具:灵资/pages" --prefix='造物-'
 
 可用 `--only` 指定一个或多个目录/文件进行局部上传。
 """
@@ -131,14 +136,23 @@ def resolve_path(value):
         path = ROOT / path
     return path
 
-
 # ========== 前缀映射默认值 ==========
-# 将本地子目录名映射到 wiki 页面标题前缀
+# 将本地子目录名映射到 wiki 页面标题前缀。
+# 关键原则：目录里文件 stem 若已自带语义前缀（如 "道统-XXX"），就不要再加前缀。
 DEFAULT_PREFIX_MAP = {
-    '20-人物': '人物-',
-    # 其余所有目录默认使用 --prefix（"造物-"）
-}
+    # 人物维度（pages/ 下）—— stem 已是裸名，需要加 "人物-"
+    '20-人物': '人物-',          # 造物维度内人物子目录（兼容旧调用）
+    '人物与势力': '人物-',        # pages/人物与势力/
 
+    # 仙基道统维度 —— stem 已自带 "道统-"/"神通-"/"位业-" 前缀，不再加前缀
+    '仙基道统': '',
+    '道统': '',
+    '神通': '',
+    '位业': '',
+
+    # 索引页 —— 直接用 stem，无前缀
+    '索引': '',
+}
 
 def build_prefix_map(args):
     """根据命令行参数构建 (目录名→前缀) 字典和默认前缀。"""
@@ -229,7 +243,7 @@ def parse_args():
     parser.add_argument('--force', action='store_true', help='强制覆盖远端不同内容')
     parser.add_argument('--bot-summary-prefix', default=BOT_SUMMARY_PREFIX, help='识别脚本编辑的摘要前缀')
     parser.add_argument('--conflict-log', default='/tmp/wiki_upload_conflicts.json', help='冲突日志路径')
-    parser.add_argument('--prefix', default='造物-', help='默认页面标题前缀，如"造物-"（默认）')
+    parser.add_argument('--prefix', default='', help='默认页面标题前缀（未命中 prefix_map 时使用）。默认空字符串，造物维度需显式传 --prefix=造物-')
     parser.add_argument('--prefix-map', default=None, help='目录→前缀映射JSON，如 \'{"20-人物":"人物-"}\'')
     parser.add_argument('--no-prefix', action='store_true', help='禁用前缀，直接用 stem 作标题（兼容旧行为）')
     return parser.parse_args()
