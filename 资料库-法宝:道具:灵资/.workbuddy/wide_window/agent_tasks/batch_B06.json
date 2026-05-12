@@ -1,0 +1,61 @@
+{
+  "batch_id": "B06",
+  "level": "L3",
+  "description": "中频 19-16次",
+  "entities": [
+    {
+      "name": "上相壶",
+      "occurrences": 19,
+      "category": "待分类",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/待分类/上相壶/context.txt"
+    },
+    {
+      "name": "六角赤焰盏",
+      "occurrences": 19,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/六角赤焰盏/context.txt"
+    },
+    {
+      "name": "登名石",
+      "occurrences": 18,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/登名石/context.txt"
+    },
+    {
+      "name": "玄卿月粹",
+      "occurrences": 18,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/玄卿月粹/context.txt"
+    },
+    {
+      "name": "长行元火",
+      "occurrences": 17,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/长行元火/context.txt"
+    },
+    {
+      "name": "候殊金书",
+      "occurrences": 17,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/候殊金书/context.txt"
+    },
+    {
+      "name": "癸暝玄令",
+      "occurrences": 17,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/癸暝玄令/context.txt"
+    },
+    {
+      "name": "毗加",
+      "occurrences": 16,
+      "category": "待分类",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/待分类/毗加/context.txt"
+    },
+    {
+      "name": "解逡",
+      "occurrences": 16,
+      "category": "待分类",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/待分类/解逡/context.txt"
+    }
+  ]
+}

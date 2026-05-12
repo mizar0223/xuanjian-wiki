@@ -1,0 +1,121 @@
+{
+  "batch_id": "B09",
+  "level": "L4",
+  "description": "中低频 7-5次",
+  "entities": [
+    {
+      "name": "党木牡火",
+      "occurrences": 7,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/党木牡火/context.txt"
+    },
+    {
+      "name": "小天离金",
+      "occurrences": 7,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/小天离金/context.txt"
+    },
+    {
+      "name": "清元灵水",
+      "occurrences": 7,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/清元灵水/context.txt"
+    },
+    {
+      "name": "洞鹭元水",
+      "occurrences": 7,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/洞鹭元水/context.txt"
+    },
+    {
+      "name": "赤金百转枪",
+      "occurrences": 7,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/赤金百转枪/context.txt"
+    },
+    {
+      "name": "月阙剑",
+      "occurrences": 7,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/月阙剑/context.txt"
+    },
+    {
+      "name": "聚辛珠",
+      "occurrences": 7,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/聚辛珠/context.txt"
+    },
+    {
+      "name": "长光掩星旗",
+      "occurrences": 6,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/长光掩星旗/context.txt"
+    },
+    {
+      "name": "从欲并火",
+      "occurrences": 6,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/从欲并火/context.txt"
+    },
+    {
+      "name": "长行雉火",
+      "occurrences": 6,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/长行雉火/context.txt"
+    },
+    {
+      "name": "玄妙大藏往生泉水",
+      "occurrences": 6,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/玄妙大藏往生泉水/context.txt"
+    },
+    {
+      "name": "升燠石",
+      "occurrences": 6,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/升燠石/context.txt"
+    },
+    {
+      "name": "岭穷玄水石",
+      "occurrences": 6,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/岭穷玄水石/context.txt"
+    },
+    {
+      "name": "沉犷岁金",
+      "occurrences": 6,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/沉犷岁金/context.txt"
+    },
+    {
+      "name": "鹤抱石",
+      "occurrences": 6,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/鹤抱石/context.txt"
+    },
+    {
+      "name": "尚飨银",
+      "occurrences": 6,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/尚飨银/context.txt"
+    },
+    {
+      "name": "白殷扇",
+      "occurrences": 6,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/白殷扇/context.txt"
+    },
+    {
+      "name": "凫晞束麟索",
+      "occurrences": 5,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/凫晞束麟索/context.txt"
+    },
+    {
+      "name": "权业武印",
+      "occurrences": 5,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/权业武印/context.txt"
+    }
+  ]
+}

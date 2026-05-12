@@ -1,0 +1,235 @@
+{
+  "batch_id": "B19",
+  "level": "L6",
+  "description": "仅1次 1-1次",
+  "entities": [
+    {
+      "name": "明月听合玄阙秋光剑",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/明月听合玄阙秋光剑/context.txt"
+    },
+    {
+      "name": "降伏剑",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/降伏剑/context.txt"
+    },
+    {
+      "name": "丈天明枪",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/丈天明枪/context.txt"
+    },
+    {
+      "name": "寒廪剑",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/寒廪剑/context.txt"
+    },
+    {
+      "name": "大悛初醒一性禀真剑",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/大悛初醒一性禀真剑/context.txt"
+    },
+    {
+      "name": "金庚长弓",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/金庚长弓/context.txt"
+    },
+    {
+      "name": "青乌弓",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/青乌弓/context.txt"
+    },
+    {
+      "name": "青乌刀",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/青乌刀/context.txt"
+    },
+    {
+      "name": "剑书",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/剑书/context.txt"
+    },
+    {
+      "name": "青忽剑",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/青忽剑/context.txt"
+    },
+    {
+      "name": "羽山剑",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/羽山剑/context.txt"
+    },
+    {
+      "name": "折羽枪",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/折羽枪/context.txt"
+    },
+    {
+      "name": "太昱孚性书",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/太昱孚性书/context.txt"
+    },
+    {
+      "name": "壁水珠",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/壁水珠/context.txt"
+    },
+    {
+      "name": "相印",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/相印/context.txt"
+    },
+    {
+      "name": "间云空明扇",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/间云空明扇/context.txt"
+    },
+    {
+      "name": "帝官有誓书",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/帝官有誓书/context.txt"
+    },
+    {
+      "name": "天珀祭心珠",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/天珀祭心珠/context.txt"
+    },
+    {
+      "name": "小周天星图",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/小周天星图/context.txt"
+    },
+    {
+      "name": "云光玄环",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/云光玄环/context.txt"
+    },
+    {
+      "name": "荡杀妖魔图",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/荡杀妖魔图/context.txt"
+    },
+    {
+      "name": "祢水珠",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/祢水珠/context.txt"
+    },
+    {
+      "name": "青玄谶书",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/青玄谶书/context.txt"
+    },
+    {
+      "name": "手持仙书",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/手持仙书/context.txt"
+    },
+    {
+      "name": "隼阴珠",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/隼阴珠/context.txt"
+    },
+    {
+      "name": "七色彩云印",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/七色彩云印/context.txt"
+    },
+    {
+      "name": "效徐珠",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/效徐珠/context.txt"
+    },
+    {
+      "name": "大周天星图",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/大周天星图/context.txt"
+    },
+    {
+      "name": "崆峒仙书",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/崆峒仙书/context.txt"
+    },
+    {
+      "name": "太栩紫炁书",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/太栩紫炁书/context.txt"
+    },
+    {
+      "name": "太栩紫气书",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/太栩紫气书/context.txt"
+    },
+    {
+      "name": "金书",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/金书/context.txt"
+    },
+    {
+      "name": "镇涛珠",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/镇涛珠/context.txt"
+    },
+    {
+      "name": "灵宝图",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/灵宝图/context.txt"
+    },
+    {
+      "name": "七十二洞玄书",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/七十二洞玄书/context.txt"
+    },
+    {
+      "name": "万训科律书",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/万训科律书/context.txt"
+    },
+    {
+      "name": "合侯玄珠",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/合侯玄珠/context.txt"
+    },
+    {
+      "name": "邃玄旗",
+      "occurrences": 1,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/邃玄旗/context.txt"
+    }
+  ]
+}

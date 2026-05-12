@@ -1,0 +1,37 @@
+{
+  "batch_id": "B05",
+  "level": "L2",
+  "description": "中高频 21-20次",
+  "entities": [
+    {
+      "name": "申白",
+      "occurrences": 21,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/申白/context.txt"
+    },
+    {
+      "name": "南明心火",
+      "occurrences": 21,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/南明心火/context.txt"
+    },
+    {
+      "name": "青尺剑",
+      "occurrences": 21,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/青尺剑/context.txt"
+    },
+    {
+      "name": "血暾果",
+      "occurrences": 20,
+      "category": "待分类",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/待分类/血暾果/context.txt"
+    },
+    {
+      "name": "止戈",
+      "occurrences": 20,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/止戈/context.txt"
+    }
+  ]
+}

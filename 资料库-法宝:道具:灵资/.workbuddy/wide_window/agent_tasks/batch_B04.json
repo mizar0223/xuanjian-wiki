@@ -1,0 +1,49 @@
+{
+  "batch_id": "B04",
+  "level": "L2",
+  "description": "中高频 30-23次",
+  "entities": [
+    {
+      "name": "金阳煌元",
+      "occurrences": 30,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/金阳煌元/context.txt"
+    },
+    {
+      "name": "百甍玄石伞",
+      "occurrences": 27,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/百甍玄石伞/context.txt"
+    },
+    {
+      "name": "听魂桑木",
+      "occurrences": 27,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/听魂桑木/context.txt"
+    },
+    {
+      "name": "问武平清觯",
+      "occurrences": 25,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/问武平清觯/context.txt"
+    },
+    {
+      "name": "六雷玄罚令",
+      "occurrences": 24,
+      "category": "符箓",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/符箓/六雷玄罚令/context.txt"
+    },
+    {
+      "name": "逍垣琉璃宝塔",
+      "occurrences": 23,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/逍垣琉璃宝塔/context.txt"
+    },
+    {
+      "name": "见阳环",
+      "occurrences": 23,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/见阳环/context.txt"
+    }
+  ]
+}

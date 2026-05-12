@@ -1,0 +1,55 @@
+{
+  "batch_id": "B07",
+  "level": "L3",
+  "description": "中频 16-15次",
+  "entities": [
+    {
+      "name": "伏掠金",
+      "occurrences": 16,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/伏掠金/context.txt"
+    },
+    {
+      "name": "毂州鼎",
+      "occurrences": 16,
+      "category": "法宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/法宝/毂州鼎/context.txt"
+    },
+    {
+      "name": "终阕沉元",
+      "occurrences": 15,
+      "category": "待分类",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/待分类/终阕沉元/context.txt"
+    },
+    {
+      "name": "清玄椁",
+      "occurrences": 15,
+      "category": "待分类",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/待分类/清玄椁/context.txt"
+    },
+    {
+      "name": "离泗杏果",
+      "occurrences": 15,
+      "category": "待分类",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/待分类/离泗杏果/context.txt"
+    },
+    {
+      "name": "九彩玄汞",
+      "occurrences": 15,
+      "category": "待分类",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/待分类/九彩玄汞/context.txt"
+    },
+    {
+      "name": "服玄",
+      "occurrences": 15,
+      "category": "待分类",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/待分类/服玄/context.txt"
+    },
+    {
+      "name": "六石云盘",
+      "occurrences": 15,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/六石云盘/context.txt"
+    }
+  ]
+}

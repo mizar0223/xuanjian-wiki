@@ -1,0 +1,121 @@
+{
+  "batch_id": "B08",
+  "level": "L4",
+  "description": "中低频 9-7次",
+  "entities": [
+    {
+      "name": "天灯",
+      "occurrences": 9,
+      "category": "待分类",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/待分类/天灯/context.txt"
+    },
+    {
+      "name": "太阳衍光宝袋",
+      "occurrences": 9,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/太阳衍光宝袋/context.txt"
+    },
+    {
+      "name": "无明水火",
+      "occurrences": 9,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/无明水火/context.txt"
+    },
+    {
+      "name": "祢水寒铁",
+      "occurrences": 9,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/祢水寒铁/context.txt"
+    },
+    {
+      "name": "不伤石",
+      "occurrences": 9,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/不伤石/context.txt"
+    },
+    {
+      "name": "天星赤金",
+      "occurrences": 9,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/天星赤金/context.txt"
+    },
+    {
+      "name": "虺元灵水",
+      "occurrences": 9,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/虺元灵水/context.txt"
+    },
+    {
+      "name": "江中炉",
+      "occurrences": 8,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/江中炉/context.txt"
+    },
+    {
+      "name": "东命瓶",
+      "occurrences": 8,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/东命瓶/context.txt"
+    },
+    {
+      "name": "命阳白玉剑",
+      "occurrences": 8,
+      "category": "剑道",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/剑道/命阳白玉剑/context.txt"
+    },
+    {
+      "name": "万煞贯金刀",
+      "occurrences": 8,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/万煞贯金刀/context.txt"
+    },
+    {
+      "name": "渡迁令",
+      "occurrences": 7,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/渡迁令/context.txt"
+    },
+    {
+      "name": "裨庭青芫宝鼎",
+      "occurrences": 7,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/裨庭青芫宝鼎/context.txt"
+    },
+    {
+      "name": "坎金围连环",
+      "occurrences": 7,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/坎金围连环/context.txt"
+    },
+    {
+      "name": "纯羽离火",
+      "occurrences": 7,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/纯羽离火/context.txt"
+    },
+    {
+      "name": "峤平离火",
+      "occurrences": 7,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/峤平离火/context.txt"
+    },
+    {
+      "name": "漠玄天铁",
+      "occurrences": 7,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/漠玄天铁/context.txt"
+    },
+    {
+      "name": "材参木",
+      "occurrences": 7,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/材参木/context.txt"
+    },
+    {
+      "name": "袤土宝心玉",
+      "occurrences": 7,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/袤土宝心玉/context.txt"
+    }
+  ]
+}

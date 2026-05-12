@@ -1,0 +1,151 @@
+{
+  "batch_id": "B14",
+  "level": "L5",
+  "description": "低频 2-2次",
+  "entities": [
+    {
+      "name": "画水葵石",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/画水葵石/context.txt"
+    },
+    {
+      "name": "石中水",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/石中水/context.txt"
+    },
+    {
+      "name": "煌元石",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/煌元石/context.txt"
+    },
+    {
+      "name": "坛金石",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/坛金石/context.txt"
+    },
+    {
+      "name": "次显白金",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/次显白金/context.txt"
+    },
+    {
+      "name": "纳心收煞金",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/纳心收煞金/context.txt"
+    },
+    {
+      "name": "天离赤金",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/天离赤金/context.txt"
+    },
+    {
+      "name": "渡夜悬石",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/渡夜悬石/context.txt"
+    },
+    {
+      "name": "北玉",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/北玉/context.txt"
+    },
+    {
+      "name": "白日清枢金",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/白日清枢金/context.txt"
+    },
+    {
+      "name": "牡金白火",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/牡金白火/context.txt"
+    },
+    {
+      "name": "鹳川青玉",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/鹳川青玉/context.txt"
+    },
+    {
+      "name": "大夏郢铜甲",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/大夏郢铜甲/context.txt"
+    },
+    {
+      "name": "延光赐恩铜",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/延光赐恩铜/context.txt"
+    },
+    {
+      "name": "观解逍金",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/观解逍金/context.txt"
+    },
+    {
+      "name": "白英迢金",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/白英迢金/context.txt"
+    },
+    {
+      "name": "左午石",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/左午石/context.txt"
+    },
+    {
+      "name": "凤尾石",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/凤尾石/context.txt"
+    },
+    {
+      "name": "天阇石",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/天阇石/context.txt"
+    },
+    {
+      "name": "玄道库金",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/玄道库金/context.txt"
+    },
+    {
+      "name": "寒湫金",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/寒湫金/context.txt"
+    },
+    {
+      "name": "汶水窞邺石",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/汶水窞邺石/context.txt"
+    },
+    {
+      "name": "不壅石",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/不壅石/context.txt"
+    },
+    {
+      "name": "塘部辛金",
+      "occurrences": 2,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/塘部辛金/context.txt"
+    }
+  ]
+}

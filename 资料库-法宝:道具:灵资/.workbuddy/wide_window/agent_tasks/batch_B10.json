@@ -1,0 +1,109 @@
+{
+  "batch_id": "B10",
+  "level": "L4",
+  "description": "中低频 5-5次",
+  "entities": [
+    {
+      "name": "白羽紫梓旗",
+      "occurrences": 5,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/白羽紫梓旗/context.txt"
+    },
+    {
+      "name": "太焃火",
+      "occurrences": 5,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/太焃火/context.txt"
+    },
+    {
+      "name": "镂金石",
+      "occurrences": 5,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/镂金石/context.txt"
+    },
+    {
+      "name": "上善明玄玉",
+      "occurrences": 5,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/上善明玄玉/context.txt"
+    },
+    {
+      "name": "一气白寰石",
+      "occurrences": 5,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/一气白寰石/context.txt"
+    },
+    {
+      "name": "地望血石",
+      "occurrences": 5,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/地望血石/context.txt"
+    },
+    {
+      "name": "寒云心铁",
+      "occurrences": 5,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/寒云心铁/context.txt"
+    },
+    {
+      "name": "东命流水",
+      "occurrences": 5,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/东命流水/context.txt"
+    },
+    {
+      "name": "归谿牝水",
+      "occurrences": 5,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/归谿牝水/context.txt"
+    },
+    {
+      "name": "宝降水",
+      "occurrences": 5,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/宝降水/context.txt"
+    },
+    {
+      "name": "稚元真水",
+      "occurrences": 5,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/稚元真水/context.txt"
+    },
+    {
+      "name": "立阳御辛一气纯阳剑",
+      "occurrences": 5,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/立阳御辛一气纯阳剑/context.txt"
+    },
+    {
+      "name": "道煞玄名剑",
+      "occurrences": 5,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/道煞玄名剑/context.txt"
+    },
+    {
+      "name": "道勖阴魄玄刃",
+      "occurrences": 5,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/道勖阴魄玄刃/context.txt"
+    },
+    {
+      "name": "血摩法书",
+      "occurrences": 5,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/血摩法书/context.txt"
+    },
+    {
+      "name": "问日现阳书",
+      "occurrences": 5,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/问日现阳书/context.txt"
+    },
+    {
+      "name": "长隆珠",
+      "occurrences": 5,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/长隆珠/context.txt"
+    }
+  ]
+}

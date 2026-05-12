@@ -1,0 +1,49 @@
+{
+  "batch_id": "B03",
+  "level": "L2",
+  "description": "中高频 49-30次",
+  "entities": [
+    {
+      "name": "六丁并火令",
+      "occurrences": 49,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/六丁并火令/context.txt"
+    },
+    {
+      "name": "大雪绝锋",
+      "occurrences": 43,
+      "category": "剑道",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/剑道/大雪绝锋/context.txt"
+    },
+    {
+      "name": "颈下羽",
+      "occurrences": 42,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/颈下羽/context.txt"
+    },
+    {
+      "name": "宛陵花",
+      "occurrences": 39,
+      "category": "丹药",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/丹药/宛陵花/context.txt"
+    },
+    {
+      "name": "玄纹瓶",
+      "occurrences": 39,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/玄纹瓶/context.txt"
+    },
+    {
+      "name": "寒廪",
+      "occurrences": 33,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/寒廪/context.txt"
+    },
+    {
+      "name": "玄库请凭函",
+      "occurrences": 30,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/玄库请凭函/context.txt"
+    }
+  ]
+}

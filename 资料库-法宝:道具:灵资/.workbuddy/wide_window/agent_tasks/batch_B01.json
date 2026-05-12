@@ -1,0 +1,37 @@
+{
+  "batch_id": "B01",
+  "level": "L1",
+  "description": "高频核心 88-70次",
+  "entities": [
+    {
+      "name": "华阳王钺",
+      "occurrences": 88,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/华阳王钺/context.txt"
+    },
+    {
+      "name": "三候戍玄火",
+      "occurrences": 81,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/三候戍玄火/context.txt"
+    },
+    {
+      "name": "淮江图",
+      "occurrences": 78,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/淮江图/context.txt"
+    },
+    {
+      "name": "辛酉渌泽印",
+      "occurrences": 71,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/辛酉渌泽印/context.txt"
+    },
+    {
+      "name": "冲阳辖星宝盘",
+      "occurrences": 70,
+      "category": "灵宝",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵宝/冲阳辖星宝盘/context.txt"
+    }
+  ]
+}

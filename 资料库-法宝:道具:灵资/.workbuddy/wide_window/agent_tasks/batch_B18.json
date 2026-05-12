@@ -1,0 +1,241 @@
+{
+  "batch_id": "B18",
+  "level": "L6",
+  "description": "仅1次 1-1次",
+  "entities": [
+    {
+      "name": "敛火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/敛火/context.txt"
+    },
+    {
+      "name": "浮掠金",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/浮掠金/context.txt"
+    },
+    {
+      "name": "阴阳谐变图",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/阴阳谐变图/context.txt"
+    },
+    {
+      "name": "太阳琉璃塔",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/太阳琉璃塔/context.txt"
+    },
+    {
+      "name": "水火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/水火/context.txt"
+    },
+    {
+      "name": "长山灵石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/长山灵石/context.txt"
+    },
+    {
+      "name": "置移桑木",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/置移桑木/context.txt"
+    },
+    {
+      "name": "壁石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/壁石/context.txt"
+    },
+    {
+      "name": "申白所馈，旧岁之金",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/申白所馈，旧岁之金/context.txt"
+    },
+    {
+      "name": "素应属金",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/素应属金/context.txt"
+    },
+    {
+      "name": "缪卫并火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/缪卫并火/context.txt"
+    },
+    {
+      "name": "小孔雀业并火",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/小孔雀业并火/context.txt"
+    },
+    {
+      "name": "馥元渌水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/馥元渌水/context.txt"
+    },
+    {
+      "name": "坎水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/坎水/context.txt"
+    },
+    {
+      "name": "少阴寒燥君火",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/少阴寒燥君火/context.txt"
+    },
+    {
+      "name": "听鸣雷水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/听鸣雷水/context.txt"
+    },
+    {
+      "name": "贵羽息水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/贵羽息水/context.txt"
+    },
+    {
+      "name": "枉生河水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/枉生河水/context.txt"
+    },
+    {
+      "name": "白悉业火",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/白悉业火/context.txt"
+    },
+    {
+      "name": "三阴宝水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/三阴宝水/context.txt"
+    },
+    {
+      "name": "渌解合水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/渌解合水/context.txt"
+    },
+    {
+      "name": "茼元之水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/茼元之水/context.txt"
+    },
+    {
+      "name": "矜天璧水壶",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/矜天璧水壶/context.txt"
+    },
+    {
+      "name": "良筹汪水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/良筹汪水/context.txt"
+    },
+    {
+      "name": "徽香坎水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/徽香坎水/context.txt"
+    },
+    {
+      "name": "地水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/地水/context.txt"
+    },
+    {
+      "name": "白瀑寒水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/白瀑寒水/context.txt"
+    },
+    {
+      "name": "淮水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/淮水/context.txt"
+    },
+    {
+      "name": "幽紫灵水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/幽紫灵水/context.txt"
+    },
+    {
+      "name": "乌阇灵水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/乌阇灵水/context.txt"
+    },
+    {
+      "name": "绛水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/绛水/context.txt"
+    },
+    {
+      "name": "未雨寒水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/未雨寒水/context.txt"
+    },
+    {
+      "name": "广湖阵炉",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/广湖阵炉/context.txt"
+    },
+    {
+      "name": "和渊灵水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/和渊灵水/context.txt"
+    },
+    {
+      "name": "宣勐业火",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/宣勐业火/context.txt"
+    },
+    {
+      "name": "凝聚符水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/凝聚符水/context.txt"
+    },
+    {
+      "name": "洞鹭玄水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/洞鹭玄水/context.txt"
+    },
+    {
+      "name": "东命水",
+      "occurrences": 1,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/东命水/context.txt"
+    },
+    {
+      "name": "青穗剑",
+      "occurrences": 1,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/青穗剑/context.txt"
+    }
+  ]
+}

@@ -1,0 +1,2252 @@
+[
+  {
+    "name": "华阳王钺",
+    "occurrences": 88,
+    "category": "灵宝",
+    "chars": 61366
+  },
+  {
+    "name": "三候戍玄火",
+    "occurrences": 81,
+    "category": "材料",
+    "chars": 53371
+  },
+  {
+    "name": "淮江图",
+    "occurrences": 78,
+    "category": "灵宝",
+    "chars": 56042
+  },
+  {
+    "name": "辛酉渌泽印",
+    "occurrences": 71,
+    "category": "灵宝",
+    "chars": 47329
+  },
+  {
+    "name": "冲阳辖星宝盘",
+    "occurrences": 70,
+    "category": "灵宝",
+    "chars": 50400
+  },
+  {
+    "name": "无丈水火",
+    "occurrences": 62,
+    "category": "灵物",
+    "chars": 40240
+  },
+  {
+    "name": "大昇",
+    "occurrences": 60,
+    "category": "灵器",
+    "chars": 45180
+  },
+  {
+    "name": "明方天石",
+    "occurrences": 53,
+    "category": "灵物",
+    "chars": 38228
+  },
+  {
+    "name": "大衍天素书",
+    "occurrences": 50,
+    "category": "位别",
+    "chars": 19133
+  },
+  {
+    "name": "六丁并火令",
+    "occurrences": 49,
+    "category": "灵宝",
+    "chars": 31217
+  },
+  {
+    "name": "大雪绝锋",
+    "occurrences": 43,
+    "category": "剑道",
+    "chars": 27162
+  },
+  {
+    "name": "颈下羽",
+    "occurrences": 42,
+    "category": "灵资",
+    "chars": 29145
+  },
+  {
+    "name": "宛陵花",
+    "occurrences": 39,
+    "category": "丹药",
+    "chars": 35175
+  },
+  {
+    "name": "玄纹瓶",
+    "occurrences": 39,
+    "category": "筑基法器",
+    "chars": 28140
+  },
+  {
+    "name": "寒廪",
+    "occurrences": 33,
+    "category": "筑基法器",
+    "chars": 24096
+  },
+  {
+    "name": "玄库请凭函",
+    "occurrences": 30,
+    "category": "灵器",
+    "chars": 22154
+  },
+  {
+    "name": "金阳煌元",
+    "occurrences": 30,
+    "category": "灵资",
+    "chars": 23138
+  },
+  {
+    "name": "百甍玄石伞",
+    "occurrences": 27,
+    "category": "灵器",
+    "chars": 16112
+  },
+  {
+    "name": "听魂桑木",
+    "occurrences": 27,
+    "category": "灵物",
+    "chars": 19114
+  },
+  {
+    "name": "问武平清觯",
+    "occurrences": 25,
+    "category": "灵器",
+    "chars": 13091
+  },
+  {
+    "name": "六雷玄罚令",
+    "occurrences": 24,
+    "category": "符箓",
+    "chars": 17119
+  },
+  {
+    "name": "逍垣琉璃宝塔",
+    "occurrences": 23,
+    "category": "灵器",
+    "chars": 18144
+  },
+  {
+    "name": "见阳环",
+    "occurrences": 23,
+    "category": "灵宝",
+    "chars": 17085
+  },
+  {
+    "name": "申白",
+    "occurrences": 21,
+    "category": "灵器",
+    "chars": 12048
+  },
+  {
+    "name": "南明心火",
+    "occurrences": 21,
+    "category": "材料",
+    "chars": 15090
+  },
+  {
+    "name": "青尺剑",
+    "occurrences": 21,
+    "category": "筑基法器",
+    "chars": 20100
+  },
+  {
+    "name": "血暾果",
+    "occurrences": 20,
+    "category": "待分类",
+    "chars": 13065
+  },
+  {
+    "name": "止戈",
+    "occurrences": 20,
+    "category": "灵器",
+    "chars": 12048
+  },
+  {
+    "name": "上相壶",
+    "occurrences": 19,
+    "category": "待分类",
+    "chars": 16080
+  },
+  {
+    "name": "六角赤焰盏",
+    "occurrences": 19,
+    "category": "灵器",
+    "chars": 14098
+  },
+  {
+    "name": "登名石",
+    "occurrences": 18,
+    "category": "灵物",
+    "chars": 8040
+  },
+  {
+    "name": "玄卿月粹",
+    "occurrences": 18,
+    "category": "灵资",
+    "chars": 13078
+  },
+  {
+    "name": "长行元火",
+    "occurrences": 17,
+    "category": "材料",
+    "chars": 15090
+  },
+  {
+    "name": "候殊金书",
+    "occurrences": 17,
+    "category": "灵宝",
+    "chars": 13078
+  },
+  {
+    "name": "癸暝玄令",
+    "occurrences": 17,
+    "category": "灵宝",
+    "chars": 12072
+  },
+  {
+    "name": "毗加",
+    "occurrences": 16,
+    "category": "待分类",
+    "chars": 8032
+  },
+  {
+    "name": "解逡",
+    "occurrences": 16,
+    "category": "待分类",
+    "chars": 8032
+  },
+  {
+    "name": "伏掠金",
+    "occurrences": 16,
+    "category": "灵物",
+    "chars": 11848
+  },
+  {
+    "name": "毂州鼎",
+    "occurrences": 16,
+    "category": "法宝",
+    "chars": 9045
+  },
+  {
+    "name": "终阕沉元",
+    "occurrences": 15,
+    "category": "待分类",
+    "chars": 8048
+  },
+  {
+    "name": "清玄椁",
+    "occurrences": 15,
+    "category": "待分类",
+    "chars": 7035
+  },
+  {
+    "name": "离泗杏果",
+    "occurrences": 15,
+    "category": "待分类",
+    "chars": 10060
+  },
+  {
+    "name": "九彩玄汞",
+    "occurrences": 15,
+    "category": "待分类",
+    "chars": 7042
+  },
+  {
+    "name": "服玄",
+    "occurrences": 15,
+    "category": "待分类",
+    "chars": 9036
+  },
+  {
+    "name": "六石云盘",
+    "occurrences": 15,
+    "category": "灵宝",
+    "chars": 8048
+  },
+  {
+    "name": "天灯",
+    "occurrences": 9,
+    "category": "待分类",
+    "chars": 4016
+  },
+  {
+    "name": "太阳衍光宝袋",
+    "occurrences": 9,
+    "category": "材料",
+    "chars": 8064
+  },
+  {
+    "name": "无明水火",
+    "occurrences": 9,
+    "category": "材料",
+    "chars": 7042
+  },
+  {
+    "name": "祢水寒铁",
+    "occurrences": 9,
+    "category": "灵物",
+    "chars": 4024
+  },
+  {
+    "name": "不伤石",
+    "occurrences": 9,
+    "category": "灵物",
+    "chars": 9045
+  },
+  {
+    "name": "天星赤金",
+    "occurrences": 9,
+    "category": "灵资",
+    "chars": 4914
+  },
+  {
+    "name": "虺元灵水",
+    "occurrences": 9,
+    "category": "灵资",
+    "chars": 7042
+  },
+  {
+    "name": "江中炉",
+    "occurrences": 8,
+    "category": "灵器",
+    "chars": 6030
+  },
+  {
+    "name": "东命瓶",
+    "occurrences": 8,
+    "category": "灵器",
+    "chars": 7035
+  },
+  {
+    "name": "命阳白玉剑",
+    "occurrences": 8,
+    "category": "剑道",
+    "chars": 7049
+  },
+  {
+    "name": "万煞贯金刀",
+    "occurrences": 8,
+    "category": "筑基法器",
+    "chars": 4028
+  },
+  {
+    "name": "渡迁令",
+    "occurrences": 7,
+    "category": "灵器",
+    "chars": 5025
+  },
+  {
+    "name": "裨庭青芫宝鼎",
+    "occurrences": 7,
+    "category": "灵器",
+    "chars": 6048
+  },
+  {
+    "name": "坎金围连环",
+    "occurrences": 7,
+    "category": "灵器",
+    "chars": 5035
+  },
+  {
+    "name": "纯羽离火",
+    "occurrences": 7,
+    "category": "材料",
+    "chars": 7042
+  },
+  {
+    "name": "峤平离火",
+    "occurrences": 7,
+    "category": "材料",
+    "chars": 4024
+  },
+  {
+    "name": "漠玄天铁",
+    "occurrences": 7,
+    "category": "灵物",
+    "chars": 4024
+  },
+  {
+    "name": "材参木",
+    "occurrences": 7,
+    "category": "灵物",
+    "chars": 4020
+  },
+  {
+    "name": "袤土宝心玉",
+    "occurrences": 7,
+    "category": "灵物",
+    "chars": 6042
+  },
+  {
+    "name": "党木牡火",
+    "occurrences": 7,
+    "category": "灵物",
+    "chars": 5030
+  },
+  {
+    "name": "小天离金",
+    "occurrences": 7,
+    "category": "灵物",
+    "chars": 3018
+  },
+  {
+    "name": "清元灵水",
+    "occurrences": 7,
+    "category": "灵资",
+    "chars": 5030
+  },
+  {
+    "name": "洞鹭元水",
+    "occurrences": 7,
+    "category": "灵资",
+    "chars": 4024
+  },
+  {
+    "name": "赤金百转枪",
+    "occurrences": 7,
+    "category": "筑基法器",
+    "chars": 4028
+  },
+  {
+    "name": "月阙剑",
+    "occurrences": 7,
+    "category": "筑基法器",
+    "chars": 7035
+  },
+  {
+    "name": "聚辛珠",
+    "occurrences": 7,
+    "category": "灵宝",
+    "chars": 4020
+  },
+  {
+    "name": "长光掩星旗",
+    "occurrences": 6,
+    "category": "灵器",
+    "chars": 3021
+  },
+  {
+    "name": "从欲并火",
+    "occurrences": 6,
+    "category": "材料",
+    "chars": 5030
+  },
+  {
+    "name": "长行雉火",
+    "occurrences": 6,
+    "category": "材料",
+    "chars": 5030
+  },
+  {
+    "name": "玄妙大藏往生泉水",
+    "occurrences": 6,
+    "category": "材料",
+    "chars": 4040
+  },
+  {
+    "name": "升燠石",
+    "occurrences": 6,
+    "category": "灵物",
+    "chars": 4020
+  },
+  {
+    "name": "岭穷玄水石",
+    "occurrences": 6,
+    "category": "灵物",
+    "chars": 4028
+  },
+  {
+    "name": "沉犷岁金",
+    "occurrences": 6,
+    "category": "灵物",
+    "chars": 4024
+  },
+  {
+    "name": "鹤抱石",
+    "occurrences": 6,
+    "category": "灵物",
+    "chars": 3015
+  },
+  {
+    "name": "尚飨银",
+    "occurrences": 6,
+    "category": "灵资",
+    "chars": 5025
+  },
+  {
+    "name": "白殷扇",
+    "occurrences": 6,
+    "category": "筑基法器",
+    "chars": 5025
+  },
+  {
+    "name": "凫晞束麟索",
+    "occurrences": 5,
+    "category": "灵器",
+    "chars": 3021
+  },
+  {
+    "name": "权业武印",
+    "occurrences": 5,
+    "category": "灵器",
+    "chars": 3018
+  },
+  {
+    "name": "白羽紫梓旗",
+    "occurrences": 5,
+    "category": "灵器",
+    "chars": 3021
+  },
+  {
+    "name": "太焃火",
+    "occurrences": 5,
+    "category": "材料",
+    "chars": 4020
+  },
+  {
+    "name": "镂金石",
+    "occurrences": 5,
+    "category": "灵物",
+    "chars": 5025
+  },
+  {
+    "name": "上善明玄玉",
+    "occurrences": 5,
+    "category": "灵物",
+    "chars": 3021
+  },
+  {
+    "name": "一气白寰石",
+    "occurrences": 5,
+    "category": "灵物",
+    "chars": 3021
+  },
+  {
+    "name": "地望血石",
+    "occurrences": 5,
+    "category": "灵物",
+    "chars": 4024
+  },
+  {
+    "name": "寒云心铁",
+    "occurrences": 5,
+    "category": "灵物",
+    "chars": 4024
+  },
+  {
+    "name": "东命流水",
+    "occurrences": 5,
+    "category": "灵资",
+    "chars": 3018
+  },
+  {
+    "name": "归谿牝水",
+    "occurrences": 5,
+    "category": "灵资",
+    "chars": 4024
+  },
+  {
+    "name": "宝降水",
+    "occurrences": 5,
+    "category": "灵资",
+    "chars": 4020
+  },
+  {
+    "name": "稚元真水",
+    "occurrences": 5,
+    "category": "灵资",
+    "chars": 4024
+  },
+  {
+    "name": "立阳御辛一气纯阳剑",
+    "occurrences": 5,
+    "category": "筑基法器",
+    "chars": 5055
+  },
+  {
+    "name": "道煞玄名剑",
+    "occurrences": 5,
+    "category": "筑基法器",
+    "chars": 3021
+  },
+  {
+    "name": "道勖阴魄玄刃",
+    "occurrences": 5,
+    "category": "筑基法器",
+    "chars": 2605
+  },
+  {
+    "name": "血摩法书",
+    "occurrences": 5,
+    "category": "灵宝",
+    "chars": 4024
+  },
+  {
+    "name": "问日现阳书",
+    "occurrences": 5,
+    "category": "灵宝",
+    "chars": 2014
+  },
+  {
+    "name": "长隆珠",
+    "occurrences": 5,
+    "category": "灵宝",
+    "chars": 2010
+  },
+  {
+    "name": "上羽夜衣",
+    "occurrences": 4,
+    "category": "灵器",
+    "chars": 4024
+  },
+  {
+    "name": "八索",
+    "occurrences": 4,
+    "category": "灵器",
+    "chars": 3012
+  },
+  {
+    "name": "漠玄甲",
+    "occurrences": 4,
+    "category": "灵器",
+    "chars": 3015
+  },
+  {
+    "name": "净隅功德瓶",
+    "occurrences": 4,
+    "category": "灵器",
+    "chars": 4028
+  },
+  {
+    "name": "守琉牡火",
+    "occurrences": 4,
+    "category": "材料",
+    "chars": 3018
+  },
+  {
+    "name": "相火",
+    "occurrences": 4,
+    "category": "材料",
+    "chars": 2008
+  },
+  {
+    "name": "天阳玄火衣",
+    "occurrences": 4,
+    "category": "材料",
+    "chars": 4028
+  },
+  {
+    "name": "渌台醒心剑",
+    "occurrences": 4,
+    "category": "位别",
+    "chars": 2014
+  },
+  {
+    "name": "乌玄金",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 4020
+  },
+  {
+    "name": "天逍垣石",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 3018
+  },
+  {
+    "name": "上明玄玉",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 3018
+  },
+  {
+    "name": "飞玄乱石",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 3018
+  },
+  {
+    "name": "天阳彩铜",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 3018
+  },
+  {
+    "name": "无咎灵木",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 3018
+  },
+  {
+    "name": "六辛齐金",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 4024
+  },
+  {
+    "name": "胜名宝牙石",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 2014
+  },
+  {
+    "name": "褚春悬木",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 4024
+  },
+  {
+    "name": "白隼金",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 3015
+  },
+  {
+    "name": "万昱剑书",
+    "occurrences": 4,
+    "category": "灵物",
+    "chars": 4024
+  },
+  {
+    "name": "秋亡水",
+    "occurrences": 4,
+    "category": "灵资",
+    "chars": 4020
+  },
+  {
+    "name": "缡刃",
+    "occurrences": 4,
+    "category": "筑基法器",
+    "chars": 2008
+  },
+  {
+    "name": "泰羽剑",
+    "occurrences": 4,
+    "category": "筑基法器",
+    "chars": 3015
+  },
+  {
+    "name": "魏景王剑",
+    "occurrences": 4,
+    "category": "筑基法器",
+    "chars": 4024
+  },
+  {
+    "name": "湛蓝刃",
+    "occurrences": 4,
+    "category": "筑基法器",
+    "chars": 3015
+  },
+  {
+    "name": "孔雀送子盘",
+    "occurrences": 4,
+    "category": "灵宝",
+    "chars": 3021
+  },
+  {
+    "name": "大空求道盘",
+    "occurrences": 4,
+    "category": "灵宝",
+    "chars": 4028
+  },
+  {
+    "name": "北帝魏书",
+    "occurrences": 4,
+    "category": "灵宝",
+    "chars": 3018
+  },
+  {
+    "name": "六震玄雷令",
+    "occurrences": 4,
+    "category": "灵宝",
+    "chars": 3021
+  },
+  {
+    "name": "白飬金书",
+    "occurrences": 4,
+    "category": "灵宝",
+    "chars": 2012
+  },
+  {
+    "name": "降服溟山术书",
+    "occurrences": 4,
+    "category": "灵宝",
+    "chars": 3024
+  },
+  {
+    "name": "观雨宝鼎",
+    "occurrences": 3,
+    "category": "待分类",
+    "chars": 3018
+  },
+  {
+    "name": "嗪地靴",
+    "occurrences": 3,
+    "category": "待分类",
+    "chars": 1005
+  },
+  {
+    "name": "招瑶四时鼎",
+    "occurrences": 3,
+    "category": "灵器",
+    "chars": 1838
+  },
+  {
+    "name": "代夜瓶",
+    "occurrences": 3,
+    "category": "灵器",
+    "chars": 3015
+  },
+  {
+    "name": "枢宫太阳火",
+    "occurrences": 3,
+    "category": "材料",
+    "chars": 2014
+  },
+  {
+    "name": "无擘水火",
+    "occurrences": 3,
+    "category": "材料",
+    "chars": 2012
+  },
+  {
+    "name": "玄矝紫火",
+    "occurrences": 3,
+    "category": "材料",
+    "chars": 1006
+  },
+  {
+    "name": "霂林寒水",
+    "occurrences": 3,
+    "category": "材料",
+    "chars": 3018
+  },
+  {
+    "name": "少商相火",
+    "occurrences": 3,
+    "category": "材料",
+    "chars": 3018
+  },
+  {
+    "name": "六丁并火",
+    "occurrences": 3,
+    "category": "材料",
+    "chars": 3018
+  },
+  {
+    "name": "折焚离火",
+    "occurrences": 3,
+    "category": "材料",
+    "chars": 2012
+  },
+  {
+    "name": "六相灵石",
+    "occurrences": 3,
+    "category": "灵物",
+    "chars": 3018
+  },
+  {
+    "name": "泷玄白玉",
+    "occurrences": 3,
+    "category": "灵物",
+    "chars": 2012
+  },
+  {
+    "name": "将胜石",
+    "occurrences": 3,
+    "category": "灵物",
+    "chars": 3015
+  },
+  {
+    "name": "动心金",
+    "occurrences": 3,
+    "category": "灵物",
+    "chars": 3015
+  },
+  {
+    "name": "三十二代夜玄铜宝灯",
+    "occurrences": 3,
+    "category": "灵物",
+    "chars": 2022
+  },
+  {
+    "name": "镇邪石",
+    "occurrences": 3,
+    "category": "灵物",
+    "chars": 3015
+  },
+  {
+    "name": "子穆玄金",
+    "occurrences": 3,
+    "category": "灵物",
+    "chars": 3018
+  },
+  {
+    "name": "道金",
+    "occurrences": 3,
+    "category": "灵物",
+    "chars": 3012
+  },
+  {
+    "name": "金鸢紫金钵",
+    "occurrences": 3,
+    "category": "灵物",
+    "chars": 2014
+  },
+  {
+    "name": "座堪解阵刃",
+    "occurrences": 3,
+    "category": "筑基法器",
+    "chars": 3021
+  },
+  {
+    "name": "戊咲珠",
+    "occurrences": 3,
+    "category": "灵宝",
+    "chars": 3015
+  },
+  {
+    "name": "天殷元珠",
+    "occurrences": 3,
+    "category": "灵宝",
+    "chars": 3018
+  },
+  {
+    "name": "渡阡令",
+    "occurrences": 3,
+    "category": "灵宝",
+    "chars": 2010
+  },
+  {
+    "name": "戮尽玄乌宝图",
+    "occurrences": 3,
+    "category": "灵宝",
+    "chars": 3024
+  },
+  {
+    "name": "三相心壶",
+    "occurrences": 2,
+    "category": "待分类",
+    "chars": 1006
+  },
+  {
+    "name": "修武庭州魏王旗",
+    "occurrences": 2,
+    "category": "灵器",
+    "chars": 2018
+  },
+  {
+    "name": "蜮心甲",
+    "occurrences": 2,
+    "category": "灵器",
+    "chars": 2010
+  },
+  {
+    "name": "璃宝瓶",
+    "occurrences": 2,
+    "category": "灵器",
+    "chars": 2010
+  },
+  {
+    "name": "千眼培光衣",
+    "occurrences": 2,
+    "category": "灵器",
+    "chars": 2014
+  },
+  {
+    "name": "六合宝瓶",
+    "occurrences": 2,
+    "category": "灵器",
+    "chars": 2012
+  },
+  {
+    "name": "拟专汞水",
+    "occurrences": 2,
+    "category": "材料",
+    "chars": 1006
+  },
+  {
+    "name": "牝水",
+    "occurrences": 2,
+    "category": "材料",
+    "chars": 2008
+  },
+  {
+    "name": "恨逝水",
+    "occurrences": 2,
+    "category": "材料",
+    "chars": 2010
+  },
+  {
+    "name": "采行弱水",
+    "occurrences": 2,
+    "category": "材料",
+    "chars": 2012
+  },
+  {
+    "name": "玄塘池水",
+    "occurrences": 2,
+    "category": "材料",
+    "chars": 2012
+  },
+  {
+    "name": "重火",
+    "occurrences": 2,
+    "category": "材料",
+    "chars": 2008
+  },
+  {
+    "name": "离火",
+    "occurrences": 2,
+    "category": "材料",
+    "chars": 2008
+  },
+  {
+    "name": "塘沂渌水",
+    "occurrences": 2,
+    "category": "材料",
+    "chars": 2012
+  },
+  {
+    "name": "趋炎并火",
+    "occurrences": 2,
+    "category": "材料",
+    "chars": 1006
+  },
+  {
+    "name": "確焰丹书",
+    "occurrences": 2,
+    "category": "丹药",
+    "chars": 2012
+  },
+  {
+    "name": "紏玉",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2008
+  },
+  {
+    "name": "画水葵石",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2012
+  },
+  {
+    "name": "石中水",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2010
+  },
+  {
+    "name": "煌元石",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2010
+  },
+  {
+    "name": "坛金石",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2010
+  },
+  {
+    "name": "次显白金",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "纳心收煞金",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2014
+  },
+  {
+    "name": "天离赤金",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2012
+  },
+  {
+    "name": "渡夜悬石",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2012
+  },
+  {
+    "name": "北玉",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2008
+  },
+  {
+    "name": "白日清枢金",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "牡金白火",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "鹳川青玉",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2012
+  },
+  {
+    "name": "大夏郢铜甲",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2014
+  },
+  {
+    "name": "延光赐恩铜",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2014
+  },
+  {
+    "name": "观解逍金",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "白英迢金",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2012
+  },
+  {
+    "name": "左午石",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2010
+  },
+  {
+    "name": "凤尾石",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2010
+  },
+  {
+    "name": "天阇石",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2010
+  },
+  {
+    "name": "玄道库金",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 2012
+  },
+  {
+    "name": "寒湫金",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "汶水窞邺石",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "不壅石",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "塘部辛金",
+    "occurrences": 2,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "春阳灵火",
+    "occurrences": 2,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "负剑",
+    "occurrences": 2,
+    "category": "筑基法器",
+    "chars": 1004
+  },
+  {
+    "name": "金炤刀",
+    "occurrences": 2,
+    "category": "筑基法器",
+    "chars": 2010
+  },
+  {
+    "name": "移刃石",
+    "occurrences": 2,
+    "category": "筑基法器",
+    "chars": 2010
+  },
+  {
+    "name": "避灾去祸剑",
+    "occurrences": 2,
+    "category": "筑基法器",
+    "chars": 2014
+  },
+  {
+    "name": "万昱剑",
+    "occurrences": 2,
+    "category": "筑基法器",
+    "chars": 2010
+  },
+  {
+    "name": "青月见合万璘归乡剑",
+    "occurrences": 2,
+    "category": "筑基法器",
+    "chars": 2022
+  },
+  {
+    "name": "礼珠金",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2010
+  },
+  {
+    "name": "心韵宝珠",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2012
+  },
+  {
+    "name": "正雷堪变图",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2014
+  },
+  {
+    "name": "沉云宝珠",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2012
+  },
+  {
+    "name": "伐真金印",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 1006
+  },
+  {
+    "name": "敕令",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 1004
+  },
+  {
+    "name": "至妙青花法印",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2016
+  },
+  {
+    "name": "宝珠木",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 1005
+  },
+  {
+    "name": "玄焜三十六书",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 1008
+  },
+  {
+    "name": "节钺",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2008
+  },
+  {
+    "name": "紫湛白澧珠",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "琉璃心术书",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2014
+  },
+  {
+    "name": "六金灵盘",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2012
+  },
+  {
+    "name": "长祠玄机图",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2014
+  },
+  {
+    "name": "玄赥大尊书",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2014
+  },
+  {
+    "name": "冲阳辖星图",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 2014
+  },
+  {
+    "name": "十二玄令",
+    "occurrences": 2,
+    "category": "灵宝",
+    "chars": 1006
+  },
+  {
+    "name": "尾上钩",
+    "occurrences": 1,
+    "category": "待分类",
+    "chars": 1005
+  },
+  {
+    "name": "白华盏",
+    "occurrences": 1,
+    "category": "待分类",
+    "chars": 1005
+  },
+  {
+    "name": "是非澄明镜",
+    "occurrences": 1,
+    "category": "待分类",
+    "chars": 1007
+  },
+  {
+    "name": "夹带",
+    "occurrences": 1,
+    "category": "待分类",
+    "chars": 1004
+  },
+  {
+    "name": "蜃镜",
+    "occurrences": 1,
+    "category": "待分类",
+    "chars": 1004
+  },
+  {
+    "name": "眉尺",
+    "occurrences": 1,
+    "category": "待分类",
+    "chars": 1004
+  },
+  {
+    "name": "上芒回锋",
+    "occurrences": 1,
+    "category": "待分类",
+    "chars": 1006
+  },
+  {
+    "name": "倚山李玄锋",
+    "occurrences": 1,
+    "category": "待分类",
+    "chars": 1007
+  },
+  {
+    "name": "太钧执锋",
+    "occurrences": 1,
+    "category": "待分类",
+    "chars": 1006
+  },
+  {
+    "name": "寒瓶",
+    "occurrences": 1,
+    "category": "灵器",
+    "chars": 1004
+  },
+  {
+    "name": "行度掌兵瓶",
+    "occurrences": 1,
+    "category": "灵器",
+    "chars": 1007
+  },
+  {
+    "name": "空沿净宝炉",
+    "occurrences": 1,
+    "category": "灵器",
+    "chars": 1007
+  },
+  {
+    "name": "异府同炉",
+    "occurrences": 1,
+    "category": "灵器",
+    "chars": 1006
+  },
+  {
+    "name": "古青药鼎",
+    "occurrences": 1,
+    "category": "丹药",
+    "chars": 1006
+  },
+  {
+    "name": "木祀铁",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "天离日昃书",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "玄党偏木牡火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1008
+  },
+  {
+    "name": "六府帝敕火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "修心天仪石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "并火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1004
+  },
+  {
+    "name": "罄心石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "太阳并火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "神道香火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "牝水石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "寒石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1004
+  },
+  {
+    "name": "三候戍火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "水火金莲图",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "请君执金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "明阳天石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "灵陵金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "白翠灵木",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "妙生石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "玄络石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "三宗荣阳石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "辰山金砂鼎",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "湛府蓝金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "七尺青冥铜",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "海内三金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "心火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1004
+  },
+  {
+    "name": "天星离石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "索迒看川石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "德敕铜",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "掖彩石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "先天之火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "仪花青石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "明烛金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "凌云木",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "四常木",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "离行长明火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "光异白金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "白芷青石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "六显离火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "倥海金地传灯",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1008
+  },
+  {
+    "name": "乌金灵甲",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "孤白梵木",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "上阳煌火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "白鹤琉璃石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "乌勾玄金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "煞陵铜",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "啼血石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "上诀宫相火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "有率先天一炁火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1009
+  },
+  {
+    "name": "三候戌玄火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "无垠水火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "广漠离火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "白泊元金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "漱灵玉",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "百湖石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "夷金石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "化砂朱石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "万煞金岐伞",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "无常水火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "素体宝玉",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "道言一字换千金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1009
+  },
+  {
+    "name": "谯金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1004
+  },
+  {
+    "name": "真焰金石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "真火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1004
+  },
+  {
+    "name": "三昭离火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "敛火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1004
+  },
+  {
+    "name": "浮掠金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1005
+  },
+  {
+    "name": "阴阳谐变图",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "太阳琉璃塔",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1007
+  },
+  {
+    "name": "水火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1004
+  },
+  {
+    "name": "长山灵石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "置移桑木",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "壁石",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1004
+  },
+  {
+    "name": "申白所馈，旧岁之金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1011
+  },
+  {
+    "name": "素应属金",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "缪卫并火",
+    "occurrences": 1,
+    "category": "灵物",
+    "chars": 1006
+  },
+  {
+    "name": "小孔雀业并火",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1008
+  },
+  {
+    "name": "馥元渌水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "坎水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1004
+  },
+  {
+    "name": "少阴寒燥君火",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1008
+  },
+  {
+    "name": "听鸣雷水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "贵羽息水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "枉生河水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "白悉业火",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "三阴宝水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "渌解合水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "茼元之水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "矜天璧水壶",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1007
+  },
+  {
+    "name": "良筹汪水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "徽香坎水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "地水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1004
+  },
+  {
+    "name": "白瀑寒水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "淮水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1004
+  },
+  {
+    "name": "幽紫灵水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "乌阇灵水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "绛水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1004
+  },
+  {
+    "name": "未雨寒水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "广湖阵炉",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "和渊灵水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "宣勐业火",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "凝聚符水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "洞鹭玄水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1006
+  },
+  {
+    "name": "东命水",
+    "occurrences": 1,
+    "category": "灵资",
+    "chars": 1005
+  },
+  {
+    "name": "青穗剑",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1005
+  },
+  {
+    "name": "明月听合玄阙秋光剑",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1011
+  },
+  {
+    "name": "降伏剑",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1005
+  },
+  {
+    "name": "丈天明枪",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1006
+  },
+  {
+    "name": "寒廪剑",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1005
+  },
+  {
+    "name": "大悛初醒一性禀真剑",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1011
+  },
+  {
+    "name": "金庚长弓",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1006
+  },
+  {
+    "name": "青乌弓",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1005
+  },
+  {
+    "name": "青乌刀",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1005
+  },
+  {
+    "name": "剑书",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1004
+  },
+  {
+    "name": "青忽剑",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1005
+  },
+  {
+    "name": "羽山剑",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1005
+  },
+  {
+    "name": "折羽枪",
+    "occurrences": 1,
+    "category": "筑基法器",
+    "chars": 1005
+  },
+  {
+    "name": "太昱孚性书",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "壁水珠",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1005
+  },
+  {
+    "name": "相印",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1004
+  },
+  {
+    "name": "间云空明扇",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "帝官有誓书",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "天珀祭心珠",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "小周天星图",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "云光玄环",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1006
+  },
+  {
+    "name": "荡杀妖魔图",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "祢水珠",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1005
+  },
+  {
+    "name": "青玄谶书",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1006
+  },
+  {
+    "name": "手持仙书",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1006
+  },
+  {
+    "name": "隼阴珠",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1005
+  },
+  {
+    "name": "七色彩云印",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "效徐珠",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1005
+  },
+  {
+    "name": "大周天星图",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "崆峒仙书",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1006
+  },
+  {
+    "name": "太栩紫炁书",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "太栩紫气书",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "金书",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1004
+  },
+  {
+    "name": "镇涛珠",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1005
+  },
+  {
+    "name": "灵宝图",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1005
+  },
+  {
+    "name": "七十二洞玄书",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1008
+  },
+  {
+    "name": "万训科律书",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1007
+  },
+  {
+    "name": "合侯玄珠",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1006
+  },
+  {
+    "name": "邃玄旗",
+    "occurrences": 1,
+    "category": "灵宝",
+    "chars": 1005
+  }
+]

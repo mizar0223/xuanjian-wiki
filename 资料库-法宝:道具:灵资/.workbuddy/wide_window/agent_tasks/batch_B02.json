@@ -1,0 +1,31 @@
+{
+  "batch_id": "B02",
+  "level": "L1",
+  "description": "高频核心 62-50次",
+  "entities": [
+    {
+      "name": "无丈水火",
+      "occurrences": 62,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/无丈水火/context.txt"
+    },
+    {
+      "name": "大昇",
+      "occurrences": 60,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/大昇/context.txt"
+    },
+    {
+      "name": "明方天石",
+      "occurrences": 53,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/明方天石/context.txt"
+    },
+    {
+      "name": "大衍天素书",
+      "occurrences": 50,
+      "category": "位别",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/位别/大衍天素书/context.txt"
+    }
+  ]
+}

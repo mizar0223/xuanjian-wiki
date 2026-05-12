@@ -1,0 +1,151 @@
+{
+  "batch_id": "B11",
+  "level": "L5",
+  "description": "低频 4-4次",
+  "entities": [
+    {
+      "name": "上羽夜衣",
+      "occurrences": 4,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/上羽夜衣/context.txt"
+    },
+    {
+      "name": "八索",
+      "occurrences": 4,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/八索/context.txt"
+    },
+    {
+      "name": "漠玄甲",
+      "occurrences": 4,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/漠玄甲/context.txt"
+    },
+    {
+      "name": "净隅功德瓶",
+      "occurrences": 4,
+      "category": "灵器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵器/净隅功德瓶/context.txt"
+    },
+    {
+      "name": "守琉牡火",
+      "occurrences": 4,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/守琉牡火/context.txt"
+    },
+    {
+      "name": "相火",
+      "occurrences": 4,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/相火/context.txt"
+    },
+    {
+      "name": "天阳玄火衣",
+      "occurrences": 4,
+      "category": "材料",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/材料/天阳玄火衣/context.txt"
+    },
+    {
+      "name": "渌台醒心剑",
+      "occurrences": 4,
+      "category": "位别",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/位别/渌台醒心剑/context.txt"
+    },
+    {
+      "name": "乌玄金",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/乌玄金/context.txt"
+    },
+    {
+      "name": "天逍垣石",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/天逍垣石/context.txt"
+    },
+    {
+      "name": "上明玄玉",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/上明玄玉/context.txt"
+    },
+    {
+      "name": "飞玄乱石",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/飞玄乱石/context.txt"
+    },
+    {
+      "name": "天阳彩铜",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/天阳彩铜/context.txt"
+    },
+    {
+      "name": "无咎灵木",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/无咎灵木/context.txt"
+    },
+    {
+      "name": "六辛齐金",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/六辛齐金/context.txt"
+    },
+    {
+      "name": "胜名宝牙石",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/胜名宝牙石/context.txt"
+    },
+    {
+      "name": "褚春悬木",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/褚春悬木/context.txt"
+    },
+    {
+      "name": "白隼金",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/白隼金/context.txt"
+    },
+    {
+      "name": "万昱剑书",
+      "occurrences": 4,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/万昱剑书/context.txt"
+    },
+    {
+      "name": "秋亡水",
+      "occurrences": 4,
+      "category": "灵资",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵资/秋亡水/context.txt"
+    },
+    {
+      "name": "缡刃",
+      "occurrences": 4,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/缡刃/context.txt"
+    },
+    {
+      "name": "泰羽剑",
+      "occurrences": 4,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/泰羽剑/context.txt"
+    },
+    {
+      "name": "魏景王剑",
+      "occurrences": 4,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/魏景王剑/context.txt"
+    },
+    {
+      "name": "湛蓝刃",
+      "occurrences": 4,
+      "category": "筑基法器",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/筑基法器/湛蓝刃/context.txt"
+    }
+  ]
+}

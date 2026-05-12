@@ -1,0 +1,241 @@
+{
+  "batch_id": "B17",
+  "level": "L6",
+  "description": "仅1次 1-1次",
+  "entities": [
+    {
+      "name": "天星离石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/天星离石/context.txt"
+    },
+    {
+      "name": "索迒看川石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/索迒看川石/context.txt"
+    },
+    {
+      "name": "德敕铜",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/德敕铜/context.txt"
+    },
+    {
+      "name": "掖彩石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/掖彩石/context.txt"
+    },
+    {
+      "name": "先天之火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/先天之火/context.txt"
+    },
+    {
+      "name": "仪花青石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/仪花青石/context.txt"
+    },
+    {
+      "name": "明烛金",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/明烛金/context.txt"
+    },
+    {
+      "name": "凌云木",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/凌云木/context.txt"
+    },
+    {
+      "name": "四常木",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/四常木/context.txt"
+    },
+    {
+      "name": "离行长明火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/离行长明火/context.txt"
+    },
+    {
+      "name": "光异白金",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/光异白金/context.txt"
+    },
+    {
+      "name": "白芷青石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/白芷青石/context.txt"
+    },
+    {
+      "name": "六显离火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/六显离火/context.txt"
+    },
+    {
+      "name": "倥海金地传灯",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/倥海金地传灯/context.txt"
+    },
+    {
+      "name": "乌金灵甲",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/乌金灵甲/context.txt"
+    },
+    {
+      "name": "孤白梵木",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/孤白梵木/context.txt"
+    },
+    {
+      "name": "上阳煌火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/上阳煌火/context.txt"
+    },
+    {
+      "name": "白鹤琉璃石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/白鹤琉璃石/context.txt"
+    },
+    {
+      "name": "乌勾玄金",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/乌勾玄金/context.txt"
+    },
+    {
+      "name": "煞陵铜",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/煞陵铜/context.txt"
+    },
+    {
+      "name": "啼血石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/啼血石/context.txt"
+    },
+    {
+      "name": "上诀宫相火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/上诀宫相火/context.txt"
+    },
+    {
+      "name": "有率先天一炁火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/有率先天一炁火/context.txt"
+    },
+    {
+      "name": "三候戌玄火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/三候戌玄火/context.txt"
+    },
+    {
+      "name": "无垠水火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/无垠水火/context.txt"
+    },
+    {
+      "name": "广漠离火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/广漠离火/context.txt"
+    },
+    {
+      "name": "白泊元金",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/白泊元金/context.txt"
+    },
+    {
+      "name": "漱灵玉",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/漱灵玉/context.txt"
+    },
+    {
+      "name": "百湖石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/百湖石/context.txt"
+    },
+    {
+      "name": "夷金石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/夷金石/context.txt"
+    },
+    {
+      "name": "化砂朱石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/化砂朱石/context.txt"
+    },
+    {
+      "name": "万煞金岐伞",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/万煞金岐伞/context.txt"
+    },
+    {
+      "name": "无常水火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/无常水火/context.txt"
+    },
+    {
+      "name": "素体宝玉",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/素体宝玉/context.txt"
+    },
+    {
+      "name": "道言一字换千金",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/道言一字换千金/context.txt"
+    },
+    {
+      "name": "谯金",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/谯金/context.txt"
+    },
+    {
+      "name": "真焰金石",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/真焰金石/context.txt"
+    },
+    {
+      "name": "真火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/真火/context.txt"
+    },
+    {
+      "name": "三昭离火",
+      "occurrences": 1,
+      "category": "灵物",
+      "context_file": "/Users/leoshi/AIBOOK/xuanjian/wiki/资料库-法宝:道具:灵资/.workbuddy/wide_window/context/灵物/三昭离火/context.txt"
+    }
+  ]
+}
