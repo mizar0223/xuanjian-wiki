@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 玄鉴仙族百科全书 HTML 解析器
-- 数据源: 资料库 - 神通/02_加工产出/玄鑒仙族_中文百科全書.html
+- 数据源: 资料库/神通/02_加工产出/玄鑒仙族_中文百科全書.html
 - 功能:
   1. 从 HTML 中提取 sections JSON 数据
   2. 结构化解析每个角色条目（姓名、修为、仙基、关系、事件）
@@ -17,7 +17,7 @@ from pathlib import Path
 # ============ 路径配置 ============
 
 WIKI_ROOT = Path(__file__).parent.parent
-HTML_PATH = WIKI_ROOT / '资料库 - 神通' / '02_加工产出' / '玄鑒仙族_中文百科全書.html'
+HTML_PATH = WIKI_ROOT / '资料库' / '神通' / '02_加工产出' / '玄鑒仙族_中文百科全書.html'
 PAGES_DIR = WIKI_ROOT / 'pages' / '人物与势力'
 OUTPUT_DIR = WIKI_ROOT / 'output' / 'encyclopedia_parsed'
 LOG_DIR = WIKI_ROOT / 'output' / 'logs'

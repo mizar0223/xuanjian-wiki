@@ -116,13 +116,13 @@ class AppConfig:
     @property
     def xianji_json_path(self):
         return self.resolve_project_path(
-            self.get('paths', 'xianji_json', default='资料库 - 神通/04_参考权威/玄鉴仙族_五德位业体系_结构化.json')
+            self.get('paths', 'xianji_json', default='资料库/神通/04_参考权威/玄鉴仙族_五德位业体系_结构化.json')
         )
 
     @property
     def xianji_authority_path(self):
         return self.resolve_project_path(
-            self.get('paths', 'xianji_authority', default='资料库 - 神通/04_参考权威/玄鉴仙族_神通仙基汇总.md')
+            self.get('paths', 'xianji_authority', default='资料库/神通/04_参考权威/玄鉴仙族_神通仙基汇总.md')
         )
 
 

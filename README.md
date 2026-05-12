@@ -76,18 +76,19 @@ wiki/
 │   │   ├── 神通/
 │   │   └── 位业/
 │   └── 索引/                            # 索引页
-├── 资料库-法宝:道具:灵资/           # 造物维度完整工程（460 页）
-│   ├── README.md                        # 造物维度专用 README
-│   ├── WORKFLOW.md                      # 造物维度工作流 SOP
-│   ├── pages/                           # 460 页 wiki 产物（按 14 类型子目录）
-│   ├── docs/                            # 写作规范（内链/分类/模板/品阶）
-│   ├── archive/                         # 旧脚本/旧批次/历史快照
-│   └── .workbuddy/                      # 工程内部（脚本/状态/AI 记忆）
-├── 资料库 - 神通/                   # 神通体系资料库
-│   ├── 01_原始素材/                      # 原始图片、百科全书 HTML
-│   ├── 02_加工产出/                      # OCR 转录、清洗文本
-│   ├── 03_校对与核对/                    # 核对报告、校正记录
-│   └── 04_参考权威/                      # 按资料族归档的权威参考
+├── 资料库/                        # 统一资料库入口
+│   ├── 神通/                      # 神通体系资料库
+│   │   ├── 01_原始素材/                      # 原始图片、百科全书 HTML
+│   │   ├── 02_加工产出/                      # OCR 转录、清洗文本
+│   │   ├── 03_校对与核对/                    # 核对报告、校正记录
+│   │   └── 04_参考权威/                      # 按资料族归档的权威参考
+│   └── 造物/                      # 造物维度完整工程（460 页）
+│       ├── README.md                        # 造物维度专用 README
+│       ├── WORKFLOW.md                      # 造物维度工作流 SOP
+│       ├── pages/                           # 460 页 wiki 产物（按 14 类型子目录）
+│       ├── docs/                            # 写作规范（内链/分类/模板/品阶）
+│       ├── archive/                         # 旧脚本/旧批次/历史快照
+│       └── .workbuddy/                      # 工程内部（脚本/状态/AI 记忆）
 ├── data/                           # 结构化数据（JSON/YAML）
 ├── backup/                         # XML 导出备份
 ├── output/                         # 中间产出（gitignore，不入版本控制）
@@ -131,7 +132,7 @@ python3 scripts/upload_pages.py
 python3 scripts/upload_pages.py --only pages/仙基道统/道统
 
 # 上传造物维度
-python3 scripts/upload_pages.py --only "资料库-法宝:道具:灵资/pages"
+python3 scripts/upload_pages.py --only "资料库/造物/pages"
 
 # 预览不上传
 python3 scripts/upload_pages.py --dry-run
@@ -175,14 +176,14 @@ nginx -t && nginx -s reload              # 重载 Nginx
 
 ### 品阶三同步铁律
 
-每页必须三处品阶一致：info 表 / 首句 / Category。详见 [造物维度 WORKFLOW](资料库-法宝:道具:灵资/WORKFLOW.md)。
+每页必须三处品阶一致：info 表 / 首句 / Category。详见 [造物维度 WORKFLOW](资料库/造物/WORKFLOW.md)。
 
 ### 内链规范
 
 - 造物页使用 `[[造物-实体名]]` 格式
 - 人物页使用 `[[人物-实体名]]` 格式
 - 保留书名号《》用于功法/经文名称
-- 详见 [内链规范](资料库-法宝:道具:灵资/docs/内链规范.md)
+- 详见 [内链规范](资料库/造物/docs/内链规范.md)
 
 ### 文件命名规则（造物维度）
 

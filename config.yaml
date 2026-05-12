@@ -43,8 +43,8 @@ database:
 
 paths:
   pages_dir: "pages"
-  xianji_json: "资料库 - 神通/04_参考权威/02_五德位业体系_主数据/玄鉴仙族_五德位业体系_结构化.json"
-  xianji_authority: "资料库 - 神通/04_参考权威/01_神通仙基_外部来源与展示/玄鉴仙族_神通仙基汇总.md"
+  xianji_json: "资料库/神通/04_参考权威/02_五德位业体系_主数据/玄鉴仙族_五德位业体系_结构化.json"
+  xianji_authority: "资料库/神通/04_参考权威/01_神通仙基_外部来源与展示/玄鉴仙族_神通仙基汇总.md"
 
 data_sources:
   base_dir: "/Users/leoshi/WorkBuddy/20260323190937"
