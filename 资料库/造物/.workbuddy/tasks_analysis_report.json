@@ -1,0 +1,891 @@
+{
+  "task_a_new_pages": [
+    {
+      "name": "不伤石",
+      "occurrences": 9,
+      "chars": 9045,
+      "category": "灵物"
+    },
+    {
+      "name": "太阳衍光宝袋",
+      "occurrences": 9,
+      "chars": 8064,
+      "category": "材料"
+    },
+    {
+      "name": "命阳白玉剑",
+      "occurrences": 8,
+      "chars": 7049,
+      "category": "剑道"
+    },
+    {
+      "name": "无明水火",
+      "occurrences": 9,
+      "chars": 7042,
+      "category": "材料"
+    },
+    {
+      "name": "虺元灵水",
+      "occurrences": 9,
+      "chars": 7042,
+      "category": "灵资"
+    },
+    {
+      "name": "纯羽离火",
+      "occurrences": 7,
+      "chars": 7042,
+      "category": "材料"
+    },
+    {
+      "name": "东命瓶",
+      "occurrences": 8,
+      "chars": 7035,
+      "category": "灵器"
+    },
+    {
+      "name": "月阙剑",
+      "occurrences": 7,
+      "chars": 7035,
+      "category": "筑基法器"
+    },
+    {
+      "name": "裨庭青芫宝鼎",
+      "occurrences": 7,
+      "chars": 6048,
+      "category": "灵器"
+    }
+  ],
+  "task_b_density_analysis": [
+    {
+      "name": "秋亡水",
+      "occurrences": 4,
+      "chars": 4020,
+      "category": "灵资",
+      "context_analysis": {
+        "char_count": 4610,
+        "high_kw": 13,
+        "med_kw": 25,
+        "low_kw": 0,
+        "weighted_score": 89,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "六辛齐金",
+      "occurrences": 4,
+      "chars": 4024,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 4622,
+        "high_kw": 7,
+        "med_kw": 31,
+        "low_kw": 1,
+        "weighted_score": 84,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "天阳玄火衣",
+      "occurrences": 4,
+      "chars": 4028,
+      "category": "材料",
+      "context_analysis": {
+        "char_count": 4580,
+        "high_kw": 26,
+        "med_kw": 1,
+        "low_kw": 2,
+        "weighted_score": 82,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "孔雀送子盘",
+      "occurrences": 4,
+      "chars": 3021,
+      "category": "灵宝",
+      "context_analysis": {
+        "char_count": 3623,
+        "high_kw": 21,
+        "med_kw": 4,
+        "low_kw": 0,
+        "weighted_score": 71,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "座堪解阵刃",
+      "occurrences": 3,
+      "chars": 3021,
+      "category": "筑基法器",
+      "context_analysis": {
+        "char_count": 3485,
+        "high_kw": 13,
+        "med_kw": 12,
+        "low_kw": 8,
+        "weighted_score": 71,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "乌玄金",
+      "occurrences": 4,
+      "chars": 4020,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 4578,
+        "high_kw": 6,
+        "med_kw": 24,
+        "low_kw": 4,
+        "weighted_score": 70,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "天殷元珠",
+      "occurrences": 3,
+      "chars": 3018,
+      "category": "灵宝",
+      "context_analysis": {
+        "char_count": 3478,
+        "high_kw": 8,
+        "med_kw": 22,
+        "low_kw": 0,
+        "weighted_score": 68,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "守琉牡火",
+      "occurrences": 4,
+      "chars": 3018,
+      "category": "材料",
+      "context_analysis": {
+        "char_count": 3506,
+        "high_kw": 17,
+        "med_kw": 7,
+        "low_kw": 2,
+        "weighted_score": 67,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "魏景王剑",
+      "occurrences": 4,
+      "chars": 4024,
+      "category": "筑基法器",
+      "context_analysis": {
+        "char_count": 4576,
+        "high_kw": 19,
+        "med_kw": 5,
+        "low_kw": 0,
+        "weighted_score": 67,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "六震玄雷令",
+      "occurrences": 4,
+      "chars": 3021,
+      "category": "灵宝",
+      "context_analysis": {
+        "char_count": 3508,
+        "high_kw": 8,
+        "med_kw": 19,
+        "low_kw": 0,
+        "weighted_score": 62,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "湛蓝刃",
+      "occurrences": 4,
+      "chars": 3015,
+      "category": "筑基法器",
+      "context_analysis": {
+        "char_count": 3511,
+        "high_kw": 7,
+        "med_kw": 20,
+        "low_kw": 0,
+        "weighted_score": 61,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "道金",
+      "occurrences": 3,
+      "chars": 3012,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3526,
+        "high_kw": 7,
+        "med_kw": 19,
+        "low_kw": 2,
+        "weighted_score": 61,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "漠玄甲",
+      "occurrences": 4,
+      "chars": 3015,
+      "category": "灵器",
+      "context_analysis": {
+        "char_count": 3500,
+        "high_kw": 11,
+        "med_kw": 13,
+        "low_kw": 1,
+        "weighted_score": 60,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "渌台醒心剑",
+      "occurrences": 4,
+      "chars": 2014,
+      "category": "位别",
+      "context_analysis": {
+        "char_count": 2425,
+        "high_kw": 16,
+        "med_kw": 5,
+        "low_kw": 0,
+        "weighted_score": 58,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "泰羽剑",
+      "occurrences": 4,
+      "chars": 3015,
+      "category": "筑基法器",
+      "context_analysis": {
+        "char_count": 3515,
+        "high_kw": 6,
+        "med_kw": 17,
+        "low_kw": 6,
+        "weighted_score": 58,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "净隅功德瓶",
+      "occurrences": 4,
+      "chars": 4028,
+      "category": "灵器",
+      "context_analysis": {
+        "char_count": 4578,
+        "high_kw": 13,
+        "med_kw": 7,
+        "low_kw": 0,
+        "weighted_score": 53,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "上明玄玉",
+      "occurrences": 4,
+      "chars": 3018,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3562,
+        "high_kw": 7,
+        "med_kw": 14,
+        "low_kw": 0,
+        "weighted_score": 49,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "六相灵石",
+      "occurrences": 3,
+      "chars": 3018,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3516,
+        "high_kw": 10,
+        "med_kw": 9,
+        "low_kw": 0,
+        "weighted_score": 48,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "上羽夜衣",
+      "occurrences": 4,
+      "chars": 4024,
+      "category": "灵器",
+      "context_analysis": {
+        "char_count": 4610,
+        "high_kw": 3,
+        "med_kw": 18,
+        "low_kw": 2,
+        "weighted_score": 47,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "相火",
+      "occurrences": 4,
+      "chars": 2008,
+      "category": "材料",
+      "context_analysis": {
+        "char_count": 2455,
+        "high_kw": 13,
+        "med_kw": 4,
+        "low_kw": 0,
+        "weighted_score": 47,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "褚春悬木",
+      "occurrences": 4,
+      "chars": 4024,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 4686,
+        "high_kw": 10,
+        "med_kw": 7,
+        "low_kw": 2,
+        "weighted_score": 46,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "六丁并火",
+      "occurrences": 3,
+      "chars": 3018,
+      "category": "材料",
+      "context_analysis": {
+        "char_count": 3488,
+        "high_kw": 4,
+        "med_kw": 16,
+        "low_kw": 2,
+        "weighted_score": 46,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "北帝魏书",
+      "occurrences": 4,
+      "chars": 3018,
+      "category": "灵宝",
+      "context_analysis": {
+        "char_count": 3506,
+        "high_kw": 14,
+        "med_kw": 1,
+        "low_kw": 0,
+        "weighted_score": 44,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "戊咲珠",
+      "occurrences": 3,
+      "chars": 3015,
+      "category": "灵宝",
+      "context_analysis": {
+        "char_count": 3477,
+        "high_kw": 13,
+        "med_kw": 2,
+        "low_kw": 1,
+        "weighted_score": 44,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "万昱剑书",
+      "occurrences": 4,
+      "chars": 4024,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 4580,
+        "high_kw": 5,
+        "med_kw": 14,
+        "low_kw": 0,
+        "weighted_score": 43,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "缡刃",
+      "occurrences": 4,
+      "chars": 2008,
+      "category": "筑基法器",
+      "context_analysis": {
+        "char_count": 2459,
+        "high_kw": 11,
+        "med_kw": 4,
+        "low_kw": 2,
+        "weighted_score": 43,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "少商相火",
+      "occurrences": 3,
+      "chars": 3018,
+      "category": "材料",
+      "context_analysis": {
+        "char_count": 3558,
+        "high_kw": 7,
+        "med_kw": 11,
+        "low_kw": 0,
+        "weighted_score": 43,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "天逍垣石",
+      "occurrences": 4,
+      "chars": 3018,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3508,
+        "high_kw": 4,
+        "med_kw": 15,
+        "low_kw": 0,
+        "weighted_score": 42,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "子穆玄金",
+      "occurrences": 3,
+      "chars": 3018,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3490,
+        "high_kw": 3,
+        "med_kw": 15,
+        "low_kw": 3,
+        "weighted_score": 42,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "动心金",
+      "occurrences": 3,
+      "chars": 3015,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3485,
+        "high_kw": 3,
+        "med_kw": 14,
+        "low_kw": 4,
+        "weighted_score": 41,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "金鸢紫金钵",
+      "occurrences": 3,
+      "chars": 2014,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 2454,
+        "high_kw": 13,
+        "med_kw": 1,
+        "low_kw": 0,
+        "weighted_score": 41,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "飞玄乱石",
+      "occurrences": 4,
+      "chars": 3018,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3537,
+        "high_kw": 8,
+        "med_kw": 7,
+        "low_kw": 0,
+        "weighted_score": 38,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "代夜瓶",
+      "occurrences": 3,
+      "chars": 3015,
+      "category": "灵器",
+      "context_analysis": {
+        "char_count": 3489,
+        "high_kw": 12,
+        "med_kw": 1,
+        "low_kw": 0,
+        "weighted_score": 38,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "泷玄白玉",
+      "occurrences": 3,
+      "chars": 2012,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 2466,
+        "high_kw": 8,
+        "med_kw": 7,
+        "low_kw": 0,
+        "weighted_score": 38,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "八索",
+      "occurrences": 4,
+      "chars": 3012,
+      "category": "灵器",
+      "context_analysis": {
+        "char_count": 3579,
+        "high_kw": 4,
+        "med_kw": 12,
+        "low_kw": 1,
+        "weighted_score": 37,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "渡阡令",
+      "occurrences": 3,
+      "chars": 2010,
+      "category": "灵宝",
+      "context_analysis": {
+        "char_count": 2410,
+        "high_kw": 9,
+        "med_kw": 4,
+        "low_kw": 1,
+        "weighted_score": 36,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "降服溟山术书",
+      "occurrences": 4,
+      "chars": 3024,
+      "category": "灵宝",
+      "context_analysis": {
+        "char_count": 3613,
+        "high_kw": 5,
+        "med_kw": 9,
+        "low_kw": 1,
+        "weighted_score": 34,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "三十二代夜玄铜宝灯",
+      "occurrences": 3,
+      "chars": 2022,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 2434,
+        "high_kw": 10,
+        "med_kw": 2,
+        "low_kw": 0,
+        "weighted_score": 34,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "镇邪石",
+      "occurrences": 3,
+      "chars": 3015,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3483,
+        "high_kw": 2,
+        "med_kw": 14,
+        "low_kw": 0,
+        "weighted_score": 34,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "无咎灵木",
+      "occurrences": 4,
+      "chars": 3018,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3537,
+        "high_kw": 8,
+        "med_kw": 3,
+        "low_kw": 1,
+        "weighted_score": 31,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "白飬金书",
+      "occurrences": 4,
+      "chars": 2012,
+      "category": "灵宝",
+      "context_analysis": {
+        "char_count": 2474,
+        "high_kw": 8,
+        "med_kw": 3,
+        "low_kw": 0,
+        "weighted_score": 30,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "天阳彩铜",
+      "occurrences": 4,
+      "chars": 3018,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3572,
+        "high_kw": 7,
+        "med_kw": 4,
+        "low_kw": 0,
+        "weighted_score": 29,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "将胜石",
+      "occurrences": 3,
+      "chars": 3015,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3509,
+        "high_kw": 8,
+        "med_kw": 2,
+        "low_kw": 0,
+        "weighted_score": 28,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "枢宫太阳火",
+      "occurrences": 3,
+      "chars": 2014,
+      "category": "材料",
+      "context_analysis": {
+        "char_count": 2418,
+        "high_kw": 9,
+        "med_kw": 0,
+        "low_kw": 0,
+        "weighted_score": 27,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "折焚离火",
+      "occurrences": 3,
+      "chars": 2012,
+      "category": "材料",
+      "context_analysis": {
+        "char_count": 2418,
+        "high_kw": 4,
+        "med_kw": 4,
+        "low_kw": 5,
+        "weighted_score": 25,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "嗪地靴",
+      "occurrences": 3,
+      "chars": 1005,
+      "category": "待分类",
+      "context_analysis": {
+        "char_count": 1393,
+        "high_kw": 1,
+        "med_kw": 7,
+        "low_kw": 2,
+        "weighted_score": 19,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "无擘水火",
+      "occurrences": 3,
+      "chars": 2012,
+      "category": "材料",
+      "context_analysis": {
+        "char_count": 2456,
+        "high_kw": 2,
+        "med_kw": 4,
+        "low_kw": 1,
+        "weighted_score": 15,
+        "has_description": true,
+        "density_tier": "high"
+      }
+    },
+    {
+      "name": "观雨宝鼎",
+      "occurrences": 3,
+      "chars": 3018,
+      "category": "待分类",
+      "context_analysis": {
+        "char_count": 3549,
+        "high_kw": 4,
+        "med_kw": 1,
+        "low_kw": 0,
+        "weighted_score": 14,
+        "has_description": true,
+        "density_tier": "medium"
+      }
+    },
+    {
+      "name": "白隼金",
+      "occurrences": 4,
+      "chars": 3015,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 3515,
+        "high_kw": 0,
+        "med_kw": 6,
+        "low_kw": 0,
+        "weighted_score": 12,
+        "has_description": true,
+        "density_tier": "medium"
+      }
+    },
+    {
+      "name": "招瑶四时鼎",
+      "occurrences": 3,
+      "chars": 1838,
+      "category": "灵器",
+      "context_analysis": {
+        "char_count": 2242,
+        "high_kw": 3,
+        "med_kw": 1,
+        "low_kw": 0,
+        "weighted_score": 11,
+        "has_description": true,
+        "density_tier": "medium"
+      }
+    },
+    {
+      "name": "胜名宝牙石",
+      "occurrences": 4,
+      "chars": 2014,
+      "category": "灵物",
+      "context_analysis": {
+        "char_count": 2448,
+        "high_kw": 3,
+        "med_kw": 0,
+        "low_kw": 0,
+        "weighted_score": 9,
+        "has_description": true,
+        "density_tier": "medium"
+      }
+    },
+    {
+      "name": "戮尽玄乌宝图",
+      "occurrences": 3,
+      "chars": 3024,
+      "category": "灵宝",
+      "context_analysis": {
+        "char_count": 3492,
+        "high_kw": 2,
+        "med_kw": 0,
+        "low_kw": 0,
+        "weighted_score": 6,
+        "has_description": true,
+        "density_tier": "low"
+      }
+    },
+    {
+      "name": "霂林寒水",
+      "occurrences": 3,
+      "chars": 3018,
+      "category": "材料",
+      "context_analysis": {
+        "char_count": 3514,
+        "high_kw": 0,
+        "med_kw": 2,
+        "low_kw": 0,
+        "weighted_score": 4,
+        "has_description": true,
+        "density_tier": "low"
+      }
+    },
+    {
+      "name": "大空求道盘",
+      "occurrences": 4,
+      "chars": 4028,
+      "category": "灵宝",
+      "context_analysis": {
+        "char_count": 4580,
+        "high_kw": 1,
+        "med_kw": 0,
+        "low_kw": 0,
+        "weighted_score": 3,
+        "has_description": true,
+        "density_tier": "low"
+      }
+    },
+    {
+      "name": "玄矝紫火",
+      "occurrences": 3,
+      "chars": 1006,
+      "category": "材料",
+      "context_analysis": {
+        "char_count": 1331,
+        "high_kw": 1,
+        "med_kw": 0,
+        "low_kw": 0,
+        "weighted_score": 3,
+        "has_description": true,
+        "density_tier": "low"
+      }
+    }
+  ],
+  "density_summary": {
+    "high": 47,
+    "medium": 4,
+    "low": 4,
+    "no_context": 0
+  }
+}

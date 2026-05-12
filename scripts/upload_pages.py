@@ -9,11 +9,11 @@
   - 命中目录名的文件使用对应前缀；未命中的使用 --prefix（默认空字符串，即不加前缀）。
   - 仙基道统/索引/人物与势力 维度：文件 stem 已自带 "道统-"/"神通-"/"位业-"/"人物-" 类语义前缀，
     因此对应目录前缀均为 ""，避免出现 "造物-道统-XXX" 这种双前缀错误。
-  - 造物维度（资料库-法宝:道具:灵资）：上传时显式 --prefix='造物-' 或在 --prefix-map 中映射对应目录。
+  - 造物维度（资料库/造物）：上传时显式 --prefix='造物-' 或在 --prefix-map 中映射对应目录。
 
 例：
   python3 upload_pages.py --only pages/仙基道统           # 自动空前缀
-  python3 upload_pages.py --only "资料库-法宝:道具:灵资/pages" --prefix='造物-'
+  python3 upload_pages.py --only "资料库/造物/pages" --prefix='造物-'
 
 可用 `--only` 指定一个或多个目录/文件进行局部上传。
 """
