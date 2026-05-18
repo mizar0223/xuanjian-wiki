@@ -11,7 +11,10 @@ import sys
 from pathlib import Path
 from collections import defaultdict, Counter
 
-PAGES_DIR = Path(__file__).parent.parent / "pages"
+# 公共路径模块（兼容直接执行与作为模块导入）
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _paths import PAGES_DIR  # noqa: E402
+
 OUTPUT_DIR = PAGES_DIR / "00-体系"
 
 # ============================================================
@@ -161,7 +164,7 @@ CATEGORIES = {
         ],
     },
     "符箓": {
-        "dir": "11-符箓",
+        "dir": "13-符箓",
         "prefix": "造物",
         "overview": (
             "'''符箓'''是《玄鉴仙族》世界观中以灵力封印于符纸之上的造物，"

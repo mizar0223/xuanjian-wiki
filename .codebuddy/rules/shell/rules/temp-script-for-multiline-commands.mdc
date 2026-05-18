@@ -1,0 +1,51 @@
+---
+description: 多行 Shell/Python 命令执行时，优先改用临时脚本，避免 here-doc 的 EOF 与转义问题。
+alwaysApply: true
+---
+
+When running complex multi-line commands in the terminal, prefer writing the logic to a temporary script file and then executing that script.
+
+<rule>
+复杂多行命令，尤其是 `python3 - <<'PY' ... PY`、`cat <<'EOF' ... EOF` 这类 here-doc 写法，容易在封装终端、JSON 命令参数、复制粘贴或自动化执行环境中出现 EOF 结束标记无法识别、换行被转义、引号被改写等问题。
+
+为保证命令稳定执行：
+
+1. 不要优先使用内联 here-doc 执行复杂脚本。
+2. 对包含循环、异常处理、多层引号、中文路径、JSON 输出或超过 3 行的脚本逻辑，优先写入 `/tmp/*.py`、`/tmp/*.sh` 等临时脚本文件。
+3. 临时脚本写入完成后，再用 `python3 /tmp/script.py` 或 `bash /tmp/script.sh` 执行。
+4. 如果确实必须使用 here-doc：
+   - 结束标记必须顶格、单独一行。
+   - 结束标记不能带引号。
+   - 结束标记前后不能有空格或缩进。
+   - 确保命令中是真实换行，而不是字面量 `\n`。
+5. 执行结束后，如临时脚本不再需要，可以删除；若用于排查问题，可保留并在回复中说明路径。
+
+推荐示例：
+
+```bash
+cat > /tmp/list_files.py <<'PY'
+from pathlib import Path
+import hashlib
+import json
+
+root = Path('/Users/shixiyang/AI/wiki/资料库 - 神通/04_参考权威')
+items = []
+
+for path in sorted(root.rglob('*')):
+    if path.is_file():
+        data = path.read_bytes()
+        items.append({
+            'rel': str(path.relative_to(root)),
+            'size': path.stat().st_size,
+            'suffix': path.suffix.lower(),
+            'sha16': hashlib.sha256(data).hexdigest()[:16],
+        })
+
+print(json.dumps({'root': str(root), 'files': items}, ensure_ascii=False, indent=2))
+PY
+
+python3 /tmp/list_files.py
+```
+
+如果是在自动化工具中执行，上面的逻辑应拆成：先创建临时脚本文件，再单独执行脚本文件。
+</rule>

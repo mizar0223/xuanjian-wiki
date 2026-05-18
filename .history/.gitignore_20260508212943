@@ -1,6 +1,0 @@
-# Wiki 工作区 gitignore
-.env
-*.pyc
-__pycache__/
-pages/
-backup/xuanjian_import.xml
