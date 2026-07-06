@@ -80,6 +80,65 @@ cleanup() {
 }
 trap cleanup EXIT
 
+# -------------------- 占位符渲染（脱敏推送用）--------------------
+# LocalSettings.php 在仓库里用 @@PLACEHOLDER@@ 占位符（不入敏感信息）
+# 部署前从此函数注入真实值（从环境变量或 .env 文件读）
+RENDER_PLACEHOLDERS=(
+    "MW_DB_PASSWORD"
+    "MW_SECRET_KEY"
+    "MW_UPGRADE_KEY"
+)
+
+# 加载 .env（如果存在）：从 WIKI_DEPLOY_ENV_FILE 指定的文件，或从默认位置
+WIKI_DEPLOY_ENV_FILE="${WIKI_DEPLOY_ENV_FILE:-/opt/mediawiki/.env}"
+
+# 渲染 LocalSettings.php：把 @@PLACEHOLDER@@ 替换为真实值
+# 真实值优先级: 1) 环境变量 2) WIKI_DEPLOY_ENV_FILE
+render_local_settings() {
+    local src="$1" dst="$2"
+
+    # 准备环境变量（从 .env 文件加载，覆盖优先级低于现有环境变量）
+    local env_file="$WIKI_DEPLOY_ENV_FILE"
+    if [[ -f "$env_file" ]]; then
+        # 临时 set -a 让所有赋值自动 export
+        set -a
+        # shellcheck disable=SC1090
+        source "$env_file"
+        set +a
+    fi
+
+    cp "$src" "$dst"
+    local missing=()
+    for ph in "${RENDER_PLACEHOLDERS[@]}"; do
+        local value="${!ph:-}"
+        if [[ -z "$value" ]]; then
+            missing+=("$ph")
+        else
+            # 用 sed 转义 | 防止占位符被当作正则特殊字符
+            local escaped_value="${value//\//\\/}"
+            # macOS sed 需 -i '' 形式；用 -e 一次性替换避免 BSD/GNU 差异
+            if ! sed -i '' "s|@@${ph}@@|${escaped_value}|g" "$dst" 2>/dev/null; then
+                err "渲染占位符 ${ph} 失败"
+                return 1
+            fi
+        fi
+    done
+
+    if [[ ${#missing[@]} -gt 0 ]]; then
+        err "占位符未配置（环境变量或 $env_file 缺失）: ${missing[*]}"
+        err "  请在 $env_file 中设置: MW_DB_PASSWORD=... MW_SECRET_KEY=... MW_UPGRADE_KEY=..."
+        return 1
+    fi
+
+    # 验证所有占位符已被替换
+    if grep -q "@@MW_.*@@" "$dst"; then
+        err "渲染后仍残留占位符（请检查真实值是否含特殊字符）:"
+        grep -n "@@MW_.*@@" "$dst" | head -3
+        return 1
+    fi
+    return 0
+}
+
 # -------------------- 用法 --------------------
 usage() {
     cat <<EOF
@@ -102,6 +161,13 @@ ${SCRIPT_NAME} — Agent-friendly MediaWiki 部署到 9433.com.cn
 环境变量:
   WIKI_SSH_HOST               自定义目标主机（默认 114.132.222.8）
   WIKI_SSH_KEY                自定义 SSH 私钥
+  WIKI_DEPLOY_ENV_FILE        占位符渲染用的凭据文件（默认 /opt/mediawiki/.env）
+                             包含 MW_DB_PASSWORD / MW_SECRET_KEY / MW_UPGRADE_KEY
+
+凭据:
+  LocalSettings.php 仓库版用 @@MW_DB_PASSWORD@@ / @@MW_SECRET_KEY@@ / @@MW_UPGRADE_KEY@@ 占位符
+  部署时 deploy-wiki.sh 自动从 \$WIKI_DEPLOY_ENV_FILE 读真实值并 sed 注入
+  真实凭据不入仓库；占位符版本可安全推送到 github 公开仓库
 
 退出码:
   0  成功
@@ -253,12 +319,31 @@ step_sync() {
             fi
             ok "同步目录: $f/"
         else
-            if ! scp "${SCP_OPTS[@]}" "$LOCAL_MW_DIR/$f" "${RUSER}@${HOST_IP}:$REMOTE_MW_DIR/$f" >/dev/null 2>>"$LOG_FILE"; then
-                record_step "$step_name" "false" 0 "scp-file-fail:$f"
-                err "scp 文件失败: $f (退出码 3)"
-                return 3
+            # 特殊处理：LocalSettings.php 含占位符，需先 sed 注入真实值再 scp
+            if [[ "$f" == "LocalSettings.php" ]]; then
+                local rendered="/tmp/LocalSettings.rendered.$$"
+                if ! render_local_settings "$LOCAL_MW_DIR/$f" "$rendered"; then
+                    rm -f "$rendered"
+                    record_step "$step_name" "false" 0 "render-fail"
+                    err "渲染 LocalSettings.php 失败（占位符未替换）"
+                    return 3
+                fi
+                if ! scp "${SCP_OPTS[@]}" "$rendered" "${RUSER}@${HOST_IP}:$REMOTE_MW_DIR/$f" >/dev/null 2>>"$LOG_FILE"; then
+                    rm -f "$rendered"
+                    record_step "$step_name" "false" 0 "scp-file-fail:$f"
+                    err "scp 文件失败: $f (退出码 3)"
+                    return 3
+                fi
+                rm -f "$rendered"
+                ok "同步文件: $f (含占位符渲染)"
+            else
+                if ! scp "${SCP_OPTS[@]}" "$LOCAL_MW_DIR/$f" "${RUSER}@${HOST_IP}:$REMOTE_MW_DIR/$f" >/dev/null 2>>"$LOG_FILE"; then
+                    record_step "$step_name" "false" 0 "scp-file-fail:$f"
+                    err "scp 文件失败: $f (退出码 3)"
+                    return 3
+                fi
+                ok "同步文件: $f"
             fi
-            ok "同步文件: $f"
         fi
     done
 

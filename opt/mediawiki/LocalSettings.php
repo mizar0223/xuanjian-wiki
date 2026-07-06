@@ -61,7 +61,7 @@ $wgDBtype = "mysql";
 $wgDBserver = "mariadb";
 $wgDBname = "wikidb";
 $wgDBuser = "mediawiki";
-$wgDBpassword = "mw_db_2026";
+$wgDBpassword = "@@MW_DB_PASSWORD@@";
 
 # MySQL specific settings
 $wgDBprefix = "wiki_";
@@ -103,14 +103,14 @@ $wgLocaltimezone = "UTC";
 ## be publicly accessible from the web.
 #$wgCacheDirectory = "$IP/cache";
 
-$wgSecretKey = "f824d3c9c157605efef920c7043976c558de0edcc7a395707ee0a042ba8a634e";
+$wgSecretKey = "@@MW_SECRET_KEY@@";
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "1862a3ae0e3732fd";
+$wgUpgradeKey = "@@MW_UPGRADE_KEY@@";
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation

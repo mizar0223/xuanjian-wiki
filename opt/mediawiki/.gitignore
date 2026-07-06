@@ -1,0 +1,20 @@
+# MediaWiki 本地配置（真实凭据，不入仓库）
+.env
+.env.local
+.env.*.local
+
+# PHP / Apache 临时文件
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Docker 数据卷（如本机挂载测试）
+mariadb_data/
+mw_images/
+
+# 上传历史（如本机直接挂载）
+images/
+
+# 部署时渲染的临时文件（deploy-wiki.sh 生成）
+LocalSettings.rendered.*

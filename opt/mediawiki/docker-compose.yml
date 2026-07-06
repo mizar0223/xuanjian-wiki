@@ -3,11 +3,13 @@ services:
     image: mariadb:10.11
     container_name: mw-mariadb
     restart: unless-stopped
+    env_file:
+      - .env
     environment:
-      MYSQL_ROOT_PASSWORD: mw_root_2026
-      MYSQL_DATABASE: mediawiki
-      MYSQL_USER: mediawiki
-      MYSQL_PASSWORD: mw_db_2026
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?MYSQL_ROOT_PASSWORD must be set in .env}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:?MYSQL_DATABASE must be set in .env}
+      MYSQL_USER: ${MYSQL_USER:?MYSQL_USER must be set in .env}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?MYSQL_PASSWORD must be set in .env}
     volumes:
       - mariadb_data:/var/lib/mysql
     command: >
@@ -29,13 +31,15 @@ services:
     restart: unless-stopped
     depends_on:
       - mariadb
+    env_file:
+      - .env
     environment:
       MW_DB_HOST: mariadb
-      MW_DB_NAME: mediawiki
-      MW_DB_USER: mediawiki
-      MW_DB_PASS: mw_db_2026
-      MW_ADMIN_USER: LeoAdmin
-      MW_ADMIN_PASS: mw_admin_2026
+      MW_DB_NAME: ${MYSQL_DATABASE}
+      MW_DB_USER: ${MYSQL_USER}
+      MW_DB_PASS: ${MYSQL_PASSWORD}
+      MW_ADMIN_USER: ${MW_ADMIN_USER:?MW_ADMIN_USER must be set in .env}
+      MW_ADMIN_PASS: ${MW_ADMIN_PASS:?MW_ADMIN_PASS must be set in .env}
     volumes:
       - mw_images:/var/www/html/images
       - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
