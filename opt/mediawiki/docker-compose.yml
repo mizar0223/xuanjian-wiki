@@ -1,0 +1,59 @@
+services:
+  mariadb:
+    image: mariadb:10.11
+    container_name: mw-mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: mw_root_2026
+      MYSQL_DATABASE: mediawiki
+      MYSQL_USER: mediawiki
+      MYSQL_PASSWORD: mw_db_2026
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    command: >
+      --innodb-buffer-pool-size=128M
+      --key-buffer-size=16M
+      --max-connections=20
+      --table-open-cache=64
+      --thread-cache-size=4
+      --query-cache-size=0
+      --query-cache-type=0
+      --performance-schema=OFF
+    mem_limit: 256m
+    networks:
+      - wiki-net
+
+  mediawiki:
+    image: mediawiki:1.42
+    container_name: mw-app
+    restart: unless-stopped
+    depends_on:
+      - mariadb
+    environment:
+      MW_DB_HOST: mariadb
+      MW_DB_NAME: mediawiki
+      MW_DB_USER: mediawiki
+      MW_DB_PASS: mw_db_2026
+      MW_ADMIN_USER: LeoAdmin
+      MW_ADMIN_PASS: mw_admin_2026
+    volumes:
+      - mw_images:/var/www/html/images
+      - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
+      - ./apache-wiki-alias.conf:/etc/apache2/conf-enabled/wiki-alias.conf:ro
+      - ./.htaccess:/var/www/html/.htaccess:ro
+      - ./resources-assets:/var/www/html/resources/assets:rw
+    entrypoint: ["docker-php-entrypoint"]
+    command: >
+      bash -c "a2enconf wiki-alias 2>/dev/null; exec apache2-foreground"
+    ports:
+      - "127.0.0.1:8889:80"
+    mem_limit: 512m
+    networks:
+      - wiki-net
+
+volumes:
+  mariadb_data:
+  mw_images:
+
+networks:
+  wiki-net:

@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Short URL: /wiki/Title -> /index.php?title=Title
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^wiki/(.*)$ /index.php?title=$1 [L,QSA]

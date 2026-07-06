@@ -24,7 +24,7 @@ docker:
   localsettings_path: "/var/www/html/LocalSettings.php"
 
 nginx:
-  config_path: "/www/server/panel/vhost/nginx/9433.com.cn.conf"
+  config_path: "/www/server/panel/vhost/nginx/mysite.conf"
   exposed_paths:
     - "/wiki/"
     - "/w/"

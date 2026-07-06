@@ -68,6 +68,7 @@ wiki/
 │   ├── wiki_admin.py                   # 管理工具（统计/查询/搜索/删除）
 │   ├── setup_smw_properties.py         # SemanticMediaWiki 属性配置
 │   ├── ssh_wiki.sh                     # SSH 快捷连接
+│   ├── deploy-wiki.sh                  # 配置/资源发布 + docker restart（agent-friendly）
 │   └── common/                         # 共享配置模块
 ├── pages/                          # 人物维度 MediaWiki 源文件（1099 页）
 │   ├── 人物与势力/                      # 角色/势力正文页面
@@ -146,6 +147,19 @@ docker exec -it mediawiki vi /var/www/html/LocalSettings.php  # 编辑配置
 docker restart mediawiki                 # 重启
 nginx -t && nginx -s reload              # 重载 Nginx
 ```
+
+**配置/资源发布（推荐，agent-friendly）**
+```bash
+# 推送 LocalSettings.php / .htaccess / apache-wiki-alias.conf / resources-assets/
+# 到 /opt/mediawiki/，然后 docker compose restart mediawiki
+./scripts/deploy-wiki.sh --dry-run       # 预览
+./scripts/deploy-wiki.sh                 # 实际部署 + 健康检查
+./scripts/deploy-wiki.sh --no-restart    # 只推文件不重启
+./scripts/deploy-wiki.sh --include-images  # 含 mw_images（88M+，慎用）
+```
+
+> 依赖：仓库根目录下需有 `opt/mediawiki/` 作为本地源（含 `LocalSettings.php` 等）。
+> 当前仓库未追踪该目录，首次使用前先用 `ssh_wiki.sh` 上去 `scp` 一份到本地，或在初始化时建空目录。
 
 ---
 
