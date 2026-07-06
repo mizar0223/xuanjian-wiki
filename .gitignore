@@ -5,3 +5,6 @@ __pycache__/
 backup/xuanjian_import.xml
 output/
 .DS_Store
+
+# 非必要大文件产物（已从版本控制移除，本地保留）
+资料库/神通/01_原始素材/神通图片更新版本-再补充/归档.zip
