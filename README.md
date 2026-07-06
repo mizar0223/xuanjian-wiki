@@ -223,6 +223,39 @@ L 前缀仅用于文件名，上传脚本自动生成不带 L 的线上标题。
 
 ---
 
+## 仓库清理与远程同步（2026-07-06）
+
+### 背景
+
+本仓库同时托管于工蜂（`origin`）与 GitHub（`github`），两者指向同一份《玄鉴仙族》维基源码：
+
+| Remote | 地址 |
+|--------|------|
+| `origin` | `https://git.woa.com/leoshixie/xuanjian-wiki.git`（工蜂） |
+| `github` | `https://github.com/mizar0223/xuanjian-wiki`（GitHub） |
+
+### 同步过程
+
+1. 初始化 GitHub remote 并首次推送 `main`：
+   ```bash
+   git remote add github https://github.com/mizar0223/xuanjian-wiki
+   git push -u github main
+   ```
+2. 首次推送时 GitHub 对大于 50 MB 的文件给出 `GH001` 警告（`归档.zip` 达 72.38 MB），随后对该文件及一批非必要产物做了清理（见下）。
+
+### 清理内容（三个提交）
+
+| Commit | 内容 |
+|--------|------|
+| `b26d78b` | 删除 `docs/原著/*.txt` 共 63 个（原著摘录文本，有意清理） |
+| `0e96852` | 将 `资料库/神通/01_原始素材/神通图片更新版本-再补充/归档.zip`（72.38 MB）移出版本控制，并加入 `.gitignore`（`--cached` 移除，本地文件保留，GitHub 不再追踪） |
+| `43ff3af` | 删除 `资料库/神通/01_原始素材/神通图片更新版本-再补充/1440 章图片/` 下 10 个非必要 JPG（IMG_0778~0788） |
+
+### 注意事项
+
+- `.env`、`backup/*.xml`、`output/` 等敏感 / 中间产物已被 `.gitignore` 忽略，不会进入任何远程仓库。
+- 当前 `github/main` 已最新；`origin/main`（工蜂）与本地分支存在分叉（本地领先 3 个提交 + 远程 1 个提交未拉取）。如需把相同内容同步回工蜂，先执行 `git pull --rebase origin main` 整合分叉提交，再 `git push origin main`。
+
 ## 账号信息
 
 | 项目 | 值 |
