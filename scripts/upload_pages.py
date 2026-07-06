@@ -37,7 +37,7 @@ ROOT = CONFIG.project_root
 DEFAULT_PAGES_DIR = CONFIG.pages_dir
 WIKI_API = CONFIG.wiki_api
 WIKI_USER = CONFIG.wiki_user
-WIKI_URL = CONFIG.wiki_url or 'http://leoshixie.devcloud.woa.com/wiki/'
+WIKI_URL = CONFIG.wiki_url or 'http://9433.com.cn/wiki/'
 MAX_RETRIES = 3
 BOT_SUMMARY_PREFIX = '[bot]'
 

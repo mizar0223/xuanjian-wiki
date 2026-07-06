@@ -22,7 +22,7 @@ AUTHORITY_PATH = CONFIG.xianji_authority_path
 PAGES_DIR = CONFIG.pages_dir
 API = CONFIG.wiki_api
 USER = CONFIG.wiki_user
-WIKI_URL = CONFIG.wiki_url or 'http://leoshixie.devcloud.woa.com/wiki/'
+WIKI_URL = CONFIG.wiki_url or 'http://9433.com.cn/wiki/'
 BOT_SUMMARY_PREFIX = '[bot]'
 
 TOP_SECTIONS = [

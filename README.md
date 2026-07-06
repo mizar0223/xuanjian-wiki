@@ -8,8 +8,8 @@
 
 ## 在线访问
 
-- **Wiki 首页**: http://leoshixie.devcloud.woa.com/wiki/首页
-- **API 端点**: http://leoshixie.devcloud.woa.com/api.php
+- **Wiki 首页**: http://9433.com.cn/wiki/首页
+- **API 端点**: http://9433.com.cn/api.php
 
 ---
 
@@ -29,7 +29,7 @@
 ## 技术架构
 
 ```
-┌─── 本地 ───────────────────────────┐     ┌─── CVM (21.214.75.44) ───────────┐
+┌─── 本地 ───────────────────────────┐     ┌─── 服务器 (114.132.222.8) ────────┐
 │                                     │     │                                    │
 │  数据源 → generate_pages.py         │     │  Nginx (:80)                       │
 │       ↓                             │     │    ├─ /wiki/  → MediaWiki(:8081)   │
@@ -39,7 +39,7 @@
 │                                     │     │  Docker: mediawiki:1.42            │
 │  wiki_admin.py ──── HTTP ───────────┼────→│    └─ Apache + PHP 8.1            │
 │                                     │     │                                    │
-│  ssh_wiki.sh ──── SSH :36000 ───────┼────→│  Docker: mysql:8.0 (wikidb)       │
+│  ssh_wiki.sh ──── SSH :22 ──────────┼────→│  Docker: mysql:8.0 (wikidb)       │
 │                                     │     │                                    │
 └─────────────────────────────────────┘     └────────────────────────────────────┘
 ```
@@ -112,7 +112,7 @@ wiki/
 **SSH 连接服务器**
 ```bash
 ./scripts/ssh_wiki.sh
-# 或手动：ssh -p 36000 root@21.214.75.44
+# 或手动：ssh -i /Users/leoshi/WorkBuddy/2026-05-15-task-13/forAI.pem root@114.132.222.8
 ```
 
 **Wiki 管理**
@@ -261,9 +261,11 @@ L 前缀仅用于文件名，上传脚本自动生成不带 L 的线上标题。
 | 项目 | 值 |
 |------|-----|
 | Wiki 管理员 | WikiAdmin |
-| anydev 环境 ID | evnIns-6h90vw7jeohg |
-| CVM IP | 21.214.75.44 |
-| SSH 端口 | 36000 |
+| 服务器域名 | 9433.com.cn |
+| 服务器 IP | 114.132.222.8 |
+| SSH 端口 | 22 |
+| SSH 用户 | root |
+| SSH 密钥 | forAI.pem |
 | MW 容器端口 | 8081→80 |
 
 密码见 `.env` 文件（不入版本控制）

@@ -9,7 +9,7 @@ from common.config import AppConfig, require_wiki_password
 CONFIG = AppConfig()
 WIKI_API = CONFIG.wiki_api
 USERNAME = CONFIG.wiki_user
-WIKI_URL = CONFIG.wiki_url or 'http://leoshixie.devcloud.woa.com/wiki/'
+WIKI_URL = CONFIG.wiki_url or 'http://9433.com.cn/wiki/'
 
 # ============================================================
 # SMW Property 定义

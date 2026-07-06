@@ -12,7 +12,7 @@ urllib3.disable_warnings()
 CONFIG = AppConfig()
 WIKI_API = CONFIG.wiki_api
 WIKI_USER = CONFIG.wiki_user
-WIKI_URL = CONFIG.wiki_url or 'http://leoshixie.devcloud.woa.com/wiki/'
+WIKI_URL = CONFIG.wiki_url or 'http://9433.com.cn/wiki/'
 IMG_DIR = str(CONFIG.data_source_path('image_dir'))
 DELAY = 1.0  # seconds between uploads (larger files need more)
 MAX_RETRIES = 3

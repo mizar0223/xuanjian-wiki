@@ -3,18 +3,19 @@
 
 wiki:
   name: "玄鉴仙族维基"
-  url: "http://leoshixie.devcloud.woa.com/wiki/"
-  api: "http://leoshixie.devcloud.woa.com/api.php"
+  url: "http://9433.com.cn/wiki/"
+  api: "http://9433.com.cn/api.php"
   user: "WikiAdmin"
   engine: "MediaWiki 1.42.7"
   skin: "Vector 2022"
   language: "zh-hans"
 
 server:
-  host: "21.214.75.44"
-  ssh_port: 36000
-  anydev_env_id: "evnIns-6h90vw7jeohg"
-  domain: "leoshixie.devcloud.woa.com"
+  host: "114.132.222.8"
+  ssh_port: 22
+  ssh_user: "root"
+  ssh_key: "/Users/leoshi/WorkBuddy/2026-05-15-task-13/forAI.pem"
+  domain: "9433.com.cn"
 
 docker:
   container_name: "mediawiki"
@@ -23,7 +24,7 @@ docker:
   localsettings_path: "/var/www/html/LocalSettings.php"
 
 nginx:
-  config_path: "/etc/nginx/conf.d/leoshixie.conf"
+  config_path: "/www/server/panel/vhost/nginx/9433.com.cn.conf"
   exposed_paths:
     - "/wiki/"
     - "/w/"
