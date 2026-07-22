@@ -3,8 +3,8 @@
 
 wiki:
   name: "玄鉴仙族维基"
-  url: "http://9433.com.cn/wiki/"
-  api: "http://9433.com.cn/api.php"
+  url: "https://9433.com.cn/wiki/"
+  api: "https://9433.com.cn/api.php"
   user: "WikiAdmin"
   engine: "MediaWiki 1.42.7"
   skin: "Vector 2022"
