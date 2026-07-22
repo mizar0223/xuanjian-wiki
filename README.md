@@ -4,7 +4,7 @@
 
 ## 代码仓库
 
-- **工蜂**: https://git.woa.com/leoshixie/xuanjian-wiki
+- **GitHub**: https://github.com/mizar0223/xuanjian-wiki
 
 ## 在线访问
 
@@ -233,42 +233,55 @@ L 前缀仅用于文件名，上传脚本自动生成不带 L 的线上标题。
 | 分类体系优化 | 🔲 待做 | - |
 | 人物关系图可视化 | 🔲 待做 | - |
 | 图片资源上传 | 🔲 待做 | - |
-| SemanticMediaWiki 扩展 | 🔲 待做 | - |
+| SemanticMediaWiki 扩展 | ✅ 完成 | 2026-07-22 |
 
 ---
 
-## 仓库清理与远程同步（2026-07-06）
+## SemanticMediaWiki（2026-07-22 上线）
 
-### 背景
+### 版本与组成
 
-本仓库同时托管于工蜂（`origin`）与 GitHub（`github`），两者指向同一份《玄鉴仙族》维基源码：
+| 项 | 值 |
+|----|-----|
+| SMW 版本 | `mediawiki/semantic-media-wiki ~5.0.2`（兼容 MW 1.39–1.43.1 / PHP 8.1–8.4） |
+| 安装方式 | composer（容器内 `php /tmp/composer update --no-dev --no-security-blocking --optimize-autoloader`） |
+| 持久化 | `volumes/vendor` + `volumes/extensions` 整体挂载（composer 产物不随容器重建丢失） |
+| 声明文件 | `composer.local.json`（`require` SMW，git 跟踪） |
+| 加载配置 | `LocalSettings.php`：`wfLoadExtension('SemanticMediaWiki'); enableSemantics('9433.com.cn');` |
+| 命名空间 | 属性(102) / 概念(108) / 语义表单(106) 等 |
 
-| Remote | 地址 |
-|--------|------|
-| `origin` | `https://git.woa.com/leoshixie/xuanjian-wiki.git`（工蜂） |
-| `github` | `https://github.com/mizar0223/xuanjian-wiki`（GitHub） |
+### 运维命令（容器内执行）
 
-### 同步过程
+```bash
+# 数据库结构升级（装/升 SMW 后必跑；站点会停在 SMW 维护页直到跑完）
+docker exec mw-app php maintenance/run.php update.php --quick
 
-1. 初始化 GitHub remote 并首次推送 `main`：
-   ```bash
-   git remote add github https://github.com/mizar0223/xuanjian-wiki
-   git push -u github main
-   ```
-2. 首次推送时 GitHub 对大于 50 MB 的文件给出 `GH001` 警告（`归档.zip` 达 72.38 MB），随后对该文件及一批非必要产物做了清理（见下）。
+# 全量语义数据重建（约 3784 页 / 数分钟；页面批量导入后跑）
+docker exec -d mw-app bash -c "php extensions/SemanticMediaWiki/maintenance/rebuildData.php -d 50 -v > /tmp/rebuild.log 2>&1"
+```
 
-### 清理内容（三个提交）
+### 排障要点（2026-07-22 实战记录）
 
-| Commit | 内容 |
-|--------|------|
-| `b26d78b` | 删除 `docs/原著/*.txt` 共 63 个（原著摘录文本，有意清理） |
-| `0e96852` | 将 `资料库/神通/01_原始素材/神通图片更新版本-再补充/归档.zip`（72.38 MB）移出版本控制，并加入 `.gitignore`（`--cached` 移除，本地文件保留，GitHub 不再追踪） |
-| `43ff3af` | 删除 `资料库/神通/01_原始素材/神通图片更新版本-再补充/1440 章图片/` 下 10 个非必要 JPG（IMG_0778~0788） |
+1. **容器重建即丢**：`/tmp/*`、apt 装的包、容器内 composer.json 修改全部失效——vendor/extensions 已挂载持久，其余都别依赖。
+2. **composer 装包前置**：容器内先 `mkdir -p /var/lib/apt/lists/partial && apt-get update && apt-get install -y unzip`（ composer 解压依赖 unzip；容器 apt 缓存为空时 install 会静默失败）。
+3. **镜像自带 composer.json 的坑**：`require-dev`（phpunit 等）触发安全公告阻塞 → 需删除 require-dev 段；再加 `--no-security-blocking`（或 config 写 `policy.advisories.block=false`）。
+4. **内存**：`mem_limit` 已从 512m 提至 1900m（2G 机器）。composer update 期间单容器峰值可超 1.5G，OOM(137) 就降并发分开跑。
+5. **deploy-wiki.sh 本地渲染凭据可能过期**：正确姿势 = scp 占位符版 → 服务器上用 `/opt/mediawiki/.env` 真值 sed 渲染（见脚本 RENDER_PLACEHOLDERS）。
+6. **SMW 维护页（503）**：扩展加载但未跑 update.php 时全站 503 + SMW 升级页，跑完 update.php 自动恢复。
 
-### 注意事项
+### #ask 查询示例
 
-- `.env`、`backup/*.xml`、`output/` 等敏感 / 中间产物已被 `.gitignore` 忽略，不会进入任何远程仓库。
-- 当前 `github/main` 已最新；`origin/main`（工蜂）与本地分支存在分叉（本地领先 3 个提交 + 远程 1 个提交未拉取）。如需把相同内容同步回工蜂，先执行 `git pull --rebase origin main` 整合分叉提交，再 `git push origin main`。
+```
+# 紫府人物一览（自动表格）
+{{#ask:[[属性:修为::~*紫府*]]|?修为|?道统|?所属势力|mainlabel=人物|limit=500|class=wikitable sortable}}
+
+# 计数
+{{#ask:[[属性:修为::~*紫府*]]|format=count}}
+```
+
+成品页：`wiki/紫府人物`（pages/索引/紫府人物.wiki）
+
+---
 
 ## 账号信息
 

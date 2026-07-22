@@ -3,7 +3,14 @@
 # deploy-wiki.sh — Agent 友好的 9433.com.cn wiki 部署脚本
 # 用途: 把 MediaWiki 配置文件/资源发布到 /opt/mediawiki，
 #       自动 docker compose restart mediawiki 生效。
-# 与 agent-deploy.sh 的差异:
+# 部署目标: 仅 9433.com.cn (114.132.222.8)。
+#   腾讯内网服务器已下线，本脚本不再包含内网部署逻辑。
+# 渲染策略 (2026-07-22 起):
+#   - 本地只推「占位符版」LocalSettings.php (含 @@MW_*@@)
+#   - 推上服务器后，由服务器端用服务器自己的 .env 渲染
+#   - 彻底避免「本地凭据 ≠ 服务器真实凭据 → 全站 500」事故
+#   - 真实凭据不经过本地，占位符版本可安全推送公开仓库
+# 说明:
 #   - 目标不是静态站点，而是 Docker 化的 MediaWiki 应用
 #   - 推送路径是 /opt/mediawiki（宿主机 bind mount 源）
 #   - 默认行为是「配置 + 资源」，跳过上传目录（mw_images 88M）
@@ -80,64 +87,18 @@ cleanup() {
 }
 trap cleanup EXIT
 
-# -------------------- 占位符渲染（脱敏推送用）--------------------
-# LocalSettings.php 在仓库里用 @@PLACEHOLDER@@ 占位符（不入敏感信息）
-# 部署前从此函数注入真实值（从环境变量或 .env 文件读）
-RENDER_PLACEHOLDERS=(
-    "MW_DB_PASSWORD"
-    "MW_SECRET_KEY"
-    "MW_UPGRADE_KEY"
-)
+# -------------------- 占位符渲染（服务器端渲染）--------------------
+# LocalSettings.php 在仓库里是 @@MW_DB_PASSWORD@@ / @@MW_SECRET_KEY@@ /
+# @@MW_UPGRADE_KEY@@ 占位符版（不入敏感信息）。
+# 本地【不做】渲染，原样推送到服务器 $REMOTE_MW_DIR/LocalSettings.php.next，
+# 再由服务器端脚本逐行解析服务器自己的 .env 注入真实值、原子替换就位。
+# 这样本地无需持有任何真实凭据，也不会出现本地/服务器凭据不一致导致全站 500。
 
-# 加载 .env（如果存在）：从 WIKI_DEPLOY_ENV_FILE 指定的文件，或从默认位置
-WIKI_DEPLOY_ENV_FILE="${WIKI_DEPLOY_ENV_FILE:-/opt/mediawiki/.env}"
+# 服务器端凭据文件路径（在远程主机上，不是本地路径）
+REMOTE_ENV_FILE="${WIKI_DEPLOY_ENV_FILE:-/opt/mediawiki/.env}"
 
-# 渲染 LocalSettings.php：把 @@PLACEHOLDER@@ 替换为真实值
-# 真实值优先级: 1) 环境变量 2) WIKI_DEPLOY_ENV_FILE
-render_local_settings() {
-    local src="$1" dst="$2"
-
-    # 准备环境变量（从 .env 文件加载，覆盖优先级低于现有环境变量）
-    local env_file="$WIKI_DEPLOY_ENV_FILE"
-    if [[ -f "$env_file" ]]; then
-        # 临时 set -a 让所有赋值自动 export
-        set -a
-        # shellcheck disable=SC1090
-        source "$env_file"
-        set +a
-    fi
-
-    cp "$src" "$dst"
-    local missing=()
-    for ph in "${RENDER_PLACEHOLDERS[@]}"; do
-        local value="${!ph:-}"
-        if [[ -z "$value" ]]; then
-            missing+=("$ph")
-        else
-            # 用 sed 转义 | 防止占位符被当作正则特殊字符
-            local escaped_value="${value//\//\\/}"
-            # macOS sed 需 -i '' 形式；用 -e 一次性替换避免 BSD/GNU 差异
-            if ! sed -i '' "s|@@${ph}@@|${escaped_value}|g" "$dst" 2>/dev/null; then
-                err "渲染占位符 ${ph} 失败"
-                return 1
-            fi
-        fi
-    done
-
-    if [[ ${#missing[@]} -gt 0 ]]; then
-        err "占位符未配置（环境变量或 $env_file 缺失）: ${missing[*]}"
-        err "  请在 $env_file 中设置: MW_DB_PASSWORD=... MW_SECRET_KEY=... MW_UPGRADE_KEY=..."
-        return 1
-    fi
-
-    # 验证所有占位符已被替换
-    if grep -q "@@MW_.*@@" "$dst"; then
-        err "渲染后仍残留占位符（请检查真实值是否含特殊字符）:"
-        grep -n "@@MW_.*@@" "$dst" | head -3
-        return 1
-    fi
-    return 0
-}
+# 远程渲染成功后旧版本备份保留份数
+REMOTE_BACKUP_KEEP="${REMOTE_BACKUP_KEEP:-5}"
 
 # -------------------- 用法 --------------------
 usage() {
@@ -159,15 +120,17 @@ ${SCRIPT_NAME} — Agent-friendly MediaWiki 部署到 9433.com.cn
   -h, --help                  显示帮助
 
 环境变量:
-  WIKI_SSH_HOST               自定义目标主机（默认 114.132.222.8）
+  WIKI_SSH_HOST               自定义目标主机（默认 114.132.222.8，仅 9433）
   WIKI_SSH_KEY                自定义 SSH 私钥
-  WIKI_DEPLOY_ENV_FILE        占位符渲染用的凭据文件（默认 /opt/mediawiki/.env）
-                             包含 MW_DB_PASSWORD / MW_SECRET_KEY / MW_UPGRADE_KEY
+  WIKI_DEPLOY_ENV_FILE        【服务器上】的凭据文件路径（默认 /opt/mediawiki/.env）
+                             含 MW_DB_PASSWORD / MW_SECRET_KEY / MW_UPGRADE_KEY
+  REMOTE_BACKUP_KEEP          服务器端 LocalSettings.php 旧版本备份保留份数（默认 5）
 
-凭据:
+凭据（服务器端渲染）:
   LocalSettings.php 仓库版用 @@MW_DB_PASSWORD@@ / @@MW_SECRET_KEY@@ / @@MW_UPGRADE_KEY@@ 占位符
-  部署时 deploy-wiki.sh 自动从 \$WIKI_DEPLOY_ENV_FILE 读真实值并 sed 注入
-  真实凭据不入仓库；占位符版本可安全推送到 github 公开仓库
+  本地【不渲染】，占位符版原样 scp 到服务器 LocalSettings.php.next
+  随后 ssh 在服务器上解析 \$WIKI_DEPLOY_ENV_FILE 并 sed 注入、原子替换就位
+  真实凭据全程不经过本地；旧版本自动备份为 LocalSettings.php.bak.<时间戳>
 
 退出码:
   0  成功
@@ -176,6 +139,7 @@ ${SCRIPT_NAME} — Agent-friendly MediaWiki 部署到 9433.com.cn
   3  scp 失败
   4  docker restart 失败
   5  HTTP 健康检查失败
+  6  服务器端渲染失败（.env 缺失/占位符残留）
 
 示例:
   # 默认：同步配置 + 重启容器 + 健康检查
@@ -266,7 +230,7 @@ banner() {
 step_ssh() {
     local step_name="ssh_check"
     local t0=$(now_ms)
-    info "步骤 1/4: 检查 SSH 连接"
+    info "步骤 1/5: 检查 SSH 连接"
 
     if [[ "$DRY_RUN" == "true" ]]; then
         gray "  [DRY] ssh ${RUSER}@${HOST_IP} echo OK"
@@ -288,11 +252,15 @@ step_ssh() {
 step_sync() {
     local step_name="sync_files"
     local t0=$(now_ms)
-    info "步骤 2/4: 同步配置文件 + 资源"
+    info "步骤 2/5: 同步配置文件 + 资源"
 
     if [[ "$DRY_RUN" == "true" ]]; then
         for f in "${SYNC_FILES[@]}"; do
-            gray "  [DRY] scp $LOCAL_MW_DIR/$f → ${RUSER}@${HOST_IP}:$REMOTE_MW_DIR/$f"
+            if [[ "$f" == "LocalSettings.php" ]]; then
+                gray "  [DRY] scp $LOCAL_MW_DIR/$f (占位符版) → ${RUSER}@${HOST_IP}:$REMOTE_MW_DIR/$f.next"
+            else
+                gray "  [DRY] scp $LOCAL_MW_DIR/$f → ${RUSER}@${HOST_IP}:$REMOTE_MW_DIR/$f"
+            fi
         done
         $INCLUDE_IMAGES && gray "  [DRY] scp -r $LOCAL_MW_DIR/images → ${RUSER}@${HOST_IP}:$REMOTE_MW_DIR/images"
         record_step "$step_name" "true" 0 "dry-run"
@@ -319,23 +287,15 @@ step_sync() {
             fi
             ok "同步目录: $f/"
         else
-            # 特殊处理：LocalSettings.php 含占位符，需先 sed 注入真实值再 scp
+            # 特殊处理：LocalSettings.php 推「占位符版」为 .next，
+            # 不在本地渲染，留给 step_render_remote 在服务器端注入真实值
             if [[ "$f" == "LocalSettings.php" ]]; then
-                local rendered="/tmp/LocalSettings.rendered.$$"
-                if ! render_local_settings "$LOCAL_MW_DIR/$f" "$rendered"; then
-                    rm -f "$rendered"
-                    record_step "$step_name" "false" 0 "render-fail"
-                    err "渲染 LocalSettings.php 失败（占位符未替换）"
-                    return 3
-                fi
-                if ! scp "${SCP_OPTS[@]}" "$rendered" "${RUSER}@${HOST_IP}:$REMOTE_MW_DIR/$f" >/dev/null 2>>"$LOG_FILE"; then
-                    rm -f "$rendered"
+                if ! scp "${SCP_OPTS[@]}" "$LOCAL_MW_DIR/$f" "${RUSER}@${HOST_IP}:$REMOTE_MW_DIR/$f.next" >/dev/null 2>>"$LOG_FILE"; then
                     record_step "$step_name" "false" 0 "scp-file-fail:$f"
                     err "scp 文件失败: $f (退出码 3)"
                     return 3
                 fi
-                rm -f "$rendered"
-                ok "同步文件: $f (含占位符渲染)"
+                ok "同步文件: $f.next (占位符版，待服务器端渲染)"
             else
                 if ! scp "${SCP_OPTS[@]}" "$LOCAL_MW_DIR/$f" "${RUSER}@${HOST_IP}:$REMOTE_MW_DIR/$f" >/dev/null 2>>"$LOG_FILE"; then
                     record_step "$step_name" "false" 0 "scp-file-fail:$f"
@@ -371,11 +331,124 @@ step_sync() {
     ok "同步完成 (${GRAY}$((t1 - t0))ms${NC})"
 }
 
-# Step 3: docker compose restart
+# Step 3: 服务器端渲染 LocalSettings.php（用服务器自己的 .env）
+step_render_remote() {
+    local step_name="render_remote"
+    local t0=$(now_ms)
+    info "步骤 3/5: 服务器端渲染 LocalSettings.php（用服务器 .env）"
+
+    if [[ "$DRY_RUN" == "true" ]]; then
+        gray "  [DRY] ssh ... 解析 $REMOTE_ENV_FILE 并 sed 渲染 $REMOTE_MW_DIR/LocalSettings.php.next → LocalSettings.php"
+        record_step "$step_name" "true" 0 "dry-run"
+        return 0
+    fi
+
+    # 通过 heredoc 把渲染脚本喂给远程 bash；参数: MW_DIR ENV_FILE BACKUP_KEEP
+    # 用 if 捕获返回码，避免 set -e 在命令替换失败时直接杀脚本
+    local remote_out rc
+    if remote_out=$(ssh "${SSH_OPTS[@]}" "${RUSER}@${HOST_IP}" \
+        "bash -s -- '$REMOTE_MW_DIR' '$REMOTE_ENV_FILE' '$REMOTE_BACKUP_KEEP'" 2>&1 <<'REMOTE_RENDER'
+set -eo pipefail
+MW_DIR="$1"
+ENV_FILE="$2"
+BACKUP_KEEP="${3:-5}"
+SRC="$MW_DIR/LocalSettings.php.next"
+DST="$MW_DIR/LocalSettings.php"
+
+[[ -f "$SRC" ]] || { echo "[ERR] 未找到待渲染文件 $SRC"; exit 10; }
+[[ -f "$ENV_FILE" ]] || { echo "[ERR] 服务器缺少凭据文件 $ENV_FILE"; exit 11; }
+
+# 逐行解析 .env（不 source）：
+#  - 语义与 docker compose 一致（= 后内容字面取值，不解释 shell 元字符）
+#  - 避免 source 执行 .env 内容的安全风险
+#  - 兼容值为空/含 & | / 空格等特殊字符；成对首尾引号会剥掉
+get_env_val() {
+    local key="$1" line val
+    line=$(grep -E "^[[:space:]]*${key}[[:space:]]*=" "$ENV_FILE" | tail -1) || return 1
+    val="${line#*=}"
+    val="${val#"${val%%[![:space:]]*}"}"   # 去首部空白
+    val="${val%"${val##*[![:space:]]}"}"   # 去尾部空白
+    if [[ ${#val} -ge 2 && ( ( "${val:0:1}" == '"' && "${val: -1}" == '"' ) || ( "${val:0:1}" == "'" && "${val: -1}" == "'" ) ) ]]; then
+        val="${val:1:-1}"
+    fi
+    printf '%s' "$val"
+}
+
+PLACEHOLDERS=(MW_DB_PASSWORD MW_SECRET_KEY MW_UPGRADE_KEY)
+missing=()
+declare -A VALUES=()
+for ph in "${PLACEHOLDERS[@]}"; do
+    v="$(get_env_val "$ph" || true)"   # key 缺失时 grep 返回非零，用 || true 防 set -e 中断
+    if [[ -z "$v" ]]; then
+        missing+=("$ph")
+    else
+        VALUES[$ph]="$v"
+    fi
+done
+if (( ${#missing[@]} > 0 )); then
+    echo "[ERR] $ENV_FILE 缺少变量（或值为空）: ${missing[*]}"
+    exit 12
+fi
+
+# sed 替换值转义：反斜杠、&、分隔符 |
+escape_sed() { printf '%s' "$1" | sed -e 's/[\\&|]/\\&/g'; }
+
+TMP_DST="$DST.render-tmp.$$"
+cp "$SRC" "$TMP_DST"
+for ph in "${PLACEHOLDERS[@]}"; do
+    v="$(escape_sed "${VALUES[$ph]}")"
+    sed -i "s|@@${ph}@@|${v}|g" "$TMP_DST"
+done
+
+if grep -q "@@MW_.*@@" "$TMP_DST"; then
+    echo "[ERR] 渲染后仍残留占位符:"
+    grep -n "@@MW_.*@@" "$TMP_DST" | head -3
+    rm -f "$TMP_DST"
+    exit 13
+fi
+
+# 备份旧版本再原子替换
+TS="$(date +%Y%m%d_%H%M%S)"
+if [[ -f "$DST" ]]; then
+    cp -p "$DST" "$DST.bak.$TS"
+fi
+mv "$TMP_DST" "$DST"
+chmod 644 "$DST"
+rm -f "$SRC"
+
+# 裁剪旧备份，仅保留最近 N 份（无备份时 ls 非零，属正常，不让 pipefail 杀脚本）
+ls -1t "$DST".bak.* 2>/dev/null | tail -n +$((BACKUP_KEEP + 1)) | xargs -r rm -f || true
+
+echo "[OK] 服务器端渲染完成（旧版备份: $DST.bak.$TS）"
+REMOTE_RENDER
+    ); then
+        rc=0
+    else
+        rc=$?
+    fi
+
+    # 透传远程脚本的输出（不含敏感值，仅有诊断信息）
+    while IFS= read -r line; do
+        [[ "$line" == *"[ERR]"* ]] && err "  远程: $line" || gray "  远程: $line"
+    done <<< "$remote_out"
+
+    if [[ $rc -ne 0 ]]; then
+        record_step "$step_name" "false" 0 "remote-render-fail:rc=$rc"
+        err "服务器端渲染失败 (远程退出码 $rc，本地退出码 6)"
+        err "  线上 $REMOTE_MW_DIR/LocalSettings.php 未被改动，服务不受影响"
+        return 6
+    fi
+
+    local t1=$(now_ms)
+    record_step "$step_name" "true" $((t1 - t0)) ""
+    ok "渲染完成，旧版本已备份 (${GRAY}$((t1 - t0))ms${NC})"
+}
+
+# Step 4: docker compose restart
 step_restart() {
     local step_name="docker_restart"
     local t0=$(now_ms)
-    info "步骤 3/4: docker compose restart mediawiki"
+    info "步骤 4/5: docker compose restart mediawiki"
 
     if $NO_RESTART; then
         warn "跳过 docker restart（--no-restart）"
@@ -403,11 +476,11 @@ step_restart() {
     ok "容器重启完成 (${GRAY}$((t1 - t0))ms${NC})"
 }
 
-# Step 4: HTTP 健康检查
+# Step 5: HTTP 健康检查
 step_healthcheck() {
     local step_name="healthcheck"
     local t0=$(now_ms)
-    info "步骤 4/4: HTTP 健康检查"
+    info "步骤 5/5: HTTP 健康检查"
 
     if ! $HEALTHCHECK; then
         warn "跳过健康检查（--no-healthcheck）"
@@ -446,6 +519,9 @@ step_healthcheck() {
 
     record_step "$step_name" "false" 0 "http-$http_status-after-${max_attempts}-tries"
     err "HTTP $http_status ❌ 重试 $max_attempts 次后仍失败 (退出码 5) - $url"
+    err "  如系本次配置变更引起，可回滚 LocalSettings.php："
+    err "  ssh -i <key> ${RUSER}@${HOST_IP} 'ls -1t $REMOTE_MW_DIR/LocalSettings.php.bak.* | head -1'  # 找最新备份"
+    err "  然后 cp 覆盖 $REMOTE_MW_DIR/LocalSettings.php 并 docker compose restart mediawiki"
     return 5
 }
 
@@ -457,8 +533,9 @@ STAGE_NUM=0
 run_step() {
     STAGE_NUM=$((STAGE_NUM + 1))
     if [[ $EXIT_CODE -eq 0 ]]; then
-        "$1"
-        local rc=$?
+        local rc=0
+        # 用 || 捕获返回码，避免 set -e 直接杀脚本导致 record_step/JSON 输出被跳过
+        "$1" || rc=$?
         if [[ $rc -ne 0 ]]; then
             EXIT_CODE=$rc
         fi
@@ -466,6 +543,7 @@ run_step() {
 }
 run_step step_ssh
 run_step step_sync
+run_step step_render_remote
 run_step step_restart
 run_step step_healthcheck
 

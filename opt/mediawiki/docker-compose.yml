@@ -46,12 +46,16 @@ services:
       - ./apache-wiki-alias.conf:/etc/apache2/conf-enabled/wiki-alias.conf:ro
       - ./.htaccess:/var/www/html/.htaccess:ro
       - ./resources-assets:/var/www/html/resources/assets:rw
+      # SMW 持久化（2026-07-22）：vendor/extensions 整体挂载，composer 装的扩展不随容器重建丢失
+      - ./volumes/vendor:/var/www/html/vendor
+      - ./volumes/extensions:/var/www/html/extensions
+      - ./composer.local.json:/var/www/html/composer.local.json:ro
     entrypoint: ["docker-php-entrypoint"]
     command: >
       bash -c "a2enconf wiki-alias 2>/dev/null; exec apache2-foreground"
     ports:
       - "127.0.0.1:8889:80"
-    mem_limit: 512m
+    mem_limit: 1536m
     networks:
       - wiki-net
 

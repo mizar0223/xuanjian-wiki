@@ -142,6 +142,7 @@ def resolve_path(value):
 DEFAULT_PREFIX_MAP = {
     # 人物维度（pages/ 下）—— stem 是裸名，需要加 "人物-"
     '人物与势力': '人物-',        # pages/人物与势力/
+    '人物': '人物-',              # pages/人物/（2026-07-22 目录重组后跟进）
 
     # 仙基道统维度 —— stem 已自带 "道统-"/"神通-"/"位业-" 前缀，不再加前缀
     '仙基道统': '',
@@ -195,8 +196,9 @@ def get_page_title(path, pages_root, prefix_map, default_prefix):
     """
     stem = path.stem
 
-    # 方法1: 在路径组件中直接查找已知的目录名
-    for part in path.parts:
+    # 方法1: 在路径目录组件中查找已知的目录名（从深到浅，最深目录优先，
+    # 避免 pages/人物/x.wiki 被顶层 'pages' 键截胡而丢失 '人物-' 前缀）
+    for part in reversed(path.parts[:-1]):
         if part in prefix_map:
             return prefix_map[part] + stem
 

@@ -134,6 +134,14 @@ wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'Timeless' );
 wfLoadSkin( 'Vector' );
 
+# Enabled extensions.
+# ParserFunctions：模板 {{#if:}} 等解析函数（官方镜像 bundled，2026-07-22 补载——修复全站模板源码裸露）
+wfLoadExtension( 'ParserFunctions' );
+
+# SemanticMediaWiki：语义属性与 #ask 查询（2026-07-22 经 composer 安装 ~5.0.2）
+wfLoadExtension( 'SemanticMediaWiki' );
+enableSemantics( '9433.com.cn' );
+
 
 # End of automatically generated settings.
 # Add more configuration options below.
